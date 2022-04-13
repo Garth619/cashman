@@ -1,0 +1,32 @@
+// vars/mixins
+
+@import "global/fonts", "global/colors", "global/mediaqueries", "global/mixins_do_not_edit";
+
+// third party files
+
+@import "vendors/slick", "vendors/lity";
+
+// reset
+
+@import "global/reset";
+
+// global
+
+@import "global/global";
+
+// components
+
+@import "components/buttons", "components/header", "components/navigation", "components/banner",
+	"components/sidebar", "components/footer";
+
+// page templates
+
+@import "templates/homepage/section-1", "templates/homepage/section-2",
+	"templates/homepage/section-3", "templates/homepage/section-4", "templates/homepage/section-5",
+	"templates/homepage/section-6", "templates/about", "templates/padirectory", "templates/blog",
+	"templates/case-results", "templates/testimonials", "templates/attprofile", "templates/contact",
+	"templates/meetteam", "templates/not-found";
+
+// animations
+
+@import "global/animations";

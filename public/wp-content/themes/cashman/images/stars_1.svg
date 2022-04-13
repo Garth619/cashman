@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154" height="26" viewBox="0 0 154 26">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ce996e"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_13793" data-name="Group 13793" transform="translate(-870 -5048)">
+    <path id="Polygon_1" data-name="Polygon 1" d="M18.385,0,15.758,10.242,26,7.615,16.9,13,26,18.385,15.758,15.758,18.385,26,13,16.9,7.615,26l2.627-10.242L0,18.385,9.1,13,0,7.615l10.242,2.627L7.615,0,13,9.1Z" transform="translate(870 5048)" fill="url(#linear-gradient)"/>
+    <path id="Polygon_1-2" data-name="Polygon 1" d="M18.385,0,15.758,10.242,26,7.615,16.9,13,26,18.385,15.758,15.758,18.385,26,13,16.9,7.615,26l2.627-10.242L0,18.385,9.1,13,0,7.615l10.242,2.627L7.615,0,13,9.1Z" transform="translate(902 5048)" fill="url(#linear-gradient)"/>
+    <path id="Polygon_1-3" data-name="Polygon 1" d="M18.385,0,15.758,10.242,26,7.615,16.9,13,26,18.385,15.758,15.758,18.385,26,13,16.9,7.615,26l2.627-10.242L0,18.385,9.1,13,0,7.615l10.242,2.627L7.615,0,13,9.1Z" transform="translate(934 5048)" fill="url(#linear-gradient)"/>
+    <path id="Polygon_1-4" data-name="Polygon 1" d="M18.385,0,15.758,10.242,26,7.615,16.9,13,26,18.385,15.758,15.758,18.385,26,13,16.9,7.615,26l2.627-10.242L0,18.385,9.1,13,0,7.615l10.242,2.627L7.615,0,13,9.1Z" transform="translate(966 5048)" fill="url(#linear-gradient)"/>
+    <path id="Polygon_1-5" data-name="Polygon 1" d="M18.385,0,15.758,10.242,26,7.615,16.9,13,26,18.385,15.758,15.758,18.385,26,13,16.9,7.615,26l2.627-10.242L0,18.385,9.1,13,0,7.615l10.242,2.627L7.615,0,13,9.1Z" transform="translate(998 5048)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
