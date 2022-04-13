@@ -1,0 +1,86 @@
+header {
+}
+
+#header-left {
+	padding: 12px 20px 8px;
+}
+
+#logo {
+	display: block;
+	img {
+		@include image();
+		@include margin_lr();
+		max-width: 345px;
+	}
+}
+
+#header-right {
+	background: $grey;
+	@include flex();
+}
+
+#cta-wrap {
+	flex-grow: 1;
+	padding: 9px 22px;
+}
+
+#cta {
+	display: block;
+	@include type(
+		(
+			size: 16px,
+			height: 16px,
+			family: $primaryfont,
+			color: $browndark,
+			weight: 900,
+		)
+	);
+}
+
+#phone {
+	display: inline-block;
+	margin-top: 5px;
+	@include type(
+		(
+			size: 24px,
+			height: 24px,
+			family: $primaryfont,
+			color: $white,
+			weight: 700,
+		)
+	);
+}
+
+#menu-wrap {
+	flex-shrink: 0;
+	@include flex(center, center, column);
+	@include box(68px, 68px);
+	span {
+		display: block;
+		background: $brownlight;
+		margin-bottom: 7px;
+		opacity: 1;
+		transform-origin: center center;
+		transform: rotate(0);
+		transition: transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease-in-out;
+		@include box(39px, 4px);
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	&.open {
+		span {
+			&:nth-of-type(1) {
+				transform: rotate(45deg);
+				transform-origin: 9px 4px;
+			}
+			&:nth-of-type(2) {
+				opacity: 0;
+			}
+			&:nth-of-type(3) {
+				transform: rotate(-45deg);
+				transform-origin: 2px -3px;
+			}
+		}
+	}
+}

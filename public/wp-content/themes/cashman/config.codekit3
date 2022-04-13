@@ -409,11 +409,31 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/images\/logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/pa_grid_arrow.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/images\/pa_grid_arrow.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/images\/Path 1.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/Path 1.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -514,6 +534,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/images\/test_right_arrow.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/images\/THE CASHMAN LAW FIRM.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/THE CASHMAN LAW FIRM.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

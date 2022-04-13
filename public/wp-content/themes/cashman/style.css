@@ -726,4 +726,100 @@ img.aligncenter {
   display: block;
 }
 
+#header-left {
+  padding: 12px 20px 8px;
+}
+
+#logo {
+  display: block;
+}
+#logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 345px;
+}
+
+#header-right {
+  background: #2f3842;
+  display: flex;
+}
+
+#cta-wrap {
+  flex-grow: 1;
+  padding: 9px 22px;
+}
+
+#cta {
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: effra, sans-serif;
+  color: #ce996e;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#phone {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: effra, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#menu-wrap {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 68px;
+  height: 68px;
+}
+#menu-wrap span {
+  display: block;
+  background: #f0c498;
+  margin-bottom: 7px;
+  opacity: 1;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  transition: opacity 200ms ease-in-out, -webkit-transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  transition: transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease-in-out;
+  transition: transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease-in-out, -webkit-transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  width: 39px;
+  height: 4px;
+}
+#menu-wrap span:last-of-type {
+  margin-bottom: 0;
+}
+#menu-wrap.open span:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 9px 4px;
+          transform-origin: 9px 4px;
+}
+#menu-wrap.open span:nth-of-type(2) {
+  opacity: 0;
+}
+#menu-wrap.open span:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 2px -3px;
+          transform-origin: 2px -3px;
+}
+
+nav {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
