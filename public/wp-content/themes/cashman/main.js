@@ -90,14 +90,7 @@ jQuery(document).ready(function ($) {
 		}
 	}
 
-	// createWaypoint(
-	// 	"section-one",
-	// 	"#body",
-	// 	"mobile-header-change",
-	// 	71,
-	// 	null,
-	// 	true
-	// );
+	createWaypoint("section-one", "#body", "mobile-header-change", 68, null, true);
 
 	/**
 	 * Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
@@ -283,7 +276,7 @@ jQuery(document).ready(function ($) {
 		$(this).toggleClass("open");
 		$("header").toggleClass("open");
 		$("nav").toggleClass("open");
-		$("html, body").toggleClass("fixed");
+		$("html, body").toggleClass("ilawyer-fixed");
 	});
 	function navDesktop() {
 		$("header nav").addClass("nav_desktop");

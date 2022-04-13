@@ -54,7 +54,7 @@ body {
 
 html,
 body {
-	&.fixed {
+	&.ilawyer-fixed {
 		@media screen and (max-width: 1199px) {
 			overflow: hidden;
 		}

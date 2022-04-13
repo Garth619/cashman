@@ -31,23 +31,25 @@
 <body id='body' <?php body_class(); ?>>
 
     <header>
-        <div id='header-left'>
-            <a id='logo' href='<?php bloginfo('url'); ?>'>
-                <img src='<?php bloginfo('template_directory'); ?>/images/logo.svg' alt='altname' width='422' height='53' loading='eager' />
-            </a>
-        </div>
-        <div id='header-right'>
-            <nav> <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
-            <div id='cta-wrap'>
-                <span id='cta'>
-                    Free case evaluation - 24/7
-                </span>
-                <a id='phone' href='tel:+18002003120'>(800) 200-3120</a>
+        <div id='header-inner'>
+            <div id='header-left'>
+                <a id='logo' href='<?php bloginfo('url'); ?>'>
+                    <img src='<?php bloginfo('template_directory'); ?>/images/logo.svg' alt='altname' width='422' height='53' loading='eager' />
+                </a>
             </div>
-            <div id='menu-wrap'>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div id='header-right'>
+                <nav> <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
+                <div id='cta-wrap'>
+                    <span id='cta'>
+                        Free case evaluation - 24/7
+                    </span>
+                    <a id='phone' href='tel:+18002003120'>(800) 200-3120</a>
+                </div>
+                <div id='menu-wrap'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>

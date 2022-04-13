@@ -1,27 +1,57 @@
 header {
 }
 
+#header-inner {
+	@include mq(small_tablet) {
+		@include flex();
+	}
+}
+
 #header-left {
 	padding: 12px 20px 8px;
+	@include mq(small_tablet) {
+		flex-shrink: 0;
+		padding: 17px 21px 16px;
+	}
 }
 
 #logo {
 	display: block;
 	img {
+		width: 100%;
 		@include image();
 		@include margin_lr();
-		max-width: 345px;
+		max-width: 385px;
+		@include mq(small_tablet) {
+			max-width: 100%;
+			@include box(385px, auto);
+		}
 	}
 }
 
 #header-right {
 	background: $grey;
+	width: 100%;
 	@include flex();
+	@include mq(small_tablet) {
+		flex-grow: 1;
+		background: transparent;
+	}
+}
+
+body.mobile-header-change {
+	#header-right {
+		@include fixed(0, null, null, 0.5);
+	}
 }
 
 #cta-wrap {
 	flex-grow: 1;
 	padding: 9px 22px;
+	@include mq(small_tablet) {
+		text-align: right;
+		padding: 19px 16px;
+	}
 }
 
 #cta {
@@ -49,21 +79,34 @@ header {
 			weight: 700,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 26px;
+		color: $black;
+	}
 }
 
 #menu-wrap {
 	flex-shrink: 0;
+	cursor: pointer;
 	@include flex(center, center, column);
 	@include box(68px, 68px);
+	@include mq(small_tablet) {
+		background: $grey;
+		@include box(82px, 82px);
+	}
 	span {
 		display: block;
-		background: $brownlight;
+		background: $browndarktwo;
 		margin-bottom: 7px;
 		opacity: 1;
 		transform-origin: center center;
 		transform: rotate(0);
 		transition: transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease-in-out;
 		@include box(39px, 4px);
+		@include mq(small_tablet) {
+			margin-bottom: 8px;
+			@include box(42px, 4px);
+		}
 		&:last-of-type {
 			margin-bottom: 0;
 		}
@@ -73,6 +116,9 @@ header {
 			&:nth-of-type(1) {
 				transform: rotate(45deg);
 				transform-origin: 9px 4px;
+				@include mq(small_tablet) {
+					transform-origin: 11px 8px;
+				}
 			}
 			&:nth-of-type(2) {
 				opacity: 0;
@@ -80,6 +126,9 @@ header {
 			&:nth-of-type(3) {
 				transform: rotate(-45deg);
 				transform-origin: 2px -3px;
+				@include mq(small_tablet) {
+					transform-origin: 4px -7px;
+				}
 			}
 		}
 	}
