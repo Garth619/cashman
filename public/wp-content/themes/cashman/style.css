@@ -763,6 +763,13 @@ body.ilawyer-menu-open header {
     display: flex;
   }
 }
+@media screen and (min-width: 1650px) {
+  #header-inner {
+    max-width: 1918px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 #header-left {
   padding: 12px 20px 8px;

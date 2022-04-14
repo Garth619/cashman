@@ -27,6 +27,10 @@ body.ilawyer-menu-open {
 	@include mq(small_tablet) {
 		@include flex();
 	}
+	@include mq(small_monitor) {
+		max-width: 1918px;
+		@include margin_lr();
+	}
 }
 
 #header-left {
