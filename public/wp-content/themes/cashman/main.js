@@ -275,7 +275,7 @@ jQuery(document).ready(function ($) {
 	$("#menu-wrap").on("click", function (e) {
 		// $(this).toggleClass("open");
 		// $("header").toggleClass("open");
-		// $("nav").toggleClass("open");
+		$("nav").slideToggle("slow");
 		$("body").toggleClass("ilawyer-menu-open");
 		$("html, body").toggleClass("ilawyer-fixed");
 	});

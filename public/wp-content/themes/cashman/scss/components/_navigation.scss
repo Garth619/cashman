@@ -3,28 +3,26 @@ nav {
 	padding: 50px 0px;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
-	transform: translateY(-35px);
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out,
-		transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+	display: none;
 	@include box(100%, 100vh);
 	@include abs(131px, null, null, 0, -1);
 	@include mq(small_tablet) {
-		top: 82px;
-		transform: translateY(-15px);
+		top: 83px;
 	}
 	@include mq(small_laptop) {
-		opacity: 1;
-		visibility: visible;
+		display: block !important;
 		overflow-y: visible;
-		transform: translateY(0);
 		background: transparent;
 		position: relative;
 		padding: 0;
 		top: 0;
-		z-index: 1;
+		z-index: 5;
 		@include box(auto, auto);
+	}
+	@include mq(small_monitor) {
+		order: 1;
+		flex-grow: 1;
+		margin-top: 33px;
 	}
 	ul {
 		li {
@@ -54,6 +52,8 @@ nav {
 							@include contentdisplay(inline-block, "-");
 						}
 					}
+				}
+				&:hover {
 					> ul.sub-menu {
 						@include mq(small_laptop) {
 							opacity: 1;
@@ -110,7 +110,13 @@ body.ilawyer-menu-open {
 
 body.mobile-header-change {
 	nav {
-		@include fixed(63px, null, null, 0, -1);
+		@include fixed(68px, null, null, 0, -1);
+		@include mq(small_tablet) {
+			top: 83px;
+		}
+		@include mq(small_laptop) {
+			position: static;
+		}
 	}
 }
 
@@ -121,6 +127,9 @@ nav {
 			padding-bottom: 0px;
 			@include flex(flex-end);
 		}
+		@include mq(small_monitor) {
+			justify-content: center;
+		}
 		> li {
 			font-size: 18px;
 			font-weight: 700;
@@ -130,6 +139,14 @@ nav {
 				margin-left: 2.8%;
 				padding-bottom: 15px;
 			}
+			@include mq(large_laptop) {
+				font-size: 18px;
+				margin-left: 3.1%;
+			}
+			@include mq(small_monitor) {
+				margin: 0 1.1%;
+				padding-bottom: 27px;
+			}
 			// these need their dropdowns to go to the left bc the get cut off on the edge of the browser
 			&:nth-last-of-type(-n + 3) {
 				> ul.sub-menu {
@@ -137,11 +154,17 @@ nav {
 						left: auto;
 						right: -5px;
 					}
+					@include mq(small_monitor) {
+						left: -5px;
+						right: auto;
+					}
 					> li {
 						> ul.sub-menu {
 							right: auto;
-							top: -29px;
 							left: -277px;
+							@include mq(small_monitor) {
+								left: -409px;
+							}
 						}
 					}
 				}
@@ -176,6 +199,13 @@ nav {
 			width: 277px;
 			@include abs(38px, null, null, -5px);
 		}
+		@include mq(large_laptop) {
+		}
+		@include mq(small_monitor) {
+			top: 50px;
+			width: 409px;
+			padding: 52px 0px;
+		}
 		&.active {
 			margin-bottom: 35px;
 			padding: 30px 0;
@@ -185,6 +215,10 @@ nav {
 			@include mq(small_tablet) {
 				padding: 35px 0;
 			}
+			@include mq(small_laptop) {
+				opacity: 0;
+				visibility: hidden;
+			}
 		}
 		li {
 			font-size: 16px;
@@ -192,6 +226,9 @@ nav {
 			text-transform: capitalize;
 			@include mq(small_laptop) {
 				font-size: 15px;
+			}
+			@include mq(large_laptop) {
+				font-size: 16px;
 			}
 			&.ilawyer-view-all {
 				text-transform: uppercase;
@@ -204,6 +241,9 @@ nav {
 			a {
 				margin-bottom: 15px;
 				padding: 0 40px;
+				@include mq(small_monitor) {
+					padding: 0 55px;
+				}
 			}
 		}
 		> li ul.sub-menu {
@@ -211,9 +251,13 @@ nav {
 			margin-top: 0px;
 			@include mq(small_laptop) {
 				background: $white;
-				top: -28px;
+				top: -29px;
 				left: auto;
 				right: -277px;
+			}
+			@include mq(small_monitor) {
+				top: -51px;
+				right: -409px;
 			}
 			&.active {
 				margin-top: 29px;
