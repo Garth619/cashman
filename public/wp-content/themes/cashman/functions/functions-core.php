@@ -17,19 +17,19 @@ add_theme_support('wp-block-styles');
  * Add arrows to menu items
  * @link http://www.billerickson.net/code/add-arrows-to-menu-items/
  */
-function be_arrows_in_menus($item_output, $item, $depth, $args)
-{
+// function be_arrows_in_menus($item_output, $item, $depth, $args)
+// {
 
-    if (in_array('menu-item-has-children', $item->classes)) {
-        $arrow = '<svg xmlns="http://www.w3.org/2000/svg" width="9.561" height="5.458" viewBox="0 0 9.561 5.458">
-        <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M4.782,1.645,8.4,5.258a.683.683,0,0,0,.965-.966L5.265.2a.683.683,0,0,0-.942-.02L.2,4.288a.683.683,0,0,0,.965.966Z" transform="translate(9.561 5.458) rotate(180)" fill="#c78b42"/>
-      </svg>';
-        $item_output = str_replace('</a>', $arrow . '</a>', $item_output);
-    }
+//     if (in_array('menu-item-has-children', $item->classes)) {
+//         $arrow = '<svg xmlns="http://www.w3.org/2000/svg" width="9.561" height="5.458" viewBox="0 0 9.561 5.458">
+//         <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M4.782,1.645,8.4,5.258a.683.683,0,0,0,.965-.966L5.265.2a.683.683,0,0,0-.942-.02L.2,4.288a.683.683,0,0,0,.965.966Z" transform="translate(9.561 5.458) rotate(180)" fill="#c78b42"/>
+//       </svg>';
+//         $item_output = str_replace('</a>', $arrow . '</a>', $item_output);
+//     }
 
-    return $item_output;
-}
-add_filter('walker_nav_menu_start_el', 'be_arrows_in_menus', 10, 4);
+//     return $item_output;
+// }
+// add_filter('walker_nav_menu_start_el', 'be_arrows_in_menus', 10, 4);
 
 /**
  * Remove margin from admin bar

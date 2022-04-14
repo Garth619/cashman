@@ -1,4 +1,7 @@
 header {
+	box-shadow: 0px 3px 6px #00000029;
+	position: relative;
+	z-index: 5;
 }
 
 #header-inner {
@@ -9,21 +12,23 @@ header {
 
 #header-left {
 	padding: 12px 20px 8px;
+	height: 63px;
+	@include flex(center, center);
 	@include mq(small_tablet) {
 		flex-shrink: 0;
+		height: 83px;
 		padding: 17px 21px 16px;
 	}
 }
 
 #logo {
 	display: block;
+	max-width: 312px;
 	img {
-		width: 100%;
 		@include image();
 		@include margin_lr();
-		max-width: 385px;
 		@include mq(small_tablet) {
-			max-width: 100%;
+			max-width: 385px;
 			@include box(385px, auto);
 		}
 	}
@@ -32,7 +37,7 @@ header {
 #header-right {
 	background: $grey;
 	width: 100%;
-	@include flex();
+
 	@include mq(small_tablet) {
 		flex-grow: 1;
 		background: transparent;
@@ -41,7 +46,21 @@ header {
 
 body.mobile-header-change {
 	#header-right {
-		@include fixed(0, null, null, 0.5);
+		@include fixed(0, null, null, 0);
+	}
+}
+
+#header-right-inner {
+	position: relative;
+	z-index: 1;
+	background: $grey;
+	@include flex();
+	&::after {
+		background: $grey;
+		box-shadow: 0px 3px 6px #00000029;
+		@include box(100%, 6px);
+		@include contentdisplay();
+		@include abs(62px, null, null, 0, 1);
 	}
 }
 
