@@ -37,13 +37,13 @@
                 </a>
             </div>
             <div id='header-right'>
-                <nav> <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
                 <div id='cta-wrap'>
                     <span id='cta'>
                         Free case evaluation - 24/7
                     </span>
                     <a id='phone' href='tel:+18002003120'>(800) 200-3120</a>
                 </div>
+                <nav> <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
                 <div id='menu-wrap'>
                     <span></span>
                     <span></span>

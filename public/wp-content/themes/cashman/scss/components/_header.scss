@@ -1,6 +1,15 @@
 header {
 	position: relative;
 	z-index: 5;
+	@include mq(small_laptop) {
+	}
+	&::before {
+		box-shadow: 0px 3px 6px #00000029;
+		pointer-events: none;
+		@include box(100%, 100%);
+		@include abs(0, null, null, 0, 5);
+		@include contentdisplay();
+	}
 }
 
 body.ilawyer-menu-open {
@@ -24,11 +33,17 @@ body.ilawyer-menu-open {
 		height: 83px;
 		padding: 17px 21px 16px;
 	}
+	@include mq(small_laptop) {
+		padding: 12px 15px 8px;
+	}
 }
 
 #logo {
 	display: block;
 	max-width: 312px;
+	@include mq(small_tablet) {
+		max-width: 100%;
+	}
 	img {
 		@include image();
 		@include margin_lr();
@@ -47,57 +62,15 @@ body.ilawyer-menu-open {
 		flex-grow: 1;
 		background: transparent;
 	}
+	@include mq(small_laptop) {
+		padding-right: 21px;
+		@include flex(null, null, column);
+	}
 }
 
 body.mobile-header-change {
 	#header-right {
 		@include fixed(0, null, null, 0);
-	}
-}
-
-// #header-right-inner {
-// 	position: relative;
-// 	z-index: 1;
-// 	background: $grey;
-// 	@include flex();
-// 	&::after {
-// 		background: $grey;
-// 		box-shadow: 0px 3px 6px #00000029;
-// 		@include box(100%, 6px);
-// 		@include contentdisplay();
-// 		@include abs(62px, null, null, 0, 1);
-// 	}
-// }
-
-#shadow-hack {
-	// needed this to be seperate so I can add z-index and tuck the nav underneath it when it opens on small devices
-	box-shadow: 0px 4px 6px -2px rgba(#000, 0.3);
-	@include box(100%, 6px);
-	@include contentdisplay();
-	@include abs(125px, null, null, 0, 1);
-	@include mq(small_tablet) {
-		top: 68px;
-		@include box(100%, 15px);
-		@include flex();
-	}
-	&::before,
-	&::after {
-		@include mq(small_tablet) {
-			@include contentdisplay();
-		}
-	}
-	&::before {
-		@include mq(small_tablet) {
-			flex-grow: 1;
-			background: $white;
-		}
-	}
-	&::after {
-		@include mq(small_tablet) {
-			background: $grey;
-			flex-shrink: 0;
-			@include box(83px, 15px);
-		}
 	}
 }
 
@@ -107,6 +80,11 @@ body.mobile-header-change {
 	@include mq(small_tablet) {
 		text-align: right;
 		padding: 19px 16px;
+	}
+	@include mq(small_laptop) {
+		padding: 18px 0 3px 0;
+		flex: none;
+		@include flex(flex-end, center);
 	}
 }
 
@@ -137,7 +115,12 @@ body.mobile-header-change {
 	);
 	@include mq(small_tablet) {
 		font-size: 26px;
-		color: $black;
+		color: $greythree;
+	}
+	@include mq(small_laptop) {
+		font-size: 28px;
+		margin-top: 0;
+		margin-left: 15px;
 	}
 }
 
@@ -167,6 +150,9 @@ body.ilawyer-menu-open {
 	@include mq(small_tablet) {
 		background: $grey;
 		@include box(83px, 83px);
+	}
+	@include mq(small_laptop) {
+		display: none;
 	}
 	span {
 		display: block;
