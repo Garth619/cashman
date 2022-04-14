@@ -29,7 +29,6 @@
 </head>
 
 <body id='body' <?php body_class(); ?>>
-
     <header>
         <div id='header-inner'>
             <div id='header-left'>
@@ -39,19 +38,18 @@
             </div>
             <div id='header-right'>
                 <nav> <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
-                <div id='header-right-inner'>
-                    <div id='cta-wrap'>
-                        <span id='cta'>
-                            Free case evaluation - 24/7
-                        </span>
-                        <a id='phone' href='tel:+18002003120'>(800) 200-3120</a>
-                    </div>
-                    <div id='menu-wrap'>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div id='cta-wrap'>
+                    <span id='cta'>
+                        Free case evaluation - 24/7
+                    </span>
+                    <a id='phone' href='tel:+18002003120'>(800) 200-3120</a>
+                </div>
+                <div id='menu-wrap'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
+            <span id='shadow-hack'></span>
         </div>
     </header>

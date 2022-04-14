@@ -273,9 +273,10 @@ jQuery(document).ready(function ($) {
 	 * tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
 	 */
 	$("#menu-wrap").on("click", function (e) {
-		$(this).toggleClass("open");
-		$("header").toggleClass("open");
-		$("nav").toggleClass("open");
+		// $(this).toggleClass("open");
+		// $("header").toggleClass("open");
+		// $("nav").toggleClass("open");
+		$("body").toggleClass("ilawyer-menu-open");
 		$("html, body").toggleClass("ilawyer-fixed");
 	});
 	function navDesktop() {

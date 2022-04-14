@@ -1,7 +1,12 @@
 header {
-	box-shadow: 0px 3px 6px #00000029;
 	position: relative;
 	z-index: 5;
+}
+
+body.ilawyer-menu-open {
+	header {
+		box-shadow: none;
+	}
 }
 
 #header-inner {
@@ -37,7 +42,7 @@ header {
 #header-right {
 	background: $grey;
 	width: 100%;
-
+	@include flex();
 	@include mq(small_tablet) {
 		flex-grow: 1;
 		background: transparent;
@@ -50,17 +55,49 @@ body.mobile-header-change {
 	}
 }
 
-#header-right-inner {
-	position: relative;
-	z-index: 1;
-	background: $grey;
-	@include flex();
+// #header-right-inner {
+// 	position: relative;
+// 	z-index: 1;
+// 	background: $grey;
+// 	@include flex();
+// 	&::after {
+// 		background: $grey;
+// 		box-shadow: 0px 3px 6px #00000029;
+// 		@include box(100%, 6px);
+// 		@include contentdisplay();
+// 		@include abs(62px, null, null, 0, 1);
+// 	}
+// }
+
+#shadow-hack {
+	// needed this to be seperate so I can add z-index and tuck the nav underneath it when it opens on small devices
+	box-shadow: 0px 4px 6px -2px rgba(#000, 0.3);
+	@include box(100%, 6px);
+	@include contentdisplay();
+	@include abs(125px, null, null, 0, 1);
+	@include mq(small_tablet) {
+		top: 68px;
+		@include box(100%, 15px);
+		@include flex();
+	}
+	&::before,
 	&::after {
-		background: $grey;
-		box-shadow: 0px 3px 6px #00000029;
-		@include box(100%, 6px);
-		@include contentdisplay();
-		@include abs(62px, null, null, 0, 1);
+		@include mq(small_tablet) {
+			@include contentdisplay();
+		}
+	}
+	&::before {
+		@include mq(small_tablet) {
+			flex-grow: 1;
+			background: $white;
+		}
+	}
+	&::after {
+		@include mq(small_tablet) {
+			background: $grey;
+			flex-shrink: 0;
+			@include box(83px, 15px);
+		}
 	}
 }
 
@@ -104,6 +141,24 @@ body.mobile-header-change {
 	}
 }
 
+body.ilawyer-menu-open {
+	#menu-wrap {
+		span {
+			&:nth-of-type(1) {
+				transform: rotate(45deg);
+				transform-origin: 6px 9px;
+			}
+			&:nth-of-type(2) {
+				opacity: 0;
+			}
+			&:nth-of-type(3) {
+				transform: rotate(-45deg);
+				transform-origin: 7px -4px;
+			}
+		}
+	}
+}
+
 #menu-wrap {
 	flex-shrink: 0;
 	cursor: pointer;
@@ -111,7 +166,7 @@ body.mobile-header-change {
 	@include box(68px, 68px);
 	@include mq(small_tablet) {
 		background: $grey;
-		@include box(82px, 82px);
+		@include box(83px, 83px);
 	}
 	span {
 		display: block;
@@ -128,27 +183,6 @@ body.mobile-header-change {
 		}
 		&:last-of-type {
 			margin-bottom: 0;
-		}
-	}
-	&.open {
-		span {
-			&:nth-of-type(1) {
-				transform: rotate(45deg);
-				transform-origin: 9px 4px;
-				@include mq(small_tablet) {
-					transform-origin: 11px 8px;
-				}
-			}
-			&:nth-of-type(2) {
-				opacity: 0;
-			}
-			&:nth-of-type(3) {
-				transform: rotate(-45deg);
-				transform-origin: 2px -3px;
-				@include mq(small_tablet) {
-					transform-origin: 4px -7px;
-				}
-			}
 		}
 	}
 }
