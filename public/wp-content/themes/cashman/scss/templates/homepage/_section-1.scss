@@ -1,4 +1,70 @@
 #section-one {
-	background: $offwhite;
-	height: 1000px;
+	position: relative;
+}
+
+body.mobile-header-change {
+	#section-one {
+		margin-top: 68px;
+	}
+}
+
+#sec-one-inner {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding: 79px 30px 255px;
+}
+
+#sec-one-sp {
+	list-style: none;
+	li {
+		display: inline-block;
+		@include type(
+			(
+				size: 13px,
+				height: 15px,
+				spacing: 2.6px,
+				family: $primaryfont,
+				color: $white,
+				weight: 900,
+				align: center,
+				transform: uppercase,
+			)
+		);
+		&:after {
+			vertical-align: top;
+			border-radius: 50%;
+			margin: 4px 7px 0;
+			background: $brownlight;
+			@include box(6px, 6px);
+			@include contentdisplay(inline-block);
+		}
+		&:last-of-type {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+#sec-one-title {
+	display: block;
+	margin-top: 22px;
+	margin-bottom: 20px;
+	@include type(
+		(
+			size: 39px,
+			height: 42px,
+			family: $secondaryfont,
+			color: $white,
+			transform: uppercase,
+		)
+	);
+}
+
+#hero {
+	object-fit: cover;
+	@include abs(0, null, null, 0);
+	@include image();
+	@include box(100%, 100%);
 }
