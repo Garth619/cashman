@@ -10,7 +10,6 @@
 	transition: color 200ms ease-in-out;
 	position: relative;
 	overflow: hidden;
-	@include margin_lr();
 	@include type(
 		(
 			size: 16px,
@@ -22,6 +21,18 @@
 			transform: lowercase,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 18px;
+		padding: 19px 26px;
+	}
+	@include mq(large_laptop) {
+		font-size: 20px;
+		padding: 22px 29px;
+	}
+	@include mq(small_monitor) {
+		font-size: 22px;
+		padding: 24px 25px;
+	}
 	&::before,
 	&::after {
 		@include contentdisplay();

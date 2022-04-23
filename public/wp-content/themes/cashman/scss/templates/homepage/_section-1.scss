@@ -1,10 +1,16 @@
 #section-one {
 	position: relative;
+	@include mq(small_tablet) {
+		margin-top: 83px;
+	}
 }
 
 body.mobile-header-change {
 	#section-one {
 		margin-top: 68px;
+		@include mq(small_tablet) {
+			margin-top: 83px;
+		}
 	}
 }
 
@@ -13,6 +19,21 @@ body.mobile-header-change {
 	z-index: 1;
 	text-align: center;
 	padding: 79px 30px 255px;
+	@include mq(small_tablet) {
+		text-align: left;
+		padding: 79px 90px 210px;
+	}
+	@include mq(small_laptop) {
+		padding: 79px 115px 190px;
+	}
+	@include mq(large_laptop) {
+		padding: 85px 140px 220px;
+	}
+	@include mq(small_monitor) {
+		padding: 130px 215px 380px;
+		max-width: 1920px;
+		@include margin_lr();
+	}
 }
 
 #sec-one-sp {
@@ -31,6 +52,14 @@ body.mobile-header-change {
 				transform: uppercase,
 			)
 		);
+		@include mq(small_tablet) {
+			@include quick_type(16px, 19px, 3.2px);
+		}
+		@include mq(small_monitor) {
+			font-size: 18px;
+			line-height: 19px;
+			letter-spacing: 3.6px;
+		}
 		&:after {
 			vertical-align: top;
 			border-radius: 50%;
@@ -38,6 +67,12 @@ body.mobile-header-change {
 			background: $brownlight;
 			@include box(6px, 6px);
 			@include contentdisplay(inline-block);
+			@include mq(small_tablet) {
+				margin: 7px 10px 0;
+			}
+			@include mq(small_laptop) {
+				margin: 6px 12px 0;
+			}
 		}
 		&:last-of-type {
 			&::after {
@@ -51,6 +86,8 @@ body.mobile-header-change {
 	display: block;
 	margin-top: 22px;
 	margin-bottom: 20px;
+	max-width: 305px;
+	@include margin_lr();
 	@include type(
 		(
 			size: 39px,
@@ -60,6 +97,40 @@ body.mobile-header-change {
 			transform: uppercase,
 		)
 	);
+	@media screen and (min-width: 675px) {
+		max-width: 485px;
+	}
+	@include mq(small_tablet) {
+		font-size: 60px;
+		line-height: 65px;
+		margin-top: 9px;
+		margin-bottom: 28px;
+		@include margin_lr(0);
+	}
+	@include mq(small_laptop) {
+		font-size: 66px;
+		line-height: 71px;
+	}
+	@include mq(large_laptop) {
+		font-size: 77px;
+		line-height: 83px;
+		margin-top: 22px;
+		margin-bottom: 20px;
+		max-width: 580px;
+	}
+	@include mq(small_monitor) {
+		font-size: 90px;
+		line-height: 97px;
+		margin-bottom: 28px;
+		max-width: 814px;
+	}
+}
+
+#sec-one-button {
+	@include margin_lr();
+	@include mq(small_tablet) {
+		@include margin_lr(0);
+	}
 }
 
 #hero {

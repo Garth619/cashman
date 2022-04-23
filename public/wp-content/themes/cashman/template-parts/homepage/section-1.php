@@ -8,11 +8,13 @@
         <span id='sec-one-title'>
             <span class='brown-light'>PeRSONALIZED SERVICE</span> IS AT THE HEART OF WHAT WE DO.
         </span>
-        <a class='button-one' href='#consultation'>Click for free case evaluation</a>
+        <a id='sec-one-button' class='button-one' href='#consultation'>Click for free case evaluation</a>
     </div>
     <picture>
-        <!-- <source media='(min-width: 1170px)' srcset='' type='image/webp'>
-        <source media='(min-width: 1380px)' srcset=''> -->
+        <source media='(min-width: 1650px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_1920.jpg'>
+        <source media='(min-width: 1400px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_1400.jpg'>
+        <source media='(min-width: 1200px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_1200.jpg'>
+        <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_tablet.jpg'>
         <img id='hero' src='<?php bloginfo('template_directory'); ?>/images/header_img_mobile.jpg' alt='' width='768' height='607' loading='eager' />
     </picture>
 </section>
