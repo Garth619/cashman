@@ -171,6 +171,29 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/images\/bg.jpg" : {
+      "ft" : 16384,
+      "iS" : 677360,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/bg.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/bg.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/bg.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/images\/content_img_1.jpg" : {
       "ft" : 16384,
       "iS" : 231630,

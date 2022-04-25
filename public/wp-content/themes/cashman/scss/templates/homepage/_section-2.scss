@@ -1,0 +1,104 @@
+//$grey
+
+#section-two {
+	padding: 30px;
+	position: relative;
+}
+
+#sec-two-inner {
+	position: relative;
+	z-index: 1;
+	padding: 1px 0;
+}
+
+#sec-two-sp {
+	margin-top: -160px;
+	.slick-list {
+		margin: 0 -spacing;
+	}
+	.slick-track {
+		padding-bottom: 20px;
+		@include flex();
+	}
+	.slick-list {
+		margin: 0 -10px;
+	}
+	.slick-slide {
+		height: inherit;
+		margin: 0 10px;
+		background: $grey;
+		padding: 27px;
+		text-align: center;
+		box-shadow: 0px 3px 6px #00000029;
+		> div {
+			height: 100%;
+		}
+	}
+}
+
+.sec-two-single-sp {
+	height: 100%;
+	&.two {
+		.sec-two-single-sp-content {
+			max-width: 16ch;
+			@include margin_lr();
+		}
+	}
+}
+
+.sec-two-single-sp-inner {
+	background: $greytwo;
+	border-radius: 350px;
+	padding: 37px 23px 100px;
+	color: $white;
+	position: relative;
+	height: 100%;
+	svg,
+	img {
+		width: auto;
+		@include image();
+		height: 60px;
+		@include margin_lr();
+	}
+	span {
+		display: block;
+	}
+}
+
+.sec-two-single-sp-title {
+	margin-top: 16px;
+	@include type(
+		(
+			size: 26px,
+			height: 27px,
+			family: $secondaryfont,
+		)
+	);
+}
+
+.sec-two-single-sp-content {
+	margin-top: 13px;
+	margin-bottom: 35px;
+	@include type(
+		(
+			size: 16px,
+			height: 17px,
+			family: $primaryfont,
+		)
+	);
+}
+
+.sec-two-single-sp-button {
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px 15px;
+	margin-top: 37px;
+	@include abs(null, 0, 62px, 0);
+	@include margin_lr();
+}
+
+#sec-two-background {
+	object-fit: cover;
+	@include box(100%, 100%);
+	@include abs(0, null, null, 0);
+}

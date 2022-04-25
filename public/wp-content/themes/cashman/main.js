@@ -120,62 +120,61 @@ jQuery(document).ready(function ($) {
 	 * Slick Carousel ( http://kenwheeler.github.io/slick/ )
 	 */
 
-	// $("#sec-one-logos").slick({
-	// 	infinite: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	mobileFirst: true,
-	// 	arrows: false,
-	// 	fade: true,
-	// 	dots: true,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 767,
-	// 			settings: {
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 3,
-	// 				slidesToScroll: 3,
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 975,
-	// 			settings: {
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 4,
-	// 				slidesToScroll: 4,
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 1199,
-	// 			settings: {
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 5,
-	// 				slidesToScroll: 5,
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 1379,
-	// 			settings: {
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 6,
-	// 				slidesToScroll: 6,
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 1649,
-	// 			settings: {
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 7,
-	// 				slidesToScroll: 7,
-	// 			},
-	// 		},
-	// 	],
-	// });
+	$("#sec-two-sp").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		mobileFirst: true,
+		arrows: false,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				},
+			},
+			{
+				breakpoint: 975,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+				},
+			},
+			{
+				breakpoint: 1199,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 5,
+					slidesToScroll: 5,
+				},
+			},
+			{
+				breakpoint: 1379,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 6,
+					slidesToScroll: 6,
+				},
+			},
+			{
+				breakpoint: 1649,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 7,
+					slidesToScroll: 7,
+				},
+			},
+		],
+	});
 
 	// $("#sec-two-selling-points").slick({
 	// 	infinite: true,
