@@ -133,44 +133,17 @@ jQuery(document).ready(function ($) {
 				settings: {
 					fade: false,
 					arrows: false,
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				},
+			},
+			{
+				breakpoint: 974,
+				settings: {
+					fade: false,
+					arrows: false,
 					slidesToShow: 3,
 					slidesToScroll: 3,
-				},
-			},
-			{
-				breakpoint: 975,
-				settings: {
-					fade: false,
-					arrows: false,
-					slidesToShow: 4,
-					slidesToScroll: 4,
-				},
-			},
-			{
-				breakpoint: 1199,
-				settings: {
-					fade: false,
-					arrows: false,
-					slidesToShow: 5,
-					slidesToScroll: 5,
-				},
-			},
-			{
-				breakpoint: 1379,
-				settings: {
-					fade: false,
-					arrows: false,
-					slidesToShow: 6,
-					slidesToScroll: 6,
-				},
-			},
-			{
-				breakpoint: 1649,
-				settings: {
-					fade: false,
-					arrows: false,
-					slidesToShow: 7,
-					slidesToScroll: 7,
 				},
 			},
 		],

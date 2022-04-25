@@ -1,18 +1,41 @@
-//$grey
-
 #section-two {
-	padding: 30px;
+	padding: 30px 30px 20px 30px;
 	position: relative;
+	@include mq(small_tablet) {
+		padding: 30px 50px 50px;
+	}
+	@media screen and (min-width: 975px) {
+		padding: 30px 40px 50px;
+	}
+	@include mq(small_laptop) {
+		padding: 30px 40px 80px;
+	}
 }
 
 #sec-two-inner {
 	position: relative;
 	z-index: 1;
 	padding: 1px 0;
+	max-width: 440px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		max-width: 680px;
+	}
+	@media screen and (min-width: 975px) {
+		max-width: 100%;
+	}
 }
 
 #sec-two-sp {
 	margin-top: -160px;
+	max-width: 325px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		max-width: 100%;
+	}
+	@include mq(small_laptop) {
+		margin-top: -139px;
+	}
 	.slick-list {
 		margin: 0 -spacing;
 	}
@@ -22,6 +45,12 @@
 	}
 	.slick-list {
 		margin: 0 -10px;
+		@include mq(small_tablet) {
+			margin: 0 -13px;
+		}
+		@media screen and (min-width: 975px) {
+			margin: 0 -15px;
+		}
 	}
 	.slick-slide {
 		height: inherit;
@@ -30,18 +59,78 @@
 		padding: 27px;
 		text-align: center;
 		box-shadow: 0px 3px 6px #00000029;
+		@include mq(small_tablet) {
+			margin: 0 13px;
+		}
+		@media screen and (min-width: 975px) {
+			margin: 0 15px;
+		}
+		@include mq(small_laptop) {
+			padding: 30px;
+		}
 		> div {
 			height: 100%;
+		}
+	}
+	.slick-dots {
+		position: static;
+		margin: 3px 0 0 0;
+		@include mq(small_tablet) {
+			margin: 12px 0 0 0;
+		}
+		li.slick-active {
+			button {
+				&:before {
+					color: $brownlight;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color: $brownlight;
+				}
+			}
+		}
+		li {
+			margin: 0;
+			width: 18px;
+			button {
+				width: 18px;
+				&:before {
+					width: 18px;
+					opacity: 1;
+					color: $white;
+					font-size: 30px;
+					transition: all 200ms ease-in-out;
+				}
+			}
 		}
 	}
 }
 
 .sec-two-single-sp {
 	height: 100%;
+	&:first-child {
+		display: block;
+	}
+	&:nth-child(n + 2) {
+		display: none;
+	}
 	&.two {
 		.sec-two-single-sp-content {
 			max-width: 16ch;
 			@include margin_lr();
+			@include mq(small_laptop) {
+				max-width: 19ch;
+			}
+		}
+	}
+	&.three {
+		.sec-two-single-sp-content {
+			@include mq(small_laptop) {
+				max-width: 26ch;
+			}
 		}
 	}
 }
@@ -49,16 +138,22 @@
 .sec-two-single-sp-inner {
 	background: $greytwo;
 	border-radius: 350px;
-	padding: 37px 23px 100px;
+	padding: 37px 23px 97px;
 	color: $white;
 	position: relative;
 	height: 100%;
+	@include mq(small_laptop) {
+		padding: 41px 23px 97px;
+	}
 	svg,
 	img {
 		width: auto;
 		@include image();
 		height: 60px;
 		@include margin_lr();
+		@include mq(small_laptop) {
+			height: 65px;
+		}
 	}
 	span {
 		display: block;
@@ -67,6 +162,8 @@
 
 .sec-two-single-sp-title {
 	margin-top: 16px;
+	max-width: 12ch;
+	@include margin_lr();
 	@include type(
 		(
 			size: 26px,
@@ -74,31 +171,124 @@
 			family: $secondaryfont,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 30px;
+		line-height: 30px;
+	}
 }
 
 .sec-two-single-sp-content {
-	margin-top: 13px;
-	margin-bottom: 35px;
+	margin-bottom: 38px;
+	margin-top: 10px;
+	@include margin_lr();
+	max-width: 24ch;
 	@include type(
 		(
 			size: 16px,
-			height: 17px,
+			height: 20px,
 			family: $primaryfont,
 		)
 	);
+	@include mq(small_laptop) {
+		font-size: 17px;
+		line-height: 24px;
+		margin-top: 13px;
+		margin-bottom: 33px;
+	}
 }
 
 .sec-two-single-sp-button {
 	font-size: 15px;
 	line-height: 16px;
 	padding: 10px 15px;
-	margin-top: 37px;
-	@include abs(null, 0, 62px, 0);
+	@include abs(null, 0, 68px, 0);
 	@include margin_lr();
+	@include mq(small_laptop) {
+		font-size: 16px;
+		padding: 12px 15px;
+	}
 }
 
 #sec-two-background {
 	object-fit: cover;
 	@include box(100%, 100%);
 	@include abs(0, null, null, 0);
+}
+
+#sec-two-content {
+	padding: 0 10px;
+	@include mq(small_tablet) {
+		padding: 0 77px;
+		max-width: 767px;
+		@include margin_lr();
+	}
+	@include mq(small_laptop) {
+		@include flex();
+		max-width: 100%;
+		padding: 0 48px;
+	}
+}
+
+#sec-two-content-left {
+	margin-top: 50px;
+	@include mq(small_tablet) {
+		margin-top: 43px;
+	}
+	@include mq(small_laptop) {
+		margin-top: 80px;
+		flex-basis: 550px;
+		flex-shrink: 0;
+		margin-right: 64px;
+	}
+	h1 {
+		font-size: 26px;
+		line-height: 33px;
+		margin-bottom: 17px;
+		@include type(
+			(
+				size: 26px,
+				height: 33px,
+				family: $secondaryfont,
+				color: $brownlight,
+			)
+		);
+		@include mq(small_tablet) {
+			font-size: 45px;
+			line-height: 54px;
+			margin-bottom: 25px;
+		}
+		@include mq(small_laptop) {
+			font-size: 50px;
+			line-height: 60px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+#sec-two-content-right {
+	@include mq(small_tablet) {
+		@include flex();
+		padding-right: 50px;
+	}
+	@include mq(small_laptop) {
+		margin-top: 99px;
+		padding-right: 0;
+	}
+	&::before {
+		@include mq(small_tablet) {
+			flex-shrink: 0;
+			background: $brownlight;
+			margin-right: 22px;
+			margin-top: 17px;
+			@include box(59px, 2px);
+			@include contentdisplay();
+		}
+	}
+	&.content {
+		color: $white;
+		@include mq(small_laptop) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
 }
