@@ -816,6 +816,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_logo-slider.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/_logo-slider.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_navigation.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1422,6 +1437,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/template-parts\/internal-layout.php",
+      "oF" : 0
+    },
+    "\/template-parts\/logos-slider.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/logos-slider.php",
       "oF" : 0
     },
     "\/template-parts\/loop.php" : {

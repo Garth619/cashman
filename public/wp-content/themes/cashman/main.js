@@ -150,7 +150,7 @@ jQuery(document).ready(function ($) {
 		],
 	});
 
-	$("#sec-three-logos").slick({
+	$(".logos-slider").slick({
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -174,6 +174,15 @@ jQuery(document).ready(function ($) {
 					arrows: false,
 					slidesToShow: 3,
 					slidesToScroll: 3,
+				},
+			},
+			{
+				breakpoint: 1100,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
 				},
 			},
 		],

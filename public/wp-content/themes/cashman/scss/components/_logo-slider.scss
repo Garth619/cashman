@@ -1,0 +1,140 @@
+.logos-slider {
+	@include mq(small_tablet) {
+		margin-top: 74px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 140px;
+		padding: 0 30px;
+	}
+	.slick-dots {
+		position: static;
+		margin-top: 40px;
+		@include mq(small_tablet) {
+			margin-top: 35px;
+		}
+		@include mq(small_laptop) {
+			margin-top: 60px;
+		}
+		@include mq(large_laptop) {
+			margin-top: 65px;
+		}
+		li.slick-active {
+			button {
+				&:before {
+					color: $browndark;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color: $browndark;
+				}
+			}
+		}
+		li {
+			margin: 0;
+			width: 15px;
+			button {
+				width: 15px;
+				&:before {
+					width: 15px;
+					opacity: 1;
+					color: $greythree;
+					font-size: 30px;
+					transition: all 200ms ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.single-logo {
+	height: 76px;
+	margin-top: 43px;
+	@include mq(small_laptop) {
+		height: 94px;
+	}
+	@include mq(large_laptop) {
+		height: 112px;
+	}
+	&:first-child {
+		display: block;
+	}
+	&:nth-child(n + 2) {
+		display: none;
+	}
+	.single-logo-inner {
+		height: 100%;
+		background: $offwhite;
+		@include flex(center, center);
+		img {
+			@include image();
+			max-height: 76px;
+			mix-blend-mode: multiply;
+			@include mq(small_laptop) {
+				max-height: 94px;
+			}
+			@include mq(large_laptop) {
+				max-height: 112px;
+			}
+		}
+	}
+	// need a better way to allow for customizations for each logo for each device that the client can adjust. these shouldnt be hardcoded
+	&.award_1 {
+		.single-logo-inner {
+			img {
+				@include box(123px, auto);
+				@include mq(small_laptop) {
+					@include box(154px, auto);
+				}
+				@include mq(large_laptop) {
+					@include box(182px, auto);
+				}
+			}
+		}
+	}
+	&.award_2 {
+		.single-logo-inner {
+			img {
+				@include box(147px, auto);
+				@include mq(small_laptop) {
+					@include box(184px, auto);
+				}
+				@include mq(large_laptop) {
+					@include box(217px, auto);
+				}
+			}
+		}
+	}
+	&.award_3_new {
+		.single-logo-inner {
+			img {
+				@include box(175px, auto);
+				@include mq(small_laptop) {
+					@include box(220px, auto);
+				}
+				@include mq(large_laptop) {
+					@include box(263px, auto);
+				}
+			}
+		}
+	}
+	&.award_4 {
+		.single-logo-inner {
+			img {
+				@include box(130px, auto);
+				@include mq(large_laptop) {
+					@include box(140px, auto);
+				}
+			}
+		}
+	}
+	&.award_6 {
+		.single-logo-inner {
+			img {
+				@include box(210px, auto);
+			}
+		}
+	}
+}

@@ -23,6 +23,10 @@ body {
 		font-size: 18px;
 		line-height: 28px;
 	}
+	@include mq(large_laptop) {
+		font-size: 20px;
+		line-height: 30px;
+	}
 	strong,
 	b {
 		font-weight: 700;
@@ -46,12 +50,21 @@ body {
 				height: 34px,
 				family: $secondaryfont,
 				color: $browndark,
-				weight: 500,
+				//weight: 500,
 			)
 		);
 		@include mq(small_tablet) {
 			padding-top: 25px;
 			padding-bottom: 20px;
+		}
+		@include mq(small_laptop) {
+			font-size: 26px;
+			line-height: 40px;
+			padding-bottom: 17px;
+		}
+		@include mq(large_laptop) {
+			font-size: 28px;
+			line-height: 42px;
 		}
 		&.blog-title {
 		}
@@ -110,6 +123,19 @@ body {
 			margin-top: 103px;
 			margin-bottom: 120px;
 			max-width: 620px;
+		}
+		@include mq(small_laptop) {
+			margin-top: 115px;
+			margin-bottom: 163px;
+			font-size: 38px;
+			line-height: 48px;
+			max-width: 730px;
+		}
+		@include mq(large_laptop) {
+			font-size: 44px;
+			line-height: 55px;
+			max-width: 840px;
+			margin-top: 135px;
 		}
 		&::before,
 		&::after {

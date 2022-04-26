@@ -1,27 +1,90 @@
 #section-three {
-	background: $whitegradient;
-	padding: 55px 30px 40px;
+	background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 61%);
+	padding-top: 55px;
+	padding-bottom: 40px;
 	@include mq(small_tablet) {
-		padding: 75px 95px 40px;
+		padding-top: 75px;
+	}
+	@include mq(small_laptop) {
+		padding-bottom: 120px;
+	}
+	@include mq(large_laptop) {
+		padding-top: 130px;
+		padding-bottom: 80px;
 	}
 }
 #sec-three-inner {
+	padding-left: 30px;
+	padding-right: 30px;
+	@include mq(small_tablet) {
+		padding-left: 95px;
+		padding-right: 95px;
+	}
 }
 
 #sec-three-top {
+	@include mq(small_laptop) {
+		@include flex(space-between);
+	}
+	@include mq(large_laptop) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 	.sec-three-image-wrapper {
 		display: none;
+		@include mq(small_laptop) {
+			display: block;
+			flex-shrink: 0;
+			flex-basis: 490px;
+			background: pink;
+			margin-left: 93px;
+			margin-right: -30px;
+		}
+		@include mq(large_laptop) {
+			flex-basis: 530px;
+			margin-left: 119px;
+		}
+		.img-wrapper {
+			@include mq(small_laptop) {
+				position: relative;
+			}
+			&:nth-of-type(1) {
+				@include mq(small_laptop) {
+					max-width: 402px;
+					left: 88px;
+				}
+				@include mq(large_laptop) {
+					max-width: 441px;
+				}
+			}
+			&:nth-of-type(2) {
+				@include mq(small_laptop) {
+					max-width: 299px;
+					margin-top: -202px;
+					z-index: 1;
+				}
+				@include mq(large_laptop) {
+					max-width: 327px;
+					margin-top: -217px;
+				}
+			}
+			img {
+				width: 100%;
+			}
+		}
 	}
-}
-
-.sec-three-content {
+	.sec-three-content {
+		@include mq(small_laptop) {
+			flex-grow: 1;
+		}
+		@include mq(large_laptop) {
+			margin-top: 50px;
+		}
+	}
 }
 
 .sec-three-image-wrapper {
-	max-width: 448px;
 	@include margin_lr();
-	@include mq(small_tablet) {
-	}
 }
 
 .sec-three-learn-more {
@@ -44,6 +107,14 @@
 	@include mq(small_tablet) {
 		float: right;
 		@include margin_lr(0);
+	}
+	@include mq(small_laptop) {
+		font-size: 16px;
+		letter-spacing: 3.2px;
+		margin-top: 115px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 41px;
 	}
 	&:hover {
 		color: $browndark;
@@ -68,6 +139,9 @@
 				transition: background 300ms ease-in-out;
 				@include box(100%, 2px);
 				@include contentdisplay();
+				@include mq(small_laptop) {
+					margin-top: 6px;
+				}
 			}
 		}
 		&.arrow {
@@ -77,6 +151,9 @@
 			margin-left: 9px;
 			@include flex();
 			@include box(30px, 30px);
+			@include mq(small_laptop) {
+				margin-left: 23px;
+			}
 			svg {
 				flex-shrink: 0;
 				display: inline-block;
@@ -93,92 +170,33 @@
 }
 
 #sec-three-bottom {
+	@include mq(small_laptop) {
+		@include flex(space-between);
+	}
+
 	.sec-three-content {
 		padding-top: 45px;
 		@include mq(small_tablet) {
 			padding-top: 84px;
 			clear: both;
 		}
-	}
-}
-
-#sec-three-logos {
-	@include mq(small_tablet) {
-		margin-top: 74px;
-	}
-	.slick-dots {
-		position: static;
-		margin-top: 40px;
-		li.slick-active {
-			button {
-				&:before {
-					color: $browndark;
-				}
-			}
-		}
-		li:hover {
-			button {
-				&:before {
-					color: $browndark;
-				}
-			}
-		}
-		li {
-			margin: 0;
-			width: 15px;
-			button {
-				width: 15px;
-				&:before {
-					width: 15px;
-					opacity: 1;
-					color: $greythree;
-					font-size: 30px;
-					transition: all 200ms ease-in-out;
-				}
-			}
+		@include mq(small_laptop) {
+			flex-grow: 1;
+			padding-top: 0px;
+			margin-top: -45px;
 		}
 	}
-}
-
-.sec-three-logo {
-	height: 76px;
-	margin-top: 43px;
-	.sec-three-logo-inner {
-		height: 100%;
-		background: $offwhite;
-		@include flex(center, center);
-		img {
-			@include image();
-			max-height: 76px;
-			mix-blend-mode: multiply;
+	.sec-three-image-wrapper {
+		@include mq(small_laptop) {
+			flex-shrink: 0;
+			flex-basis: 448px;
+			margin-right: 120px;
 		}
-	}
-	&.award_1 {
-		.sec-three-logo-inner {
-			img {
-				@include box(123px, auto);
-			}
+		@include mq(large_laptop) {
+			flex-basis: 531px;
+			margin-right: 152px;
 		}
-	}
-	&.award_2 {
-		.sec-three-logo-inner {
-			img {
-				@include box(147px, auto);
-			}
-		}
-	}
-	&.award_4 {
-		.sec-three-logo-inner {
-			img {
-				@include box(140px, auto);
-			}
-		}
-	}
-	&.award_6 {
-		.sec-three-logo-inner {
-			img {
-				@include box(230px, auto);
-			}
+		.img-wrapper {
 		}
 	}
 }
