@@ -13,3 +13,4 @@ $browngradient: transparent linear-gradient(180deg, $brownlight 0%, $browndark 1
 	padding-box;
 $offwhite: #f2f0ef;
 $white: #fff;
+$whitegradient: linear-gradient(180deg, #ffffff 0%, $offwhite 100%) 0% 0% no-repeat padding-box;

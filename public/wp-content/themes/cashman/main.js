@@ -126,6 +126,7 @@ jQuery(document).ready(function ($) {
 		slidesToScroll: 1,
 		mobileFirst: true,
 		arrows: false,
+		adaptiveHeight: true,
 		dots: true,
 		responsive: [
 			{
@@ -135,6 +136,35 @@ jQuery(document).ready(function ($) {
 					arrows: false,
 					slidesToShow: 2,
 					slidesToScroll: 2,
+				},
+			},
+			{
+				breakpoint: 974,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				},
+			},
+		],
+	});
+
+	$("#sec-three-logos").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		mobileFirst: true,
+		arrows: false,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 3,
+					slidesToScroll: 3,
 				},
 			},
 			{

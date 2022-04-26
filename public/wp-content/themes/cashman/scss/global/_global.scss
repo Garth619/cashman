@@ -9,10 +9,20 @@ body {
 .page-title {
 }
 
+.img-wrapper {
+	img {
+		@include image();
+	}
+}
+
 .content {
 	font-size: 17px;
 	line-height: 26px;
 	font-family: $primaryfont;
+	@include mq(small_tablet) {
+		font-size: 18px;
+		line-height: 28px;
+	}
 	strong,
 	b {
 		font-weight: 700;
@@ -28,6 +38,21 @@ body {
 		@extend .page-title;
 	}
 	h2 {
+		padding-top: 20px;
+		padding-bottom: 13px;
+		@include type(
+			(
+				size: 24px,
+				height: 34px,
+				family: $secondaryfont,
+				color: $browndark,
+				weight: 500,
+			)
+		);
+		@include mq(small_tablet) {
+			padding-top: 25px;
+			padding-bottom: 20px;
+		}
 		&.blog-title {
 		}
 		a.blog-heading-link {
@@ -61,7 +86,41 @@ body {
 		}
 	}
 	blockquote {
-		@include type(());
+		text-align: center;
+		font-size: 26px;
+		line-height: 33px;
+		font-family: $secondaryfont;
+		color: $greythree;
+		margin-top: 65px;
+		margin-bottom: 60px;
+		max-width: 440px;
+		@include margin_lr();
+		@include type(
+			(
+				size: 26px,
+				height: 33px,
+				family: $secondaryfont,
+				color: $greythree,
+				align: center,
+			)
+		);
+		@include mq(small_tablet) {
+			font-size: 30px;
+			line-height: 40px;
+			margin-top: 103px;
+			margin-bottom: 120px;
+			max-width: 620px;
+		}
+		&::before,
+		&::after {
+			background: $brownlight;
+			@include box(2px, 60px);
+			@include contentdisplay();
+			@include margin_lr();
+		}
+		p {
+			padding-top: 15px;
+		}
 
 		cite {
 		}

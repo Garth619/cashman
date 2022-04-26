@@ -24,7 +24,7 @@
     ?>
     <style>
         @import url("https://use.typekit.net/qpf0hem.css");
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
     </style>
 </head>
 

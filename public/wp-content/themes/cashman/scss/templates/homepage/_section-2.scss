@@ -10,19 +10,26 @@
 	@include mq(small_laptop) {
 		padding: 30px 40px 80px;
 	}
+	@include mq(large_laptop) {
+		padding: 30px 75px 110px;
+	}
+	@include mq(small_monitor) {
+		padding: 30px 145px 150px;
+	}
 }
 
 #sec-two-inner {
 	position: relative;
 	z-index: 1;
 	padding: 1px 0;
-	max-width: 440px;
 	@include margin_lr();
 	@include mq(small_tablet) {
-		max-width: 680px;
 	}
 	@media screen and (min-width: 975px) {
-		max-width: 100%;
+	}
+	@include mq(small_monitor) {
+		max-width: 1630px;
+		@include margin_lr();
 	}
 }
 
@@ -36,12 +43,18 @@
 	@include mq(small_laptop) {
 		margin-top: -139px;
 	}
-	.slick-list {
-		margin: 0 -spacing;
+	@include mq(large_laptop) {
+		margin-top: -185px;
+	}
+	@include mq(small_monitor) {
+		margin-top: -250px;
 	}
 	.slick-track {
 		padding-bottom: 20px;
-		@include flex();
+
+		@include mq(small_tablet) {
+			@include flex();
+		}
 	}
 	.slick-list {
 		margin: 0 -10px;
@@ -51,22 +64,37 @@
 		@media screen and (min-width: 975px) {
 			margin: 0 -15px;
 		}
+		@include mq(large_laptop) {
+			margin: 0 -25px;
+		}
+		@include mq(small_monitor) {
+			margin: 0 -30px;
+		}
 	}
 	.slick-slide {
-		height: inherit;
-		margin: 0 10px;
+		margin: 0 10px 23px;
 		background: $grey;
-		padding: 27px;
+		padding: 27px 32px;
 		text-align: center;
 		box-shadow: 0px 3px 6px #00000029;
 		@include mq(small_tablet) {
 			margin: 0 13px;
+			padding: 27px 40px;
+			height: inherit;
 		}
 		@media screen and (min-width: 975px) {
 			margin: 0 15px;
 		}
 		@include mq(small_laptop) {
-			padding: 30px;
+			padding: 30px 44px;
+		}
+		@include mq(large_laptop) {
+			margin: 0 25px;
+			padding: 30px 48px;
+		}
+		@include mq(small_monitor) {
+			padding: 37px 62px;
+			margin: 0 30px;
 		}
 		> div {
 			height: 100%;
@@ -118,6 +146,9 @@
 		display: none;
 	}
 	&.two {
+		.sec-two-single-sp-title {
+			max-width: 8ch;
+		}
 		.sec-two-single-sp-content {
 			max-width: 16ch;
 			@include margin_lr();
@@ -145,6 +176,12 @@
 	@include mq(small_laptop) {
 		padding: 41px 23px 97px;
 	}
+	@include mq(large_laptop) {
+		padding: 53px 30px 103px;
+	}
+	@include mq(small_monitor) {
+		padding: 72px 23px 152px;
+	}
 	svg,
 	img {
 		width: auto;
@@ -153,6 +190,12 @@
 		@include margin_lr();
 		@include mq(small_laptop) {
 			height: 65px;
+		}
+		@include mq(large_laptop) {
+			height: 70px;
+		}
+		@include mq(small_monitor) {
+			height: 92px;
 		}
 	}
 	span {
@@ -175,6 +218,14 @@
 		font-size: 30px;
 		line-height: 30px;
 	}
+	@include mq(large_laptop) {
+		margin-top: 24px;
+	}
+	@include mq(small_monitor) {
+		font-size: 40px;
+		line-height: 40px;
+		margin-top: 28px;
+	}
 }
 
 .sec-two-single-sp-content {
@@ -195,6 +246,15 @@
 		margin-top: 13px;
 		margin-bottom: 33px;
 	}
+	@include mq(large_laptop) {
+		margin-top: 19px;
+		margin-bottom: 39px;
+	}
+	@include mq(small_monitor) {
+		font-size: 22px;
+		line-height: 30px;
+		margin-top: 25px;
+	}
 }
 
 .sec-two-single-sp-button {
@@ -203,9 +263,17 @@
 	padding: 10px 15px;
 	@include abs(null, 0, 68px, 0);
 	@include margin_lr();
+	@include mq(small_tablet) {
+		bottom: 72px;
+	}
 	@include mq(small_laptop) {
 		font-size: 16px;
 		padding: 12px 15px;
+	}
+	@include mq(small_monitor) {
+		font-size: 18px;
+		padding: 17px 24px;
+		bottom: 100px;
 	}
 }
 
@@ -227,6 +295,9 @@
 		max-width: 100%;
 		padding: 0 48px;
 	}
+	@include mq(large_laptop) {
+		padding: 0px 85px;
+	}
 }
 
 #sec-two-content-left {
@@ -239,6 +310,18 @@
 		flex-basis: 550px;
 		flex-shrink: 0;
 		margin-right: 64px;
+	}
+	@include mq(large_laptop) {
+		flex-basis: 630px;
+		margin-top: 103px;
+		margin-right: 90px;
+	}
+	@include mq(small_monitor) {
+		margin-top: 183px;
+		margin-right: 112px;
+	}
+	@include mq(monitor) {
+		flex-basis: 850px;
 	}
 	h1 {
 		font-size: 26px;
@@ -262,6 +345,14 @@
 			line-height: 60px;
 			margin-bottom: 25px;
 		}
+		@include mq(large_laptop) {
+			font-size: 57px;
+			line-height: 68px;
+		}
+		@include mq(monitor) {
+			font-size: 72px;
+			line-height: 86px;
+		}
 	}
 }
 
@@ -273,6 +364,13 @@
 	@include mq(small_laptop) {
 		margin-top: 99px;
 		padding-right: 0;
+	}
+	@include mq(large_laptop) {
+		margin-top: 128px;
+	}
+	@include mq(small_monitor) {
+		padding-right: 15px;
+		margin-top: 203px;
 	}
 	&::before {
 		@include mq(small_tablet) {
@@ -289,6 +387,9 @@
 		@include mq(small_laptop) {
 			font-size: 20px;
 			line-height: 30px;
+		}
+		@include mq(large_laptop) {
+			font-size: 22px;
 		}
 	}
 }
