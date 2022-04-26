@@ -185,6 +185,15 @@ jQuery(document).ready(function ($) {
 					slidesToScroll: 4,
 				},
 			},
+			{
+				breakpoint: 1800,
+				settings: {
+					fade: false,
+					arrows: false,
+					slidesToShow: 5,
+					slidesToScroll: 5,
+				},
+			},
 		],
 	});
 

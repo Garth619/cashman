@@ -1,10 +1,18 @@
 .logos-slider {
+	margin-top: 73px;
 	@include mq(small_tablet) {
-		margin-top: 74px;
+		margin-top: 122px;
+	}
+	@include mq(small_laptop) {
+		margin-top: 144px;
 	}
 	@include mq(large_laptop) {
-		margin-top: 140px;
+		margin-top: 221px;
 		padding: 0 30px;
+	}
+	@include mq(small_monitor) {
+		padding: 0 70px;
+		margin-top: 235px;
 	}
 	.slick-dots {
 		position: static;
@@ -51,7 +59,6 @@
 
 .single-logo {
 	height: 76px;
-	margin-top: 43px;
 	@include mq(small_laptop) {
 		height: 94px;
 	}
@@ -91,6 +98,9 @@
 				@include mq(large_laptop) {
 					@include box(182px, auto);
 				}
+				@include mq(small_monitor) {
+					@include box(217px, auto);
+				}
 			}
 		}
 	}
@@ -103,6 +113,9 @@
 				}
 				@include mq(large_laptop) {
 					@include box(217px, auto);
+				}
+				@include mq(small_monitor) {
+					@include box(257px, auto);
 				}
 			}
 		}
@@ -117,6 +130,9 @@
 				@include mq(large_laptop) {
 					@include box(263px, auto);
 				}
+				@include mq(small_monitor) {
+					@include box(312px, auto);
+				}
 			}
 		}
 	}
@@ -127,6 +143,18 @@
 				@include mq(large_laptop) {
 					@include box(140px, auto);
 				}
+				@include mq(small_monitor) {
+					@include box(157px, auto);
+				}
+			}
+		}
+	}
+	&.award_5 {
+		.single-logo-inner {
+			img {
+				@include mq(small_monitor) {
+					@include box(143px, auto);
+				}
 			}
 		}
 	}
@@ -134,6 +162,12 @@
 		.single-logo-inner {
 			img {
 				@include box(210px, auto);
+				@include mq(large_laptop) {
+					@include box(240px, auto);
+				}
+				@include mq(small_monitor) {
+					@include box(280px, auto);
+				}
 			}
 		}
 	}
