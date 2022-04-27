@@ -359,7 +359,7 @@
 #sec-two-content-right {
 	@include mq(small_tablet) {
 		@include flex();
-		padding-right: 50px;
+		padding-right: 40px;
 	}
 	@include mq(small_laptop) {
 		margin-top: 99px;

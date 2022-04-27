@@ -170,8 +170,6 @@ jQuery(document).ready(function ($) {
 			{
 				breakpoint: 974,
 				settings: {
-					fade: false,
-					arrows: false,
 					slidesToShow: 3,
 					slidesToScroll: 3,
 				},
@@ -179,8 +177,6 @@ jQuery(document).ready(function ($) {
 			{
 				breakpoint: 1100,
 				settings: {
-					fade: false,
-					arrows: false,
 					slidesToShow: 4,
 					slidesToScroll: 4,
 				},
@@ -188,8 +184,6 @@ jQuery(document).ready(function ($) {
 			{
 				breakpoint: 1800,
 				settings: {
-					fade: false,
-					arrows: false,
 					slidesToShow: 5,
 					slidesToScroll: 5,
 				},
@@ -197,66 +191,25 @@ jQuery(document).ready(function ($) {
 		],
 	});
 
-	// $("#sec-two-selling-points").slick({
-	// 	infinite: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	mobileFirst: true,
-	// 	arrows: false,
-	// 	adaptiveHeight: true,
-	// 	fade: true,
-	// 	dots: true,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 767,
-	// 			settings: {
-	// 				adaptiveHeight: false,
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1,
-	// 				centerMode: true,
-	// 				centerPadding: "220px",
-	// 			},
-	// 		},
-	// 		{
-	// 			breakpoint: 1075,
-	// 			settings: {
-	// 				adaptiveHeight: false,
-	// 				fade: false,
-	// 				arrows: false,
-	// 				slidesToShow: 3,
-	// 				slidesToScroll: 3,
-	// 			},
-	// 		},
-	// 	],
-	// });
-
-	// $("#sec-three-testimonials").slick({
-	// 	infinite: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	mobileFirst: true,
-	// 	adaptiveHeight: true,
-	// 	fade: true,
-	// 	dots: true,
-	// 	arrows: false,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 767,
-	// 			settings: {
-	// 				fade: true,
-	// 				arrows: true,
-	// 				adaptiveHeight: true,
-	// 				dots: false,
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1,
-	// 				prevArrow: "#sec-three-button-left",
-	// 				nextArrow: "#sec-three-button-right",
-	// 			},
-	// 		},
-	// 	],
-	// });
+	$("#sec-four-testimonials").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		mobileFirst: true,
+		adaptiveHeight: true,
+		fade: true,
+		dots: true,
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	});
 
 	/**
 	 * Remove "#" from menu anchor items to avoid jump to the top of the page

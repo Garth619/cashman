@@ -1,0 +1,141 @@
+#section-four {
+	position: relative;
+}
+
+#sec-four-container {
+	position: relative;
+	z-index: 1;
+	padding: 68px 35px 115px;
+	max-width: 480px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		padding: 95px 90px 138px;
+		max-width: 980px;
+	}
+}
+
+.sec-four-arrow {
+	display: none;
+}
+
+#sec-four-inner {
+}
+
+#test-stars {
+	@include image();
+	@include margin_lr();
+}
+
+#sec-four-testimonials {
+	margin-top: 25px;
+	.slick-dots {
+		position: static;
+		margin: 103px 0 0 0;
+		@include mq(small_tablet) {
+			margin: 145px 0 0 0;
+		}
+		li.slick-active {
+			button {
+				&:before {
+					color: $brownlight;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color: $brownlight;
+				}
+			}
+		}
+		li {
+			margin: 0;
+			width: 18px;
+			button {
+				width: 18px;
+				&:before {
+					width: 18px;
+					opacity: 1;
+					color: $white;
+					font-size: 30px;
+					transition: all 200ms ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.sec-four-single {
+	text-align: center;
+	span {
+		display: block;
+	}
+}
+
+.sec-four-single-title {
+	@include type(
+		(
+			size: 24px,
+			height: 30px,
+			family: $secondaryfont,
+			color: #d6b28e,
+		)
+	);
+	@include mq(small_tablet) {
+		font-size: 31px;
+		line-height: 37px;
+	}
+}
+
+.sec-four-single-content {
+	margin-top: 13px;
+	padding: 0 5px;
+	@include type(
+		(
+			size: 16px,
+			height: 24px,
+			family: $primaryfont,
+			color: $white,
+		)
+	);
+	@include mq(small_tablet) {
+		font-size: 18px;
+		line-height: 28px;
+		margin-top: 16px;
+	}
+}
+
+.sec-four-single-name {
+	margin-top: 17px;
+	@include type(
+		(
+			size: 14px,
+			height: 17px,
+			spacing: 2.8px,
+			family: $primaryfont,
+			color: $brownlight,
+			weight: 900,
+			transform: uppercase,
+		)
+	);
+	@include mq(small_tablet) {
+		margin-top: 22px;
+	}
+}
+
+#sec-four-button {
+	padding: 13px 23px;
+	margin-top: -97px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		padding: 17px 28px;
+		margin-top: -128px;
+	}
+}
+
+#sec-four-bg {
+	object-fit: cover;
+	@include image();
+	@include box(100%, 100%);
+	@include abs(0, null, null, 0);
+}

@@ -13,6 +13,8 @@
 	@include mq(small_monitor) {
 		padding: 0 70px;
 		margin-top: 235px;
+		max-width: 2300px;
+		@include margin_lr();
 	}
 	.slick-dots {
 		position: static;
