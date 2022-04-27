@@ -10,15 +10,64 @@
 	@include margin_lr();
 	@include mq(small_tablet) {
 		padding: 95px 90px 138px;
-		max-width: 980px;
+		max-width: 800px;
+	}
+	@include mq(small_laptop) {
+		padding: 107px 66px 115px;
+		max-width: 1200px;
+		@include margin_lr();
+		@include flex(space-between);
+	}
+	@include mq(large_laptop) {
+		padding: 151px 98px 135px;
+		max-width: 1400px;
+	}
+	@include mq(small_monitor) {
+		padding: 167px 126px 135px;
+		max-width: 1920px;
 	}
 }
 
 .sec-four-arrow {
 	display: none;
+	@include mq(small_laptop) {
+		display: block;
+		border: 1px solid $brownlight;
+		border-radius: 50%;
+		margin-top: 228px;
+		cursor: pointer;
+		@include box(77px, 77px);
+		@include flex(center, center);
+	}
+	@include mq(large_laptop) {
+		margin-top: 246px;
+		@include box(80px, 80px);
+	}
+	svg {
+		path {
+			fill: $white;
+			transition: all 200ms ease-in-out;
+		}
+	}
+	&:hover {
+		svg {
+			path {
+				fill: $brownlight;
+			}
+		}
+	}
 }
 
 #sec-four-inner {
+	@include mq(small_laptop) {
+		max-width: 718px;
+	}
+	@include mq(large_laptop) {
+		max-width: 810px;
+	}
+	@include mq(small_monitor) {
+		max-width: 994px;
+	}
 }
 
 #test-stars {
@@ -28,6 +77,15 @@
 
 #sec-four-testimonials {
 	margin-top: 25px;
+	@include mq(small_tablet) {
+		margin-top: 28px;
+	}
+	@include mq(small_laptop) {
+		margin-top: 16px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 27px;
+	}
 	.slick-dots {
 		position: static;
 		margin: 103px 0 0 0;
@@ -67,6 +125,12 @@
 
 .sec-four-single {
 	text-align: center;
+	&:first-child {
+		display: block;
+	}
+	&:nth-child(n + 2) {
+		display: none;
+	}
 	span {
 		display: block;
 	}
@@ -84,6 +148,18 @@
 	@include mq(small_tablet) {
 		font-size: 31px;
 		line-height: 37px;
+	}
+	@include mq(small_laptop) {
+		font-size: 39px;
+		line-height: 46px;
+	}
+	@include mq(large_laptop) {
+		font-size: 44px;
+		line-height: 52px;
+	}
+	@include mq(small_monitor) {
+		font-size: 54px;
+		line-height: 64px;
 	}
 }
 
@@ -103,6 +179,15 @@
 		line-height: 28px;
 		margin-top: 16px;
 	}
+	@include mq(small_laptop) {
+		font-size: 22px;
+		line-height: 30px;
+		padding: 0 20px;
+	}
+	@include mq(large_laptop) {
+		padding: 0 10px;
+		margin-top: 32px;
+	}
 }
 
 .sec-four-single-name {
@@ -119,7 +204,11 @@
 		)
 	);
 	@include mq(small_tablet) {
-		margin-top: 22px;
+		margin-top: 26px;
+	}
+	@include mq(small_laptop) {
+		margin-top: 28px;
+		@include quick_type(16px, 19px, 3.2px);
 	}
 }
 
@@ -130,6 +219,16 @@
 	@include mq(small_tablet) {
 		padding: 17px 28px;
 		margin-top: -128px;
+	}
+	@include mq(small_laptop) {
+		margin-top: 50px;
+	}
+	@include mq(large_laptop) {
+		font-size: 18px;
+		margin-top: 59px;
+	}
+	@include mq(small_monitor) {
+		margin-top: 74px;
 	}
 }
 

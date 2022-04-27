@@ -206,6 +206,10 @@ jQuery(document).ready(function ($) {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					dots: false,
+					arrows: true,
+					prevArrow: "#sec-four-arrow-left",
+					nextArrow: "#sec-four-arrow-right",
 				},
 			},
 		],
