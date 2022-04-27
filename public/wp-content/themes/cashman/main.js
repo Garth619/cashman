@@ -215,6 +215,42 @@ jQuery(document).ready(function ($) {
 		],
 	});
 
+	$("#sec-six-case-results").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		mobileFirst: true,
+		arrows: false,
+		adaptiveHeight: true,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					fade: false,
+					arrows: false,
+					adaptiveHeight: false,
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				},
+			},
+			{
+				breakpoint: 974,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				},
+			},
+			{
+				breakpoint: 1649,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4,
+				},
+			},
+		],
+	});
+
 	/**
 	 * Remove "#" from menu anchor items to avoid jump to the top of the page
 	 */

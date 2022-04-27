@@ -1,0 +1,309 @@
+#section-six {
+	background: $offwhite;
+	padding-top: 15px;
+	@include mq(small_tablet) {
+		padding-top: 73px;
+	}
+	@include mq(large_laptop) {
+		padding-top: 109px;
+	}
+}
+
+#sec-six-inner {
+	padding: 0 30px 30px;
+	@include mq(small_tablet) {
+		padding-bottom: 40px;
+	}
+	@include mq(large_laptop) {
+		padding-bottom: 100px;
+	}
+}
+
+#sec-six-title {
+	display: block;
+	max-width: 15ch;
+	@include margin_lr();
+	@include type(
+		(
+			size: 39px,
+			height: 37px,
+			family: $secondaryfont,
+			color: $greythree,
+			align: center,
+			transform: uppercase,
+		)
+	);
+	@include mq(small_tablet) {
+		font-size: 54px;
+		line-height: 51px;
+	}
+	@include mq(small_laptop) {
+		font-size: 70px;
+		line-height: 66px;
+	}
+	@include mq(large_laptop) {
+		font-size: 81px;
+		line-height: 77px;
+	}
+	@include mq(small_monitor) {
+		font-size: 90px;
+		line-height: 86px;
+	}
+	span {
+		display: inline;
+	}
+}
+
+#sec-six-button {
+	padding: 13px 25px;
+	margin-top: 20px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		padding: 17px 30px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 33px;
+		font-size: 18px;
+	}
+}
+
+#sec-six-case-results {
+	margin-top: 25px;
+	@include mq(small_tablet) {
+		margin-top: 43px;
+		max-width: 785px;
+		@include margin_lr();
+	}
+	@include mq(small_laptop) {
+		max-width: 1010px;
+		margin-top: 57px;
+		@include margin_lr();
+	}
+	@include mq(large_laptop) {
+		margin-top: 70px;
+		max-width: 1180px;
+	}
+	@include mq(small_monitor) {
+		margin-top: 43px;
+		max-width: 1620px;
+	}
+	.slick-dots {
+		position: static;
+		margin-top: 12px;
+		li.slick-active {
+			button {
+				&:before {
+					color: $browndark;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color: $browndark;
+				}
+			}
+		}
+		li {
+			margin: 0;
+			width: 15px;
+			button {
+				width: 15px;
+				&:before {
+					width: 15px;
+					opacity: 1;
+					color: $greythree;
+					font-size: 30px;
+					transition: all 200ms ease-in-out;
+				}
+			}
+		}
+	}
+	.slick-track {
+		@include mq(small_tablet) {
+			@include flex();
+		}
+		@include mq(small_laptop) {
+			padding-top: 45px;
+			padding-bottom: 20px;
+			//background: pink;
+		}
+	}
+	.slick-slide {
+		@include mq(small_tablet) {
+			height: inherit;
+		}
+		@include mq(small_laptop) {
+			background: transparent;
+			box-shadow: 0px 3px 6px transparent;
+			border-radius: 500px;
+			margin: 0 10px;
+			transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+		}
+		@include mq(large_laptop) {
+			margin: 0 18px;
+		}
+		&::before {
+			@include mq(small_laptop) {
+				background: $browndark;
+				margin-top: -45px;
+				opacity: 0;
+				transition: opacity 200ms ease-in-out;
+				@include margin_lr();
+				@include box(2px, 83px);
+				@include contentdisplay();
+			}
+			@include mq(large_laptop) {
+				@include box(2px, 94px);
+			}
+		}
+		&:hover {
+			@include mq(small_laptop) {
+				background: $white;
+				box-shadow: 0px 3px 6px #00000015;
+			}
+			&::before {
+				opacity: 1;
+			}
+			.sec-six-cr-button {
+				@include mq(small_laptop) {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	.slick-list {
+		@include mq(small_laptop) {
+			margin: 0 -10px;
+		}
+		@include mq(large_laptop) {
+			margin: 0 -18px;
+		}
+	}
+}
+
+.sec-six-cr {
+	padding: 20px 40px 0;
+	text-align: center;
+	@include mq(small_tablet) {
+		padding: 20px 0px 0;
+	}
+	@include mq(small_laptop) {
+		padding: 76px 0px 70px;
+	}
+	@include mq(large_laptop) {
+		padding: 117px 0px 70px;
+	}
+	&:first-child {
+		display: block;
+	}
+	&:nth-child(n + 2) {
+		display: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	span:not(.sec-six-cr-button) {
+		display: block;
+	}
+}
+
+.sec-six-cr-amount {
+	@include type(
+		(
+			size: 50px,
+			height: 50px,
+			family: $secondaryfont,
+			color: $greythree,
+			weight: 700,
+			transform: uppercase,
+		)
+	);
+	@include mq(small_laptop) {
+		font-size: 70px;
+	}
+	@include mq(large_laptop) {
+		font-size: 80px;
+	}
+}
+
+.sec-six-cr-type {
+	margin-top: 16px;
+	@include type(
+		(
+			size: 16px,
+			height: 18px,
+			spacing: 3.2px,
+			family: $primaryfont,
+			color: $browndark,
+			weight: 700,
+			transform: uppercase,
+		)
+	);
+	@include mq(small_laptop) {
+		margin-top: 32px;
+	}
+	@include mq(large_laptop) {
+		font-size: 18px;
+		letter-spacing: 3.6px;
+		margin-top: 41px;
+	}
+	@include mq(small_monitor) {
+		font-size: 20px;
+		letter-spacing: 4px;
+		margin-top: 47px;
+	}
+}
+
+.sec-six-cr-content {
+	color: $black;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 22px;
+	max-width: 20ch;
+	@include margin_lr();
+	@include mq(small_laptop) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 40px;
+		font-size: 20px;
+	}
+	@include mq(small_monitor) {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+
+.sec-six-cr-button {
+	display: none;
+	@include mq(small_laptop) {
+		display: block;
+		max-width: max-content;
+		border: 1px $black solid;
+		border-radius: 50px;
+		margin-top: 42px;
+		padding: 11px 18px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 200ms ease-in-out;
+		@include margin_lr();
+		@include type(
+			(
+				size: 14px,
+				height: 16px,
+				spacing: 2.8px,
+				family: $primaryfont,
+				color: $browndark,
+				weight: 900,
+				transform: uppercase,
+			)
+		);
+	}
+	@include mq(large_laptop) {
+		margin-top: 62px;
+		padding: 14px 18px;
+	}
+}

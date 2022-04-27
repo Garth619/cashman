@@ -8,11 +8,30 @@
 		padding: 68px 99px 110px;
 	}
 	@include mq(small_laptop) {
-		@include flex();
+		padding: 89px 80px 110px;
+		@include flex(space-between);
+	}
+	@include mq(large_laptop) {
+		padding: 89px 85px 110px;
+	}
+	@include mq(monitor) {
+		padding: 118px 105px 110px;
+		max-width: 1920px;
+		@include margin_lr();
 	}
 }
 
 #sec-five-content {
+	@include mq(small_laptop) {
+		padding-left: 50px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 78px;
+	}
+	@include mq(small_monitor) {
+		margin-top: 120px;
+		padding-left: 152px;
+	}
 }
 
 #sec-five-content-inner {
@@ -20,6 +39,10 @@
 		@include mq(small_tablet) {
 			font-size: 34px;
 			line-height: 42px;
+		}
+		@include mq(large_laptop) {
+			font-size: 36px;
+			padding-bottom: 24px;
 		}
 	}
 }
@@ -33,6 +56,15 @@
 		margin-top: 55px;
 		max-width: 750px;
 		@include margin_lr();
+	}
+	@include mq(small_laptop) {
+		@include margin_lr(0);
+	}
+	@include mq(large_laptop) {
+		max-width: 550px;
+	}
+	@include mq(small_monitor) {
+		max-width: 100%;
 	}
 	li {
 		font-size: 14px;
@@ -61,9 +93,12 @@
 			color: $black;
 			text-decoration: none;
 			border-top: 1px solid $greyfour;
-			padding: 17px 10px 17px 0;
+			padding: 18px 10px 14px 0;
 			transition: all 200ms ease-in-out;
 			@include flex(space-between, center);
+			@include mq(large_laptop) {
+				padding: 18px 20px 14px 0;
+			}
 			&:hover {
 				color: $browndark;
 			}
@@ -81,7 +116,6 @@
 
 #sec-five-image-wrapper {
 	margin-top: 87px;
-	background: pink;
 	max-width: 448px;
 	@include margin_lr();
 	@include mq(small_tablet) {
@@ -90,12 +124,26 @@
 	}
 	@include mq(small_laptop) {
 		flex-shrink: 0;
+		margin-left: 119px;
+		margin-top: 36px;
+		max-width: 500px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 52px;
+		margin-left: 105px;
+		max-width: 600px;
+	}
+	@include mq(monitor) {
+		max-width: 100%;
+		width: 802px;
+		margin-left: 200px;
 	}
 	.img-wrapper {
 		&:nth-of-type(1) {
-			// max-width: 248px;
-			// margin-left: 55px;
 			margin-left: 18%;
+			@include mq(monitor) {
+				margin-left: 20%;
+			}
 		}
 		&:nth-of-type(2) {
 			// max-width: 192px;
