@@ -12,24 +12,28 @@
             </div>
             <div class='footer-info-col'>
                 <span class='footer-title'>SaLEM OFFICE</span>
-                <span class='footer-address'>27 Congress Street, # 401 Salem, MA 01970</span>
-                <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
-                <a href='tel:+18002003120'><span class='p-accent'>P</span> (800) 200-3120</a>
+                <div class='footer-info-col-inner'>
+                    <span class='footer-address'>27 Congress Street, # 401 Salem, MA 01970</span>
+                    <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
+                    <a class='footer-phone' href='tel:+18002003120'><span class='brown-light'>P</span> &nbsp;(800) 200-3120</a>
+                </div>
             </div>
             <div class='footer-info-col'>
                 <span class='footer-title'>BOSTON OFFICE</span>
-                <span class='footer-address'>27 Congress Street, # 401
-                    Salem, MA 01970</span>
-                <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
-                <a href='tel:+18002003120'><span class='p-accent'>P</span> (800) 200-3120</a>
+                <div class='footer-info-col-inner'>
+                    <span class='footer-address'>27 Congress Street, # 401
+                        Salem, MA 01970</span>
+                    <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
+                    <a class='footer-phone' href='tel:+18002003120'><span class='brown-light'>P</span> &nbsp;(800) 200-3120</a>
+                </div>
             </div>
             <div class='footer-info-col'>
                 <div id='social-media'>
                     <a href='' target='_blank' rel='noopener'>
-                        <?php echo file_get_contents(get_template_directory() . '/images/social_fb.svg'); ?>
+                        <?php echo file_get_contents(get_template_directory() . '/images/social_g.svg'); ?>
                     </a>
                     <a href='' target='_blank' rel='noopener'>
-                        <?php echo file_get_contents(get_template_directory() . '/images/social_g.svg'); ?>
+                        <?php echo file_get_contents(get_template_directory() . '/images/social_fb.svg'); ?>
                     </a>
                     <a href='' target='_blank' rel='noopener'>
                         <?php echo file_get_contents(get_template_directory() . '/images/social_linked.svg'); ?>
@@ -38,6 +42,18 @@
             </div>
         </div>
         <img id='footer-bg' src='<?php bloginfo('template_directory'); ?>/images/bg.jpg' alt='altname' width='1943' height='1497' loading='lazy' />
+    </div>
+    <div id='copyright'>
+        <div id='copyright-inner'>
+            <a href='//ilawyermarketing.com' target='_blank' rel='noopener'>
+                <img id=' ilawyer-logo' src='<?php bloginfo('template_directory'); ?>/images/ilawyer_logo.svg' alt='ilawyer Logo' width='228' height='19' loading='lazy' />
+            </a>
+            <ul>
+                <li>COpYRIGHT &copy; <?php echo date('Y'); ?> - THE CASHMAN LAW FIRM</li>
+                <li><a href=''>DISCLAIMER</a></li>
+                <li><a href=''>SITEMAP</a></li>
+            </ul>
+        </div>
     </div>
 </footer>
 <?php wp_footer(); ?>

@@ -1745,7 +1745,7 @@ nav ul.sub-menu > li ul.sub-menu.active {
 
 #footer-inner {
   position: relative;
-  padding: 1px 30px;
+  padding: 1px 30px 77px;
 }
 
 #consultation {
@@ -1952,7 +1952,12 @@ nav ul.sub-menu > li ul.sub-menu.active {
   margin-top: 67px;
 }
 
-.footer-info-col span:not(.footer-title, .p-accent) {
+.footer-info-col {
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-info-col span:not(.footer-title, .brown-light) {
   display: block;
 }
 
@@ -1992,7 +1997,13 @@ nav ul.sub-menu > li ul.sub-menu.active {
   display: block;
 }
 
+.footer-info-col-inner {
+  margin-left: 63px;
+}
+
 .footer-address {
+  margin-top: 12px;
+  max-width: 22ch;
   font-size: 18px;
   line-height: 26px;
   font-family: effra, sans-serif;
@@ -2000,6 +2011,90 @@ nav ul.sub-menu > li ul.sub-menu.active {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+}
+
+.get-directions {
+  margin-top: 14px;
+  padding-bottom: 3px;
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-bottom: 2px solid #f0c498;
+  transition: all 200ms ease-in-out;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  font-family: effra, sans-serif;
+  color: #f0c498;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+.get-directions:hover {
+  color: #fff;
+}
+
+.footer-phone {
+  margin-top: 34px;
+  margin-bottom: 55px;
+  display: block;
+  transition: all 200ms ease-in-out;
+  font-size: 20px;
+  font-family: effra, sans-serif;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+.footer-phone:hover {
+  color: #f0c498;
+}
+
+#social-media {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#social-media a {
+  margin: 0 16px;
+}
+#social-media a svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#social-media a svg path {
+  fill: #fff;
+  transition: all 200ms ease-in-out;
+}
+#social-media a:hover svg path {
+  fill: #f0c498;
+}
+
+#copyright-inner {
+  padding: 18px 20px;
+  text-align: center;
+}
+#copyright-inner ul {
+  margin-top: 7px;
+  list-style: none;
+}
+#copyright-inner ul li {
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  line-height: 16px;
+  font-family: effra, sans-serif;
+  color: #2a333d;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#copyright-inner ul li a {
+  display: none;
 }
 
 #section-one {

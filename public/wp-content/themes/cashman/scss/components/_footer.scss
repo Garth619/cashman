@@ -3,7 +3,7 @@ footer {
 
 #footer-inner {
 	position: relative;
-	padding: 1px 30px;
+	padding: 1px 30px 77px;
 }
 
 #consultation {
@@ -206,7 +206,9 @@ footer {
 }
 
 .footer-info-col {
-	span:not(.footer-title, .p-accent) {
+	max-width: 270px;
+	@include margin_lr();
+	span:not(.footer-title, .brown-light) {
 		display: block;
 	}
 }
@@ -246,7 +248,13 @@ footer {
 	}
 }
 
+.footer-info-col-inner {
+	margin-left: 63px;
+}
+
 .footer-address {
+	margin-top: 12px;
+	max-width: 22ch;
 	@include type(
 		(
 			size: 18px,
@@ -255,4 +263,95 @@ footer {
 			color: $white,
 		)
 	);
+}
+
+.get-directions {
+	margin-top: 14px;
+	padding-bottom: 3px;
+	display: block;
+	max-width: max-content;
+	border-bottom: 2px solid $brownlight;
+	transition: all 200ms ease-in-out;
+	@include type(
+		(
+			size: 14px,
+			spacing: 2.8px,
+			family: $primaryfont,
+			color: $brownlight,
+			weight: 900,
+			transform: uppercase,
+		)
+	);
+	&:hover {
+		color: $white;
+	}
+}
+
+.footer-phone {
+	margin-top: 34px;
+	margin-bottom: 55px;
+	display: block;
+	transition: all 200ms ease-in-out;
+	@include type(
+		(
+			size: 20px,
+			family: $primaryfont,
+			color: $white,
+			weight: 900,
+			transform: uppercase,
+		)
+	);
+	&:hover {
+		color: $brownlight;
+	}
+}
+
+#social-media {
+	margin-top: 60px;
+	@include flex(center, center);
+	a {
+		margin: 0 16px;
+		svg {
+			@include image();
+			path {
+				fill: $white;
+				transition: all 200ms ease-in-out;
+			}
+		}
+		&:hover {
+			svg {
+				path {
+					fill: $brownlight;
+				}
+			}
+		}
+	}
+}
+
+#copyright {
+}
+
+#copyright-inner {
+	padding: 18px 20px;
+	text-align: center;
+	ul {
+		margin-top: 7px;
+		list-style: none;
+		li {
+			@include type(
+				(
+					size: 12px,
+					height: 16px,
+					spacing: 0.72px,
+					family: $primaryfont,
+					color: $greythree,
+					weight: 900,
+					transform: uppercase,
+				)
+			);
+			a {
+				display: none;
+			}
+		}
+	}
 }
