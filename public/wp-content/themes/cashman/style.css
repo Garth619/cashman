@@ -874,7 +874,6 @@ img.aligncenter {
   border-radius: 50px;
   border: 0.5px solid #fff;
   transition: color 200ms ease-in-out;
-  position: relative;
   overflow: hidden;
   font-size: 16px;
   line-height: 16px;
@@ -1742,6 +1741,265 @@ nav ul.sub-menu > li ul.sub-menu {
 }
 nav ul.sub-menu > li ul.sub-menu.active {
   margin-top: 29px;
+}
+
+#footer-inner {
+  position: relative;
+  padding: 1px 30px;
+}
+
+#consultation {
+  position: relative;
+  z-index: 1;
+  background: #2a333d;
+  box-shadow: 0px 3px 9px #0000007c;
+  margin-top: -170px;
+  padding: 44px 20px 50px;
+}
+#consultation .gform_validation_errors {
+  display: none;
+}
+#consultation .gform_wrapper.gravity-theme {
+  margin-top: 50px;
+}
+#consultation .gform_wrapper.gravity-theme .validation_message {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: effra, sans-serif;
+  color: #f0c498;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+#consultation .gform_wrapper.gravity-theme .gform_fields {
+  grid-row-gap: 8px;
+}
+#consultation .gform_wrapper.gravity-theme .gfield {
+  position: relative;
+}
+#consultation .gform_wrapper.gravity-theme .gfield .gfield_label {
+  display: none;
+}
+#consultation .gform_wrapper.gravity-theme .gfield input,
+#consultation .gform_wrapper.gravity-theme .gfield textarea {
+  border: 3px solid transparent;
+  transition: border 200ms ease-in-out;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: effra, sans-serif;
+  color: #1d3133;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+#consultation .gform_wrapper.gravity-theme .gfield input:focus,
+#consultation .gform_wrapper.gravity-theme .gfield textarea:focus {
+  border: 3px solid #f0c498;
+}
+#consultation .gform_wrapper.gravity-theme .gfield textarea {
+  height: 149px;
+}
+#consultation .gform_wrapper.gravity-theme .gfield input::-webkit-input-placeholder, #consultation .gform_wrapper.gravity-theme .gfield textarea::-webkit-input-placeholder {
+  color: #1d3133;
+}
+#consultation .gform_wrapper.gravity-theme .gfield input::-moz-placeholder, #consultation .gform_wrapper.gravity-theme .gfield textarea::-moz-placeholder {
+  color: #1d3133;
+}
+#consultation .gform_wrapper.gravity-theme .gfield input:-ms-input-placeholder, #consultation .gform_wrapper.gravity-theme .gfield textarea:-ms-input-placeholder {
+  color: #1d3133;
+}
+#consultation .gform_wrapper.gravity-theme .gfield input::placeholder,
+#consultation .gform_wrapper.gravity-theme .gfield textarea::placeholder {
+  color: #1d3133;
+}
+#consultation .gform_wrapper.gravity-theme .ilaw-required {
+  display: block;
+  padding-top: 8px;
+  font-size: 15px;
+  font-family: effra, sans-serif;
+  color: #f0c498;
+  font-weight: 700;
+  text-align: center;
+  text-transform: lowercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 14px 0 0 0;
+  border-radius: 50px;
+  border: 0.5px solid #fff;
+  transition: color 200ms ease-in-out;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer::before, #consultation .gform_wrapper.gravity-theme .gform_footer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer::before {
+  background: transparent linear-gradient(180deg, #f0c498 0%, #ce996e 100%) 0% 0% no-repeat padding-box;
+  z-index: -1;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer::after {
+  background: #2a333d;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer:hover {
+  color: #f0c498;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer:hover::after {
+  opacity: 1;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer:hover input[type=submit] {
+  color: #f0c498;
+}
+#consultation .gform_wrapper.gravity-theme .gform_footer input[type=submit] {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0;
+  min-height: auto;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  font-family: effra, sans-serif;
+  color: #2a333d;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#footer-form-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 35px;
+  line-height: 35px;
+  font-family: "Playfair Display", serif;
+  color: #f0c498;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#footer-form-subtitle {
+  display: block;
+  margin-top: 12px;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  line-height: 20px;
+  font-family: effra, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#footer-form-descrip {
+  display: block;
+  margin-top: 19px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: effra, sans-serif;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#footer-bg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#footer-info {
+  position: relative;
+  z-index: 1;
+  margin-top: 67px;
+}
+
+.footer-info-col span:not(.footer-title, .p-accent) {
+  display: block;
+}
+
+#contact-title {
+  max-width: 8ch;
+  margin-bottom: 53px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 44px;
+  line-height: 48px;
+  font-family: "Playfair Display", serif;
+  color: #f0c498;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  font-family: effra, sans-serif;
+  color: #f0c498;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+.footer-title::before {
+  background: #f0c498;
+  margin-right: 15px;
+  width: 50px;
+  height: 2px;
+  content: "";
+  display: block;
+}
+
+.footer-address {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: effra, sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
 }
 
 #section-one {
@@ -3226,7 +3484,7 @@ body.mobile-header-change #section-one {
 }
 
 #sec-six-inner {
-  padding: 0 30px 30px;
+  padding: 0 30px 213px;
 }
 @media screen and (min-width: 768px) {
   #sec-six-inner {

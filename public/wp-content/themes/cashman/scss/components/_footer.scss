@@ -1,0 +1,258 @@
+footer {
+}
+
+#footer-inner {
+	position: relative;
+	padding: 1px 30px;
+}
+
+#consultation {
+	position: relative;
+	z-index: 1;
+	background: $greythree;
+	box-shadow: 0px 3px 9px #0000007c;
+	margin-top: -170px;
+	padding: 44px 20px 50px;
+	.gform_validation_errors {
+		display: none;
+	}
+	.gform_wrapper.gravity-theme {
+		margin-top: 50px;
+		.validation_message {
+			background: transparent;
+			border: none;
+			padding: 0;
+			@include type(
+				(
+					size: 14px,
+					height: 16px,
+					family: $primaryfont,
+					color: $brownlight,
+					weight: 700,
+				)
+			);
+		}
+		.gform_fields {
+			grid-row-gap: 8px;
+		}
+		.gfield {
+			position: relative;
+			.gfield_label {
+				display: none;
+			}
+			input,
+			textarea {
+				border: 3px solid transparent;
+				transition: border 200ms ease-in-out;
+				padding: 12px 16px;
+				@include type(
+					(
+						size: 14px,
+						height: 16px,
+						family: $primaryfont,
+						color: $anothercolor,
+						weight: 700,
+					)
+				);
+				&:focus {
+					border: 3px solid $brownlight;
+				}
+			}
+			textarea {
+				height: 149px;
+			}
+			input::placeholder,
+			textarea::placeholder {
+				color: $anothercolor;
+			}
+		}
+		.ilaw-required {
+			display: block;
+			padding-top: 8px;
+			@include type(
+				(
+					size: 15px,
+					family: $primaryfont,
+					color: $brownlight,
+					weight: 700,
+					align: center,
+					transform: lowercase,
+				)
+			);
+		}
+		.gform_footer {
+			max-width: max-content;
+			position: relative;
+			z-index: 1;
+			padding: 0;
+			margin: 14px 0 0 0;
+			border-radius: 50px;
+			border: 0.5px solid $white;
+			transition: color 200ms ease-in-out;
+			overflow: hidden;
+			@include margin_lr();
+			&::before,
+			&::after {
+				@include contentdisplay();
+				@include box(100%, 100%);
+				@include abs(0, null, null, 0);
+			}
+			&::before {
+				background: $browngradient;
+				z-index: -1;
+			}
+			&::after {
+				background: $greythree;
+				z-index: -1;
+				opacity: 0;
+				transition: opacity 200ms ease-in-out;
+			}
+			&:hover {
+				color: $brownlight;
+				&::after {
+					opacity: 1;
+				}
+				input[type="submit"] {
+					color: $brownlight;
+				}
+			}
+			input[type="submit"] {
+				cursor: pointer;
+				background: transparent;
+				border: none;
+				width: 100%;
+				padding: 12px 20px;
+				margin: 0;
+				min-height: auto;
+				@include type(
+					(
+						size: 18px,
+						height: 18px,
+						spacing: 1.8px,
+						family: $primaryfont,
+						color: $greythree,
+						weight: 900,
+						align: center,
+						transform: uppercase,
+					)
+				);
+			}
+		}
+	}
+}
+
+#footer-form-title {
+	display: block;
+	@include margin_lr();
+	@include type(
+		(
+			size: 35px,
+			height: 35px,
+			family: $secondaryfont,
+			color: $brownlight,
+			align: center,
+			transform: uppercase,
+		)
+	);
+	br {
+	}
+}
+
+#footer-form-subtitle {
+	display: block;
+	margin-top: 12px;
+	@include type(
+		(
+			size: 16px,
+			height: 20px,
+			spacing: 3.2px,
+			family: $primaryfont,
+			color: $white,
+			weight: 700,
+			align: center,
+			transform: uppercase,
+		)
+	);
+}
+
+#footer-form-descrip {
+	display: block;
+	margin-top: 19px;
+	@include type(
+		(
+			size: 16px,
+			height: 22px,
+			family: $primaryfont,
+			color: $white,
+			align: center,
+		)
+	);
+}
+
+.footer-form-descrip {
+}
+
+#footer-bg {
+	object-fit: cover;
+	@include image();
+	@include abs(0, null, null, 0);
+	@include box(100%, 100%);
+}
+
+#footer-info {
+	position: relative;
+	z-index: 1;
+	margin-top: 67px;
+}
+
+.footer-info-col {
+	span:not(.footer-title, .p-accent) {
+		display: block;
+	}
+}
+
+#contact-title {
+	max-width: 8ch;
+	margin-bottom: 53px;
+	@include margin_lr();
+	@include type(
+		(
+			size: 44px,
+			height: 48px,
+			family: $secondaryfont,
+			color: $brownlight,
+			align: center,
+		)
+	);
+}
+
+.footer-title {
+	@include flex(null, center);
+	@include type(
+		(
+			size: 16px,
+			spacing: 3.2px,
+			family: $primaryfont,
+			color: $brownlight,
+			weight: 900,
+			transform: uppercase,
+		)
+	);
+	&::before {
+		background: $brownlight;
+		margin-right: 15px;
+		@include box(50px, 2px);
+		@include contentdisplay();
+	}
+}
+
+.footer-address {
+	@include type(
+		(
+			size: 18px,
+			height: 26px,
+			family: $primaryfont,
+			color: $white,
+		)
+	);
+}
