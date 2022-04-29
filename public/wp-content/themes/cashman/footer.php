@@ -1,9 +1,11 @@
 <footer>
     <div id='footer-inner'>
         <div id='consultation'>
-            <span id='footer-form-title'>You are<br> our priority</span>
-            <span id='footer-form-subtitle'>Free Case Evaluation</span>
-            <span id='footer-form-descrip'>Rest assured a member of The Cashman Law Firm will be in touch with you shortly.</span>
+            <div id='consultation-content'>
+                <span id='footer-form-title'>You are<br> our priority</span>
+                <span id='footer-form-subtitle'>Free Case Evaluation</span>
+                <span id='footer-form-descrip'>Rest assured a member of The Cashman Law Firm will be in touch with you shortly.</span>
+            </div>
             <?php gravity_form(1, false, false, false, '', true, 2323); ?>
         </div>
         <div id='footer-info'>

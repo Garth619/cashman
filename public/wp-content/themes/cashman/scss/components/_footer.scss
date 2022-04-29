@@ -4,6 +4,9 @@ footer {
 #footer-inner {
 	position: relative;
 	padding: 1px 30px 77px;
+	@include mq(small_tablet) {
+		padding: 1px 52px 77px;
+	}
 }
 
 #consultation {
@@ -13,11 +16,22 @@ footer {
 	box-shadow: 0px 3px 9px #0000007c;
 	margin-top: -170px;
 	padding: 44px 20px 50px;
+	max-width: 470px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		max-width: 100%;
+		padding: 52px 53px 50px;
+	}
 	.gform_validation_errors {
 		display: none;
 	}
 	.gform_wrapper.gravity-theme {
 		margin-top: 50px;
+		max-width: 400px;
+		@include margin_lr();
+		@include mq(small_tablet) {
+			max-width: 100%;
+		}
 		.validation_message {
 			background: transparent;
 			border: none;
@@ -31,12 +45,22 @@ footer {
 					weight: 700,
 				)
 			);
-		}
+		} // start utilizing gravity forms default grid system next site no need for me to override with display flex like i am below
 		.gform_fields {
-			grid-row-gap: 8px;
+			grid-column-gap: 0px;
+			gap: 0;
+			@include mq(small_tablet) {
+				@include flex(space-between, null, null, wrap);
+			}
 		}
 		.gfield {
 			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+			@include mq(small_tablet) {
+				margin-bottom: 15px;
+				flex-basis: calc(50% - 6px);
+			}
 			.gfield_label {
 				display: none;
 			}
@@ -45,6 +69,7 @@ footer {
 				border: 3px solid transparent;
 				transition: border 200ms ease-in-out;
 				padding: 12px 16px;
+				width: 100%;
 				@include type(
 					(
 						size: 14px,
@@ -65,22 +90,39 @@ footer {
 			textarea::placeholder {
 				color: $anothercolor;
 			}
+			&#field_1_5 {
+				@include mq(small_tablet) {
+					flex-basis: 100%;
+					margin-bottom: 9px;
+				}
+			}
+			&#field_1_7 {
+				margin-bottom: 0px;
+				@include mq(small_tablet) {
+					flex-basis: 300px;
+				}
+				.ilaw-required {
+					display: block;
+					padding-top: 4px;
+					@include type(
+						(
+							size: 15px,
+							family: $primaryfont,
+							color: $brownlight,
+							weight: 700,
+							align: center,
+							transform: lowercase,
+						)
+					);
+					@include mq(small_tablet) {
+						text-align: left;
+						font-size: 17px;
+					}
+				}
+			}
 		}
-		.ilaw-required {
-			display: block;
-			padding-top: 8px;
-			@include type(
-				(
-					size: 15px,
-					family: $primaryfont,
-					color: $brownlight,
-					weight: 700,
-					align: center,
-					transform: lowercase,
-				)
-			);
-		}
-		.gform_footer {
+
+		#field_submit {
 			max-width: max-content;
 			position: relative;
 			z-index: 1;
@@ -91,6 +133,9 @@ footer {
 			transition: color 200ms ease-in-out;
 			overflow: hidden;
 			@include margin_lr();
+			@include mq(small_tablet) {
+				margin: 7px 0 0 0;
+			}
 			&::before,
 			&::after {
 				@include contentdisplay();
@@ -138,6 +183,16 @@ footer {
 				);
 			}
 		}
+		.gform_footer {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+#consultation-content {
+	@include mq(small_tablet) {
+		@include flex(null, null, null, wrap);
 	}
 }
 
@@ -154,6 +209,12 @@ footer {
 			transform: uppercase,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 55px;
+		line-height: 55px;
+		text-align: left;
+		flex-basis: 100%;
+	}
 	br {
 	}
 }
@@ -173,11 +234,20 @@ footer {
 			transform: uppercase,
 		)
 	);
+	@include mq(small_tablet) {
+		text-align: left;
+		margin-top: 22px;
+		flex-shrink: 0;
+		flex-basis: 245px;
+	}
 }
 
 #footer-form-descrip {
 	display: block;
 	margin-top: 19px;
+	max-width: 310px;
+	margin-left: 30px;
+	@include margin_lr();
 	@include type(
 		(
 			size: 16px,
@@ -187,6 +257,26 @@ footer {
 			align: center,
 		)
 	);
+	@include mq(small_tablet) {
+		text-align: left;
+		flex-shrink: 0;
+		padding-left: 47px;
+		padding-right: 20px;
+		max-width: 417px;
+		width: calc(100% - 245px);
+		@include flex();
+		@include margin_lr(0);
+	}
+	&::before {
+		@include mq(small_tablet) {
+			background: $brownlight;
+			flex-shrink: 0;
+			margin-top: 10px;
+			margin-right: 19px;
+			@include box(35px, 2px);
+			@include contentdisplay();
+		}
+	}
 }
 
 .footer-form-descrip {
