@@ -5,7 +5,7 @@ footer {
 	position: relative;
 	padding: 1px 30px 77px;
 	@include mq(small_tablet) {
-		padding: 1px 52px 77px;
+		padding: 1px 52px 22px;
 	}
 }
 
@@ -293,11 +293,47 @@ footer {
 	position: relative;
 	z-index: 1;
 	margin-top: 67px;
+	@include mq(small_tablet) {
+		margin-top: 78px;
+		padding: 0 43px;
+		@include flex(flex-start, null, null, wrap);
+	}
 }
 
 .footer-info-col {
 	max-width: 270px;
 	@include margin_lr();
+	@include mq(small_tablet) {
+		max-width: 100%;
+		@include margin_lr(0);
+	}
+	&:nth-of-type(1) {
+		@include mq(small_tablet) {
+			order: 1;
+			flex-basis: 240px;
+			flex-shrink: 0;
+		}
+	}
+	&:nth-of-type(2) {
+		@include mq(small_tablet) {
+			order: 2;
+			margin-top: 34px;
+			margin-left: 62px;
+		}
+	}
+	&:nth-of-type(3) {
+		@include mq(small_tablet) {
+			order: 4;
+			margin-left: 62px;
+		}
+	}
+	&:nth-of-type(4) {
+		@include mq(small_tablet) {
+			order: 3;
+			flex-basis: 240px;
+			flex-shrink: 0;
+		}
+	}
 	span:not(.footer-title, .brown-light) {
 		display: block;
 	}
@@ -316,6 +352,11 @@ footer {
 			align: center,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 59px;
+		line-height: 64px;
+		text-align: left;
+	}
 }
 
 .footer-title {
@@ -397,10 +438,18 @@ footer {
 }
 
 #social-media {
-	margin-top: 60px;
+	margin-top: 58px;
 	@include flex(center, center);
+	@include mq(small_tablet) {
+		flex-direction: column;
+		margin-top: -25px;
+		width: 20px;
+	}
 	a {
 		margin: 0 16px;
+		@include mq(small_tablet) {
+			margin: 0px 0 33px;
+		}
 		svg {
 			@include image();
 			path {
@@ -424,10 +473,14 @@ footer {
 #copyright-inner {
 	padding: 18px 20px;
 	text-align: center;
+	@include mq(small_tablet) {
+		padding: 25px 20px;
+	}
 	ul {
 		margin-top: 7px;
 		list-style: none;
 		li {
+			display: inline-block;
 			@include type(
 				(
 					size: 12px,
@@ -439,8 +492,27 @@ footer {
 					transform: uppercase,
 				)
 			);
+			&::after {
+				margin-top: 4px;
+				margin-left: 7px;
+				margin-right: 2px;
+				background: $greythree;
+				vertical-align: top;
+				@include box(2px, 9px);
+				@include contentdisplay(inline-block);
+			}
+			&:last-of-type {
+				&::after {
+					display: none;
+				}
+			}
 			a {
 				display: none;
+				@include mq(small_tablet) {
+					display: inline-block;
+					color: $greythree;
+					text-decoration: none;
+				}
 			}
 		}
 	}
