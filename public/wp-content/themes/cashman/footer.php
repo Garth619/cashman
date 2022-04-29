@@ -47,8 +47,8 @@
     </div>
     <div id='copyright'>
         <div id='copyright-inner'>
-            <a href='//ilawyermarketing.com' target='_blank' rel='noopener'>
-                <img id=' ilawyer-logo' src='<?php bloginfo('template_directory'); ?>/images/ilawyer_logo.svg' alt='ilawyer Logo' width='228' height='19' loading='lazy' />
+            <a id='ilawyer-logo' href='//ilawyermarketing.com' target='_blank' rel='noopener'>
+                <img src='<?php bloginfo('template_directory'); ?>/images/ilawyer_logo.svg' alt='ilawyer Logo' width='228' height='19' loading='lazy' />
             </a>
             <ul>
                 <li>COpYRIGHT &copy; <?php echo date('Y'); ?> - THE CASHMAN LAW FIRM</li>

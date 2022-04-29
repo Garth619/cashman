@@ -7,6 +7,15 @@ footer {
 	@include mq(small_tablet) {
 		padding: 1px 52px 22px;
 	}
+	@include mq(small_laptop) {
+		padding: 1px 83px 52px;
+	}
+	@include mq(large_laptop) {
+		padding: 1px 115px 75px;
+	}
+	@include mq(small_monitor) {
+		padding: 90px 207px 85px;
+	}
 }
 
 #consultation {
@@ -19,8 +28,23 @@ footer {
 	max-width: 470px;
 	@include margin_lr();
 	@include mq(small_tablet) {
-		max-width: 100%;
+		max-width: 796px;
 		padding: 52px 53px 50px;
+	}
+	@include mq(small_laptop) {
+		padding: 65px 101px 74px;
+		max-width: 922px;
+		@include margin_lr();
+	}
+	@include mq(large_laptop) {
+		margin-top: -117px;
+		padding: 80px 101px 92px;
+		max-width: 1115px;
+	}
+	@include mq(small_monitor) {
+		max-width: 1315px;
+		margin-top: -268px;
+		padding: 90px 159px 104px;
 	}
 	.gform_validation_errors {
 		display: none;
@@ -31,6 +55,15 @@ footer {
 		@include margin_lr();
 		@include mq(small_tablet) {
 			max-width: 100%;
+		}
+		@include mq(small_laptop) {
+			margin-top: 41px;
+		}
+		@include mq(large_laptop) {
+			margin-top: 48px;
+		}
+		@include mq(small_monitor) {
+			margin-top: 57px;
 		}
 		.validation_message {
 			background: transparent;
@@ -61,6 +94,17 @@ footer {
 				margin-bottom: 15px;
 				flex-basis: calc(50% - 6px);
 			}
+			@include mq(small_laptop) {
+				flex-basis: calc(50% - 5px);
+				margin-bottom: 11px;
+			}
+			@include mq(large_laptop) {
+				margin-bottom: 14px;
+			}
+			@include mq(small_monitor) {
+				margin-bottom: 16px;
+				flex-basis: calc(50% - 7px);
+			}
 			.gfield_label {
 				display: none;
 			}
@@ -79,12 +123,28 @@ footer {
 						weight: 700,
 					)
 				);
+				@include mq(small_laptop) {
+					font-size: 17px;
+					padding: 10px 16px;
+				}
+				@include mq(large_laptop) {
+					padding: 15px 16px;
+				}
+				@include mq(small_monitor) {
+					padding: 17px 16px;
+				}
 				&:focus {
 					border: 3px solid $brownlight;
 				}
 			}
 			textarea {
 				height: 149px;
+				@include mq(large_laptop) {
+					height: 180px;
+				}
+				@include mq(small_monitor) {
+					height: 202px;
+				}
 			}
 			input::placeholder,
 			textarea::placeholder {
@@ -121,7 +181,6 @@ footer {
 				}
 			}
 		}
-
 		#field_submit {
 			max-width: max-content;
 			position: relative;
@@ -135,6 +194,12 @@ footer {
 			@include margin_lr();
 			@include mq(small_tablet) {
 				margin: 7px 0 0 0;
+			}
+			@include mq(small_laptop) {
+				margin: 0;
+			}
+			@include mq(small_monitor) {
+				margin: 8px 0 0 0;
 			}
 			&::before,
 			&::after {
@@ -181,6 +246,10 @@ footer {
 						transform: uppercase,
 					)
 				);
+				@include mq(small_laptop) {
+					font-size: 20px;
+					padding: 16px 25px;
+				}
 			}
 		}
 		.gform_footer {
@@ -193,6 +262,9 @@ footer {
 #consultation-content {
 	@include mq(small_tablet) {
 		@include flex(null, null, null, wrap);
+	}
+	@include mq(small_laptop) {
+		justify-content: space-between;
 	}
 }
 
@@ -214,6 +286,18 @@ footer {
 		line-height: 55px;
 		text-align: left;
 		flex-basis: 100%;
+	}
+	@include mq(small_laptop) {
+		font-size: 60px;
+		line-height: 60px;
+	}
+	@include mq(large_laptop) {
+		font-size: 70px;
+		line-height: 70px;
+	}
+	@include mq(small_monitor) {
+		font-size: 80px;
+		line-height: 80px;
 	}
 	br {
 	}
@@ -240,6 +324,15 @@ footer {
 		flex-shrink: 0;
 		flex-basis: 245px;
 	}
+	@include mq(small_laptop) {
+		margin-top: 14px;
+		flex-basis: auto;
+	}
+	@include mq(large_laptop) {
+		font-size: 18px;
+		line-height: 30px;
+		margin-top: 16px;
+	}
 }
 
 #footer-form-descrip {
@@ -262,10 +355,30 @@ footer {
 		flex-shrink: 0;
 		padding-left: 47px;
 		padding-right: 20px;
-		max-width: 417px;
+		max-width: 424px;
 		width: calc(100% - 245px);
 		@include flex();
 		@include margin_lr(0);
+	}
+	@include mq(small_laptop) {
+		font-size: 18px;
+		line-height: 26px;
+		padding-right: 0px;
+		margin-top: -43px;
+		padding-left: 0px;
+		max-width: 273px;
+		width: 100%;
+		padding-right: 0px;
+	}
+	@include mq(large_laptop) {
+		font-size: 20px;
+		line-height: 30px;
+		max-width: 305px;
+	}
+	@include mq(small_monitor) {
+		font-size: 22px;
+		max-width: 353px;
+		margin-top: -54px;
 	}
 	&::before {
 		@include mq(small_tablet) {
@@ -276,17 +389,15 @@ footer {
 			@include box(35px, 2px);
 			@include contentdisplay();
 		}
+		@include mq(large_laptop) {
+			width: 42px;
+			margin-top: 13px;
+		}
+		@include mq(small_monitor) {
+			width: 48px;
+			margin-top: 15px;
+		}
 	}
-}
-
-.footer-form-descrip {
-}
-
-#footer-bg {
-	object-fit: cover;
-	@include image();
-	@include abs(0, null, null, 0);
-	@include box(100%, 100%);
 }
 
 #footer-info {
@@ -296,7 +407,23 @@ footer {
 	@include mq(small_tablet) {
 		margin-top: 78px;
 		padding: 0 43px;
+		max-width: 667px;
+		@include margin_lr();
 		@include flex(flex-start, null, null, wrap);
+	}
+	@include mq(small_laptop) {
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		max-width: 100%;
+		padding: 0;
+	}
+	@include mq(large_laptop) {
+		margin-top: 155px;
+	}
+	@include mq(small_monitor) {
+		margin-top: 109px;
+		max-width: 1505px;
+		@include margin_lr();
 	}
 }
 
@@ -313,25 +440,43 @@ footer {
 			flex-basis: 240px;
 			flex-shrink: 0;
 		}
+		@include mq(small_laptop) {
+			order: 1;
+			flex-basis: auto;
+		}
 	}
 	&:nth-of-type(2) {
 		@include mq(small_tablet) {
 			order: 2;
 			margin-top: 34px;
-			margin-left: 62px;
+			margin-left: 59px;
+		}
+		@include mq(small_laptop) {
+			order: 2;
+			margin-left: 0;
 		}
 	}
 	&:nth-of-type(3) {
 		@include mq(small_tablet) {
 			order: 4;
-			margin-left: 62px;
+			margin-left: 59px;
+		}
+		@include mq(small_laptop) {
+			margin-top: 34px;
+			order: 3;
+			margin-left: 0;
 		}
 	}
+
 	&:nth-of-type(4) {
 		@include mq(small_tablet) {
 			order: 3;
 			flex-basis: 240px;
 			flex-shrink: 0;
+		}
+		@include mq(small_laptop) {
+			order: 4;
+			flex-basis: auto;
 		}
 	}
 	span:not(.footer-title, .brown-light) {
@@ -357,6 +502,10 @@ footer {
 		line-height: 64px;
 		text-align: left;
 	}
+	@include mq(large_laptop) {
+		font-size: 65px;
+		line-height: 70px;
+	}
 }
 
 .footer-title {
@@ -371,16 +520,27 @@ footer {
 			transform: uppercase,
 		)
 	);
+	@include mq(large_laptop) {
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: 3.6px;
+	}
 	&::before {
 		background: $brownlight;
 		margin-right: 15px;
 		@include box(50px, 2px);
 		@include contentdisplay();
+		@include mq(small_monitor) {
+			@include box(80px, 2px);
+		}
 	}
 }
 
 .footer-info-col-inner {
 	margin-left: 63px;
+	@include mq(small_monitor) {
+		margin-left: 92px;
+	}
 }
 
 .footer-address {
@@ -394,6 +554,14 @@ footer {
 			color: $white,
 		)
 	);
+	@include mq(large_laptop) {
+		font-size: 20px;
+		line-height: 30px;
+		margin-top: 6px;
+	}
+	@include mq(small_monitor) {
+		font-size: 22px;
+	}
 }
 
 .get-directions {
@@ -415,6 +583,7 @@ footer {
 	);
 	&:hover {
 		color: $white;
+		border-bottom: 2px solid $white;
 	}
 }
 
@@ -432,6 +601,10 @@ footer {
 			transform: uppercase,
 		)
 	);
+	@include mq(large_laptop) {
+		margin-top: 40px;
+		font-size: 22px;
+	}
 	&:hover {
 		color: $brownlight;
 	}
@@ -444,6 +617,14 @@ footer {
 		flex-direction: column;
 		margin-top: -25px;
 		width: 20px;
+	}
+	@include mq(small_laptop) {
+		margin-right: 40px;
+		margin-left: 30px;
+		margin-top: 36px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 45px;
 	}
 	a {
 		margin: 0 16px;
@@ -467,6 +648,13 @@ footer {
 	}
 }
 
+#footer-bg {
+	object-fit: cover;
+	@include image();
+	@include abs(0, null, null, 0);
+	@include box(100%, 100%);
+}
+
 #copyright {
 }
 
@@ -474,11 +662,24 @@ footer {
 	padding: 18px 20px;
 	text-align: center;
 	@include mq(small_tablet) {
-		padding: 25px 20px;
+		padding: 22px 20px;
+	}
+	@include mq(small_laptop) {
+		padding: 22px 40px;
+		@include flex(space-between);
+	}
+	@include mq(small_monitor) {
+		padding: 13px 52px 34px;
+		max-width: 1920px;
+		@include margin_lr();
 	}
 	ul {
 		margin-top: 7px;
 		list-style: none;
+		@include mq(small_laptop) {
+			order: 1;
+			margin-top: 0px;
+		}
 		li {
 			display: inline-block;
 			@include type(
@@ -492,28 +693,40 @@ footer {
 					transform: uppercase,
 				)
 			);
-			&::after {
-				margin-top: 4px;
-				margin-left: 7px;
-				margin-right: 2px;
-				background: $greythree;
-				vertical-align: top;
-				@include box(2px, 9px);
-				@include contentdisplay(inline-block);
-			}
-			&:last-of-type {
-				&::after {
-					display: none;
-				}
-			}
 			a {
 				display: none;
+				color: $greythree;
+				text-decoration: none;
+				transition: all 200ms ease-in-out;
+				&::before {
+					margin-top: 4px;
+					margin-left: 2px;
+					margin-right: 7px;
+					background: $greythree;
+					vertical-align: top;
+					@include box(2px, 9px);
+					@include contentdisplay(inline-block);
+				}
 				@include mq(small_tablet) {
 					display: inline-block;
-					color: $greythree;
-					text-decoration: none;
+				}
+				&:hover {
+					color: $browndark;
 				}
 			}
 		}
+	}
+}
+
+#ilawyer-logo {
+	img {
+		@include image();
+		@include margin_lr();
+		@include mq(small_laptop) {
+			@include margin_lr(0);
+		}
+	}
+	@include mq(small_laptop) {
+		order: 2;
 	}
 }

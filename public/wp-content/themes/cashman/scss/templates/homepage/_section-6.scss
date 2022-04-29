@@ -15,7 +15,10 @@
 		padding-bottom: 220px;
 	}
 	@include mq(large_laptop) {
-		padding-bottom: 100px;
+		padding-bottom: 205px;
+	}
+	@include mq(small_monitor) {
+		padding-bottom: 317px;
 	}
 }
 
