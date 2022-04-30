@@ -10,13 +10,43 @@ body {
 	color: $brownlight;
 }
 
+#internal-main {
+}
+
 .page-title {
+	display: block;
+	padding-bottom: 15px;
+	@include type(
+		(
+			size: 30px,
+			height: 36px,
+			family: $secondaryfont,
+			color: $black,
+			align: center,
+		)
+	);
 }
 
 .img-wrapper {
 	img {
 		@include image();
 	}
+}
+
+#page-container {
+	min-height: 500px;
+	padding: 47px 32px 240px;
+	background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
+}
+
+.ilawyer-mobile-button-in-banner {
+	.page-button {
+		display: none;
+	}
+}
+
+.internal-button {
+	@include margin_lr();
 }
 
 .content {
@@ -50,12 +80,12 @@ body {
 		@extend .page-title;
 	}
 	h2 {
-		padding-top: 20px;
+		padding-top: 12px;
 		padding-bottom: 13px;
 		@include type(
 			(
-				size: 24px,
-				height: 34px,
+				size: 21px,
+				height: 32px,
 				family: $secondaryfont,
 				color: $browndark,
 				//weight: 500,
@@ -85,6 +115,11 @@ body {
 		}
 	}
 	h3 {
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: 700;
+		padding-top: 25px;
+		padding-bottom: 15px;
 	}
 	p,
 	ul,
@@ -94,21 +129,43 @@ body {
 	ul,
 	ol {
 		li {
+			margin-bottom: 6px;
+			padding-left: 13px;
 		}
 	}
 	ul {
+		margin-left: 20px;
 		li {
 			&::marker {
+				font-size: 24px;
+				line-height: 24px;
+				color: $browndark;
 			}
 		}
 	}
 	ol {
+		list-style: none;
+		counter-reset: item;
 		> li {
+			counter-increment: item;
+			position: relative;
+			padding-left: 30px;
 		}
 		> li:before {
 			content: counter(item) ".";
+			color: $browndark;
+			font-weight: 700;
+			font-size: 18px;
+			@include abs(0, null, null, 0);
 		}
 	}
+	// ol {
+	// 	> li {
+	// 	}
+	// 	> li:before {
+	// 		content: counter(item) ".";
+	// 	}
+	// }
 	blockquote {
 		text-align: center;
 		font-size: 26px;
@@ -165,6 +222,8 @@ body {
 		}
 
 		cite {
+			display: block;
+			margin-bottom: 29px;
 		}
 	}
 }
@@ -268,6 +327,7 @@ body {
 		margin-top: -20px;
 		margin-bottom: 30px;
 		color: grey;
+		text-align: center;
 	}
 }
 

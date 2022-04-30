@@ -17,7 +17,7 @@ if (!ilaw_has_class('ilawyer-banner-disabled')) { ?>
                 ilaw_has_class('ilawyer-blog') ||
                 ilaw_has_class('ilawyer-alt-banner-layout')
             ) { ?>
-                <h1 id='banner-title' class='centered'>
+                <h1 id='banner-title'>
                     <?php if (is_home()) {
                         $blog_title = get_the_title(get_option('page_for_posts', true));
                         echo text_wrap($blog_title, ' ');

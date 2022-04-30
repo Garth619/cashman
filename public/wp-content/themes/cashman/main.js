@@ -91,6 +91,7 @@ jQuery(document).ready(function ($) {
 	}
 
 	createWaypoint("section-one", "#body", "mobile-header-change", 68, null, true);
+	createWaypoint("internal-main", "#body", "mobile-header-change", 68, null, true);
 
 	/**
 	 * Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)

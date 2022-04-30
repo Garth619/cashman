@@ -1,0 +1,39 @@
+#banner {
+	position: relative;
+	padding: 42px 55px 50px;
+}
+
+#banner-content {
+	position: relative;
+	z-index: 1;
+}
+
+#banner-title {
+	display: block;
+	margin-bottom: 13px;
+	@include type(
+		(
+			size: 29px,
+			height: 32px,
+			family: $secondaryfont,
+			color: $white,
+			align: center,
+			transform: uppercase,
+		)
+	);
+	// text wrapped animation span
+	span {
+		span {
+			span {
+				color: $brownlight;
+			}
+		}
+	}
+}
+
+.internal-banner-image {
+	object-fit: cover;
+	@include image();
+	@include box(100%, 100%);
+	@include abs(0, null, null, 0);
+}

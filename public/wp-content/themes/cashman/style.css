@@ -565,10 +565,38 @@ body {
   color: #f0c498;
 }
 
+.page-title, .content h1 {
+  display: block;
+  padding-bottom: 15px;
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "Playfair Display", serif;
+  color: #0b1216;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+
 .img-wrapper img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+#page-container {
+  min-height: 500px;
+  padding: 47px 32px 240px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
+}
+
+.ilawyer-mobile-button-in-banner .page-button {
+  display: none;
+}
+
+.internal-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content {
@@ -603,10 +631,10 @@ body {
   cursor: pointer;
 }
 .content h2 {
-  padding-top: 20px;
+  padding-top: 12px;
   padding-bottom: 13px;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 21px;
+  line-height: 32px;
   font-family: "Playfair Display", serif;
   color: #ce996e;
   font-weight: 400;
@@ -637,13 +665,48 @@ body {
     font-size: 32px;
   }
 }
+.content h3 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
 .content p,
 .content ul,
 .content ol {
   margin-bottom: 29px;
 }
+.content ul li,
+.content ol li {
+  margin-bottom: 6px;
+  padding-left: 13px;
+}
+.content ul {
+  margin-left: 20px;
+}
+.content ul li::marker {
+  font-size: 24px;
+  line-height: 24px;
+  color: #ce996e;
+}
+.content ol {
+  list-style: none;
+  counter-reset: item;
+}
+.content ol > li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 30px;
+}
 .content ol > li:before {
   content: counter(item) ".";
+  color: #ce996e;
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .content blockquote {
   text-align: center;
@@ -710,6 +773,11 @@ body {
 .content blockquote p {
   padding-top: 15px;
 }
+.content blockquote cite {
+  display: block;
+  margin-bottom: 29px;
+}
+
 /* Gutenberg */
 /* table */
 .content table {
@@ -816,6 +884,7 @@ body {
   margin-top: -20px;
   margin-bottom: 30px;
   color: grey;
+  text-align: center;
 }
 
 .alignleft,
@@ -1741,6 +1810,66 @@ nav ul.sub-menu > li ul.sub-menu {
 }
 nav ul.sub-menu > li ul.sub-menu.active {
   margin-top: 29px;
+}
+
+#banner {
+  position: relative;
+  padding: 42px 55px 50px;
+}
+
+#banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+#banner-title {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 29px;
+  line-height: 32px;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#banner-title span span span {
+  color: #f0c498;
+}
+
+.internal-banner-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sidebar-wrapper {
+  margin-top: 60px;
+}
+
+.widget {
+  background: #fff;
+  padding: 41px 0 0;
+  box-shadow: 0px 3px 6px #150f1052;
+}
+.widget h3 {
+  display: block;
+  font-size: 30px;
+  line-height: 35px;
+  font-family: "Playfair Display", serif;
+  color: #ce996e;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
 }
 
 #footer-inner {
