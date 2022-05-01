@@ -1858,11 +1858,13 @@ nav ul.sub-menu > li ul.sub-menu.active {
 
 .widget {
   background: #fff;
-  padding: 41px 0 0;
+  padding: 41px 0;
   box-shadow: 0px 3px 6px #150f1052;
 }
 .widget h3 {
   display: block;
+  padding: 0 23px;
+  margin-bottom: 36px;
   font-size: 30px;
   line-height: 35px;
   font-family: "Playfair Display", serif;
@@ -1870,6 +1872,50 @@ nav ul.sub-menu > li ul.sub-menu.active {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+}
+.widget ul {
+  list-style: none;
+}
+.widget ul li {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: effra, sans-serif;
+  color: #0b1216;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+.widget ul li a {
+  display: block;
+  margin-bottom: 15px;
+  color: #0b1216;
+  text-decoration: none;
+  padding: 0 28px;
+  transition: all 200ms ease-in-out;
+}
+.widget ul li a:hover {
+  color: #ce996e;
+  cursor: pointer;
+}
+.widget ul.sub-menu {
+  background: #f2f0ef;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.widget ul.sub-menu.open {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  opacity: 1;
+  padding: 32px 0;
+  visibility: visible;
+  max-height: 3000px;
+}
+.widget ul.sub-menu li:last-of-type a {
+  margin-bottom: 0;
 }
 
 #footer-inner {
