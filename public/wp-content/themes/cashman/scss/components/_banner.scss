@@ -1,6 +1,12 @@
 #banner {
 	position: relative;
 	padding: 42px 55px 50px;
+	@include mq(small_tablet) {
+		padding: 73px 55px 90px;
+	}
+	@include mq(small_laptop) {
+		padding: 100px 114px 90px;
+	}
 }
 
 #banner-content {
@@ -11,6 +17,8 @@
 #banner-title {
 	display: block;
 	margin-bottom: 13px;
+	max-width: 270px;
+	@include margin_lr();
 	@include type(
 		(
 			size: 29px,
@@ -21,6 +29,22 @@
 			transform: uppercase,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 43px;
+		line-height: 43px;
+		max-width: 370px;
+		margin-bottom: 21px;
+	}
+	@media screen and (min-width: 900px) {
+		max-width: 510px;
+	}
+	@include mq(small_laptop) {
+		font-size: 48px;
+		line-height: 48px;
+		text-align: left;
+		max-width: 570px;
+		@include margin_lr(0);
+	}
 	// text wrapped animation span
 	span {
 		span {

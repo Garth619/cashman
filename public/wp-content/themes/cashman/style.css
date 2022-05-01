@@ -565,6 +565,21 @@ body {
   color: #f0c498;
 }
 
+@media screen and (min-width: 768px) {
+  #internal-main {
+    margin-top: 83px;
+  }
+}
+
+.mobile-header-change #internal-main {
+  margin-top: 68px;
+}
+@media screen and (min-width: 768px) {
+  .mobile-header-change #internal-main {
+    margin-top: 83px;
+  }
+}
+
 .page-title, .content h1 {
   display: block;
   padding-bottom: 15px;
@@ -576,6 +591,13 @@ body {
   text-align: center;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .page-title, .content h1 {
+    font-size: 40px;
+    line-height: 50px;
+    text-align: left;
+  }
 }
 
 .img-wrapper img {
@@ -589,6 +611,26 @@ body {
   padding: 47px 32px 240px;
   background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
 }
+@media screen and (min-width: 768px) {
+  #page-container {
+    padding: 78px 93px 275px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page-container {
+    padding: 80px 95px 342px;
+  }
+}
+
+.ilawyer-two-col-layout #page-container {
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  #page-content {
+    order: 2;
+  }
+}
 
 .ilawyer-mobile-button-in-banner .page-button {
   display: none;
@@ -597,6 +639,12 @@ body {
 .internal-button {
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .internal-button {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .content {
@@ -643,14 +691,15 @@ body {
 }
 @media screen and (min-width: 768px) {
   .content h2 {
-    padding-top: 25px;
-    padding-bottom: 20px;
+    padding-top: 7px;
+    padding-bottom: 13px;
+    font-size: 26px;
+    line-height: 36px;
   }
 }
 @media screen and (min-width: 1200px) {
   .content h2 {
     font-size: 26px;
-    line-height: 40px;
     padding-bottom: 17px;
   }
 }
@@ -672,6 +721,14 @@ body {
   padding-top: 25px;
   padding-bottom: 15px;
 }
+@media screen and (min-width: 768px) {
+  .content h3 {
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+}
 .content p,
 .content ul,
 .content ol {
@@ -681,6 +738,12 @@ body {
 .content ol li {
   margin-bottom: 6px;
   padding-left: 13px;
+}
+@media screen and (min-width: 768px) {
+  .content ul li,
+.content ol li {
+    margin-bottom: 9px;
+  }
 }
 .content ul {
   margin-left: 20px;
@@ -732,18 +795,18 @@ body {
   .content blockquote {
     font-size: 30px;
     line-height: 40px;
-    margin-top: 103px;
-    margin-bottom: 120px;
+    margin-top: 69px;
+    margin-bottom: 34px;
     max-width: 620px;
   }
 }
 @media screen and (min-width: 1200px) {
   .content blockquote {
-    margin-top: 115px;
-    margin-bottom: 163px;
-    font-size: 38px;
-    line-height: 48px;
-    max-width: 730px;
+    margin-top: 62px;
+    margin-bottom: 32px;
+    font-size: 28px;
+    line-height: 35px;
+    max-width: 535px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -1816,6 +1879,16 @@ nav ul.sub-menu > li ul.sub-menu.active {
   position: relative;
   padding: 42px 55px 50px;
 }
+@media screen and (min-width: 768px) {
+  #banner {
+    padding: 73px 55px 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #banner {
+    padding: 100px 114px 90px;
+  }
+}
 
 #banner-content {
   position: relative;
@@ -1825,6 +1898,9 @@ nav ul.sub-menu > li ul.sub-menu.active {
 #banner-title {
   display: block;
   margin-bottom: 13px;
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 29px;
   line-height: 32px;
   font-family: "Playfair Display", serif;
@@ -1834,6 +1910,29 @@ nav ul.sub-menu > li ul.sub-menu.active {
   text-transform: uppercase;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  #banner-title {
+    font-size: 43px;
+    line-height: 43px;
+    max-width: 370px;
+    margin-bottom: 21px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #banner-title {
+    max-width: 510px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #banner-title {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: left;
+    max-width: 570px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 #banner-title span span span {
   color: #f0c498;
@@ -1855,11 +1954,37 @@ nav ul.sub-menu > li ul.sub-menu.active {
 #sidebar-wrapper {
   margin-top: 60px;
 }
+@media screen and (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-top: 75px;
+    max-width: 583px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #sidebar-wrapper {
+    order: 1;
+    max-width: 100%;
+    flex-shrink: 0;
+    flex-basis: 350px;
+    margin-top: 18px;
+    margin-right: 79px;
+  }
+}
 
 .widget {
   background: #fff;
   padding: 41px 0;
   box-shadow: 0px 3px 6px #150f1052;
+}
+@media screen and (min-width: 768px) {
+  .widget {
+    padding: 41px 0 53px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .widget {
+    padding: 41px 0 46px;
+  }
 }
 .widget h3 {
   display: block;
@@ -1873,6 +1998,16 @@ nav ul.sub-menu > li ul.sub-menu.active {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  .widget h3 {
+    padding: 0 72px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .widget h3 {
+    padding: 0 43px;
+  }
+}
 .widget ul {
   list-style: none;
 }
@@ -1885,6 +2020,9 @@ nav ul.sub-menu > li ul.sub-menu.active {
   font-style: normal;
   text-decoration: none;
 }
+.widget ul li.current-menu-item > a, .widget ul li.current-menu-ancestor > a {
+  color: #ce996e;
+}
 .widget ul li a {
   display: block;
   margin-bottom: 15px;
@@ -1893,9 +2031,23 @@ nav ul.sub-menu > li ul.sub-menu.active {
   padding: 0 28px;
   transition: all 200ms ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  .widget ul li a {
+    padding: 0 72px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .widget ul li a {
+    margin-bottom: 18px;
+    padding: 0 43px;
+  }
+}
 .widget ul li a:hover {
   color: #ce996e;
   cursor: pointer;
+}
+.widget ul li a.active {
+  color: #ce996e;
 }
 .widget ul.sub-menu {
   background: #f2f0ef;
@@ -1905,6 +2057,7 @@ nav ul.sub-menu > li ul.sub-menu.active {
   max-height: 0;
   opacity: 0;
   visibility: hidden;
+  transition: visibility 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), margin 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), padding 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
 }
 .widget ul.sub-menu.open {
   margin-top: 25px;
@@ -1913,6 +2066,23 @@ nav ul.sub-menu > li ul.sub-menu.active {
   padding: 32px 0;
   visibility: visible;
   max-height: 3000px;
+}
+@media screen and (min-width: 768px) {
+  .widget ul.sub-menu.open {
+    margin-top: 37px;
+    padding: 38px 0;
+    margin-bottom: 35px;
+  }
+}
+.widget ul.sub-menu.open li {
+  opacity: 1;
+  visibility: visible;
+  transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+}
+.widget ul.sub-menu li {
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 100ms;
 }
 .widget ul.sub-menu li:last-of-type a {
   margin-bottom: 0;

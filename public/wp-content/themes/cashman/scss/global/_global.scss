@@ -11,6 +11,18 @@ body {
 }
 
 #internal-main {
+	@include mq(small_tablet) {
+		margin-top: 83px;
+	}
+}
+
+.mobile-header-change {
+	#internal-main {
+		margin-top: 68px;
+		@include mq(small_tablet) {
+			margin-top: 83px;
+		}
+	}
 }
 
 .page-title {
@@ -25,6 +37,11 @@ body {
 			align: center,
 		)
 	);
+	@include mq(small_tablet) {
+		font-size: 40px;
+		line-height: 50px;
+		text-align: left;
+	}
 }
 
 .img-wrapper {
@@ -37,6 +54,24 @@ body {
 	min-height: 500px;
 	padding: 47px 32px 240px;
 	background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
+	@include mq(small_tablet) {
+		padding: 78px 93px 275px;
+	}
+	@include mq(small_laptop) {
+		padding: 80px 95px 342px;
+	}
+}
+
+.ilawyer-two-col-layout {
+	#page-container {
+		@include flex();
+	}
+}
+
+#page-content {
+	@include mq(small_laptop) {
+		order: 2;
+	}
 }
 
 .ilawyer-mobile-button-in-banner {
@@ -47,6 +82,9 @@ body {
 
 .internal-button {
 	@include margin_lr();
+	@include mq(small_laptop) {
+		@include margin_lr(0);
+	}
 }
 
 .content {
@@ -92,12 +130,13 @@ body {
 			)
 		);
 		@include mq(small_tablet) {
-			padding-top: 25px;
-			padding-bottom: 20px;
+			padding-top: 7px;
+			padding-bottom: 13px;
+			font-size: 26px;
+			line-height: 36px;
 		}
 		@include mq(small_laptop) {
 			font-size: 26px;
-			line-height: 40px;
 			padding-bottom: 17px;
 		}
 		@include mq(large_laptop) {
@@ -120,6 +159,12 @@ body {
 		font-weight: 700;
 		padding-top: 25px;
 		padding-bottom: 15px;
+		@include mq(small_tablet) {
+			font-size: 22px;
+			line-height: 30px;
+			padding-top: 35px;
+			padding-bottom: 20px;
+		}
 	}
 	p,
 	ul,
@@ -131,6 +176,9 @@ body {
 		li {
 			margin-bottom: 6px;
 			padding-left: 13px;
+			@include mq(small_tablet) {
+				margin-bottom: 9px;
+			}
 		}
 	}
 	ul {
@@ -152,20 +200,13 @@ body {
 			padding-left: 30px;
 		}
 		> li:before {
-			content: counter(item) ".";
+			content: counter(item) '.';
 			color: $browndark;
 			font-weight: 700;
 			font-size: 18px;
 			@include abs(0, null, null, 0);
 		}
 	}
-	// ol {
-	// 	> li {
-	// 	}
-	// 	> li:before {
-	// 		content: counter(item) ".";
-	// 	}
-	// }
 	blockquote {
 		text-align: center;
 		font-size: 26px;
@@ -188,16 +229,24 @@ body {
 		@include mq(small_tablet) {
 			font-size: 30px;
 			line-height: 40px;
-			margin-top: 103px;
-			margin-bottom: 120px;
+
+			margin-top: 69px;
+			margin-bottom: 34px;
+			//margin-top: 103px;
+			//margin-bottom: 120px;
 			max-width: 620px;
 		}
 		@include mq(small_laptop) {
-			margin-top: 115px;
-			margin-bottom: 163px;
-			font-size: 38px;
-			line-height: 48px;
-			max-width: 730px;
+			//margin-top: 115px;
+			//margin-bottom: 163px;
+			margin-top: 62px;
+			margin-bottom: 32px;
+			// font-size: 38px;
+			// line-height: 48px;
+			font-size: 28px;
+			line-height: 35px;
+			//max-width: 730px;
+			max-width: 535px;
 		}
 		@include mq(large_laptop) {
 			font-size: 44px;
