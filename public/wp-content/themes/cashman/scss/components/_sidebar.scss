@@ -22,6 +22,13 @@
 	background: $white;
 	padding: 41px 0;
 	box-shadow: 0px 3px 6px #150f1052;
+	margin-bottom: 30px;
+	@include mq(large_laptop) {
+		margin-bottom: 55px;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 	@include mq(small_tablet) {
 		padding: 41px 0 53px;
 	}
@@ -69,6 +76,7 @@
 				font-size: 18px;
 				line-height: 21px;
 			}
+			&.blog-active,
 			&.current-menu-item,
 			&.current-menu-ancestor {
 				> a {
@@ -144,6 +152,25 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.wp-block-categories {
+	.cat-item {
+		padding: 0 28px;
+		@include mq(small_tablet) {
+			padding: 0 72px;
+		}
+		@include mq(small_laptop) {
+			padding: 0 43px;
+		}
+		@include mq(small_monitor) {
+			padding: 0 64px;
+		}
+		a {
+			padding: 0;
+			display: inline-block;
 		}
 	}
 }

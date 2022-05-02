@@ -56,6 +56,30 @@ body {
 		line-height: 65px;
 		padding-bottom: 57px;
 	}
+	&.no-banner-title {
+		color: $browndark;
+		font-size: 40px;
+		line-height: 46px;
+		padding-top: 50px;
+		padding-bottom: 0;
+		@include mq(small_tablet) {
+			font-size: 60px;
+			line-height: 66px;
+			text-align: center;
+			padding-top: 75px;
+		}
+		@include mq(small_laptop) {
+			font-size: 70px;
+			line-height: 76px;
+			padding-top: 95px;
+			padding-bottom: 15px;
+		}
+		@include mq(small_monitor) {
+			font-size: 90px;
+			line-height: 96px;
+			padding-top: 120px;
+		}
+	}
 }
 
 .img-wrapper {
@@ -70,8 +94,7 @@ body {
 
 #page-container-inner {
 	min-height: 500px;
-	padding: 47px 32px 240px;
-
+	padding: 47px 32px 234px;
 	@include mq(small_tablet) {
 		padding: 78px 93px 275px;
 	}
@@ -80,11 +103,12 @@ body {
 	}
 	@include mq(large_laptop) {
 		padding: 80px 95px 292px;
+		max-width: 1500px;
+		@include margin_lr();
 	}
 	@include mq(small_monitor) {
 		padding: 107px 213px 391px;
-		max-width: 1920px;
-		@include margin_lr();
+		max-width: 1900px;
 	}
 }
 
@@ -168,7 +192,7 @@ body {
 		padding-bottom: 13px;
 		@include type(
 			(
-				size: 21px,
+				size: 22px,
 				height: 32px,
 				family: $secondaryfont,
 				color: $browndark,
@@ -413,7 +437,7 @@ body {
 		padding-top: 32px;
 	}
 	@include mq(large_laptop) {
-		padding-top: 52px;
+		padding-top: 32px;
 	}
 	.alignleft {
 		@media screen and (min-width: 1100px) {

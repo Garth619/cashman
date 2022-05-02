@@ -2,18 +2,27 @@
     <?php
     if (
         !(ilaw_has_class('ilawyer-h1-in-banner') ||
-            ilaw_has_class('ilawyer-blog') ||
+            is_home() ||
+            is_archive() ||
             ilaw_has_class('ilawyer-alt-banner-layout')
         )
-    ) { ?>
-        <h1 class='page-title <?= ilaw_has_class('ilawyer-mobile-button-in-banner') ? "" : "center"; ?>'>
+    ) {
+
+        // analyze from here
+    ?>
+        <h1 class='page-title'>
             <?php the_title(); ?>
         </h1>
     <?php }
     if (
-        !(ilaw_has_class('ilawyer-blog') ||
-            ilaw_has_class('ilawyer-alt-banner-layout')
-        )
+        // does this apply to new site?
+        !
+        // (
+        ilaw_has_class('ilawyer-blog')
+        // ||
+        // ilaw_has_class('ilawyer-alt-banner-layout'
+        // )
+        // )
     ) {
         $acf = get_field('global_internal_banners', 'option');
         get_template_part('template-parts/button', null, array(
