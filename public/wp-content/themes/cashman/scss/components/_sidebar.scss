@@ -12,6 +12,10 @@
 		margin-top: 18px;
 		margin-right: 79px;
 	}
+	@include mq(small_monitor) {
+		flex-basis: 454px;
+		margin-right: 135px;
+	}
 }
 
 .widget {
@@ -23,6 +27,9 @@
 	}
 	@include mq(small_laptop) {
 		padding: 41px 0 46px;
+	}
+	@include mq(small_monitor) {
+		padding: 41px 0 34px;
 	}
 	h3 {
 		display: block;
@@ -42,6 +49,9 @@
 		@include mq(small_laptop) {
 			padding: 0 43px;
 		}
+		@include mq(small_monitor) {
+			padding: 0 64px;
+		}
 	}
 	ul {
 		list-style: none;
@@ -55,6 +65,10 @@
 					weight: 700,
 				)
 			);
+			@include mq(small_monitor) {
+				font-size: 18px;
+				line-height: 21px;
+			}
 			&.current-menu-item,
 			&.current-menu-ancestor {
 				> a {
@@ -74,6 +88,9 @@
 				@include mq(small_laptop) {
 					margin-bottom: 18px;
 					padding: 0 43px;
+				}
+				@include mq(small_monitor) {
+					padding: 0 64px;
 				}
 				&:hover {
 					color: $browndark;
@@ -108,7 +125,9 @@
 					padding: 38px 0;
 					margin-bottom: 35px;
 				}
-
+				@include mq(small_monitor) {
+					margin-top: 29px;
+				}
 				li {
 					opacity: 1;
 					visibility: visible;

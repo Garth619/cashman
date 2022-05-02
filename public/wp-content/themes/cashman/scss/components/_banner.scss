@@ -7,11 +7,37 @@
 	@include mq(small_laptop) {
 		padding: 100px 114px 90px;
 	}
+	@include mq(large_laptop) {
+		padding: 100px 114px 112px;
+	}
+	@include mq(small_monitor) {
+		padding: 140px 228px 142px;
+	}
+}
+
+.ilawyer-h1-in-banner {
+	#banner {
+		padding: 33px;
+		@include mq(small_tablet) {
+			padding: 73px 55px 90px;
+		}
+		@include mq(small_laptop) {
+			padding: 100px 114px 90px;
+		}
+		@include mq(large_laptop) {
+			padding: 100px 114px 112px;
+		}
+		@include mq(small_monitor) {
+			padding: 140px 228px 142px;
+		}
+	}
 }
 
 #banner-content {
 	position: relative;
 	z-index: 1;
+	max-width: 1465px;
+	@include margin_lr();
 }
 
 #banner-title {
@@ -45,12 +71,46 @@
 		max-width: 570px;
 		@include margin_lr(0);
 	}
+	@include mq(large_laptop) {
+		font-size: 60px;
+		line-height: 60px;
+		max-width: 732px;
+		margin-bottom: 32px;
+	}
 	// text wrapped animation span
 	span {
 		span {
 			span {
 				color: $brownlight;
 			}
+		}
+	}
+}
+
+.ilawyer-h1-in-banner {
+	#banner-title {
+		font-size: 30px;
+		line-height: 36px;
+		margin-bottom: 20px;
+		text-transform: none;
+		@include mq(small_tablet) {
+			font-size: 43px;
+			line-height: 43px;
+			max-width: 610px;
+			margin-bottom: 21px;
+		}
+		@include mq(small_laptop) {
+			font-size: 48px;
+			line-height: 48px;
+			text-align: left;
+			max-width: 660px;
+			@include margin_lr(0);
+		}
+		@include mq(large_laptop) {
+			font-size: 60px;
+			line-height: 60px;
+			max-width: 785px;
+			margin-bottom: 32px;
 		}
 	}
 }

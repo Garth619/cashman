@@ -9,29 +9,35 @@ $blog_banner = get_field('blog_banners', 'options');
 
 $bodyclass = get_body_class();
 
-if (!ilaw_has_class('ilawyer-banner-disabled')) { ?>
+if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'))) { ?>
     <section id='banner'>
         <div id='banner-content'>
             <?php
             if (
-                ilaw_has_class('ilawyer-blog') ||
+                // ilaw_has_class('ilawyer-blog') ||
                 ilaw_has_class('ilawyer-alt-banner-layout')
             ) { ?>
                 <h1 id='banner-title'>
-                    <?php if (is_home()) {
-                        $blog_title = get_the_title(get_option('page_for_posts', true));
-                        echo text_wrap($blog_title, ' ');
-                    } elseif (is_archive()) {
-                        echo text_wrap(get_the_archive_title(), ' ');
-                    } elseif (
-                        is_single() ||
-                        ilaw_has_class('ilawyer-alt-banner-layout')
-                    ) {
+                    <?php
+                    if (ilaw_has_class('ilawyer-alt-banner-layout')) {
                         echo text_wrap(get_the_title(), ' ');
-                    } ?>
+                    }
+                    // if (
+                    //     is_home()) {
+                    //     $blog_title = get_the_title(get_option('page_for_posts', true));
+                    //     echo text_wrap($blog_title, ' ');
+                    // } elseif (is_archive()) {
+                    //     echo text_wrap(get_the_archive_title(), ' ');
+                    // } elseif (
+                    //     is_single() ||
+                    //     ilaw_has_class('ilawyer-alt-banner-layout')
+                    // ) {
+                    //     echo text_wrap(get_the_title(), ' ');
+                    // }
+                    ?>
                 </h1>
             <?php } elseif (ilaw_has_class('ilawyer-h1-in-banner')) { ?>
-                <h1 id='banner-title'><?= text_wrap(get_the_title(), ' '); ?></h1>
+                <h1 id='banner-title' class='h1-banner-title'><?= text_wrap(get_the_title(), ' '); ?></h1>
             <?php } else { ?>
                 <span id='banner-title'>
                     <?php
@@ -48,8 +54,11 @@ if (!ilaw_has_class('ilawyer-banner-disabled')) { ?>
         </span>
     <?php }
             if (
-                !(ilaw_has_class('ilawyer-blog') ||
-                    ilaw_has_class('ilawyer-alt-banner-layout')
+                !
+                // (ilaw_has_class('ilawyer-blog') ||
+                ilaw_has_class(
+                    'ilawyer-alt-banner-layout'
+                    // )
                 )
             ) {
                 get_template_part('template-parts/button', null, array(
@@ -67,9 +76,9 @@ if (!ilaw_has_class('ilawyer-banner-disabled')) { ?>
                 $acf_field = $global_banners;
             }
         }
-        if (ilaw_has_class('ilawyer-blog')) {
-            $acf_field = $blog_banner;
-        }
+        // if (ilaw_has_class('ilawyer-blog')) {
+        //     $acf_field = $blog_banner;
+        // }
         if (is_404()) {
             $acf_field = $global_banners;
         }

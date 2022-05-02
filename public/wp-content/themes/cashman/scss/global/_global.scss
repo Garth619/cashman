@@ -28,6 +28,8 @@ body {
 .page-title {
 	display: block;
 	padding-bottom: 15px;
+	max-width: 500px;
+	@include margin_lr();
 	@include type(
 		(
 			size: 30px,
@@ -41,6 +43,18 @@ body {
 		font-size: 40px;
 		line-height: 50px;
 		text-align: left;
+		max-width: 100%;
+		@include margin_lr();
+	}
+	@include mq(large_laptop) {
+		font-size: 50px;
+		line-height: 50px;
+		padding-bottom: 45px;
+	}
+	@include mq(small_monitor) {
+		font-size: 65px;
+		line-height: 65px;
+		padding-bottom: 57px;
 	}
 }
 
@@ -51,20 +65,34 @@ body {
 }
 
 #page-container {
+	background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
+}
+
+#page-container-inner {
 	min-height: 500px;
 	padding: 47px 32px 240px;
-	background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
+
 	@include mq(small_tablet) {
 		padding: 78px 93px 275px;
 	}
 	@include mq(small_laptop) {
 		padding: 80px 95px 342px;
 	}
+	@include mq(large_laptop) {
+		padding: 80px 95px 292px;
+	}
+	@include mq(small_monitor) {
+		padding: 107px 213px 391px;
+		max-width: 1920px;
+		@include margin_lr();
+	}
 }
 
 .ilawyer-two-col-layout {
-	#page-container {
-		@include flex();
+	#page-container-inner {
+		@include mq(small_laptop) {
+			@include flex();
+		}
 	}
 }
 
@@ -80,10 +108,28 @@ body {
 	}
 }
 
-.internal-button {
+.ilawyer-mobile-button-in-content {
+	.banner-button {
+		display: none;
+		@include mq(small_tablet) {
+			display: block;
+		}
+	}
+	.page-button {
+		margin: 5px 0 25px;
+		@include mq(small_tablet) {
+			display: none;
+		}
+	}
+}
+
+.internal-button.button-one {
 	@include margin_lr();
 	@include mq(small_laptop) {
 		@include margin_lr(0);
+	}
+	@include mq(large_laptop) {
+		font-size: 22px;
 	}
 }
 
@@ -142,9 +188,11 @@ body {
 		@include mq(large_laptop) {
 			font-size: 28px;
 			line-height: 42px;
+			padding-bottom: 5px;
 		}
 		@include mq(small_monitor) {
 			font-size: 32px;
+			padding-top: 13px;
 		}
 		&.blog-title {
 		}
@@ -164,6 +212,21 @@ body {
 			line-height: 30px;
 			padding-top: 35px;
 			padding-bottom: 20px;
+		}
+		@include mq(small_laptop) {
+			font-size: 22px;
+			line-height: 30px;
+		}
+		@include mq(large_laptop) {
+			font-size: 24px;
+			line-height: 32px;
+			padding-top: 23px;
+		}
+		@include mq(small_monitor) {
+			font-size: 26px;
+			line-height: 36px;
+			padding-top: 30px;
+			padding-bottom: 10px;
 		}
 	}
 	p,
@@ -249,15 +312,24 @@ body {
 			max-width: 535px;
 		}
 		@include mq(large_laptop) {
-			font-size: 44px;
-			line-height: 55px;
-			max-width: 840px;
-			margin-top: 135px;
+			// font-size: 44px;
+			// line-height: 55px;
+			font-size: 32px;
+			line-height: 40px;
+			//max-width: 840px;
+			max-width: 612px;
+			//margin-top: 135px;
+			margin-top: 80px;
 		}
 		@include mq(small_monitor) {
-			font-size: 50px;
-			line-height: 63px;
-			max-width: 975px;
+			// font-size: 50px;
+			// line-height: 63px;
+			//max-width: 975px;
+			max-width: 726px;
+			font-size: 38px;
+			line-height: 48px;
+			margin-top: 113px;
+			margin-bottom: 25px;
 		}
 		&::before,
 		&::after {

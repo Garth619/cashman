@@ -583,6 +583,9 @@ body {
 .page-title, .content h1 {
   display: block;
   padding-bottom: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 30px;
   line-height: 36px;
   font-family: "Playfair Display", serif;
@@ -597,6 +600,23 @@ body {
     font-size: 40px;
     line-height: 50px;
     text-align: left;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .page-title, .content h1 {
+    font-size: 50px;
+    line-height: 50px;
+    padding-bottom: 45px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .page-title, .content h1 {
+    font-size: 65px;
+    line-height: 65px;
+    padding-bottom: 57px;
   }
 }
 
@@ -607,23 +627,41 @@ body {
 }
 
 #page-container {
-  min-height: 500px;
-  padding: 47px 32px 240px;
   background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 40%);
 }
+
+#page-container-inner {
+  min-height: 500px;
+  padding: 47px 32px 240px;
+}
 @media screen and (min-width: 768px) {
-  #page-container {
+  #page-container-inner {
     padding: 78px 93px 275px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #page-container {
+  #page-container-inner {
     padding: 80px 95px 342px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #page-container-inner {
+    padding: 80px 95px 292px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  #page-container-inner {
+    padding: 107px 213px 391px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-.ilawyer-two-col-layout #page-container {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .ilawyer-two-col-layout #page-container-inner {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -636,14 +674,36 @@ body {
   display: none;
 }
 
-.internal-button {
+.ilawyer-mobile-button-in-content .banner-button {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .ilawyer-mobile-button-in-content .banner-button {
+    display: block;
+  }
+}
+.ilawyer-mobile-button-in-content .page-button {
+  margin: 5px 0 25px;
+}
+@media screen and (min-width: 768px) {
+  .ilawyer-mobile-button-in-content .page-button {
+    display: none;
+  }
+}
+
+.internal-button.button-one {
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
-  .internal-button {
+  .internal-button.button-one {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .internal-button.button-one {
+    font-size: 22px;
   }
 }
 
@@ -707,11 +767,13 @@ body {
   .content h2 {
     font-size: 28px;
     line-height: 42px;
+    padding-bottom: 5px;
   }
 }
 @media screen and (min-width: 1650px) {
   .content h2 {
     font-size: 32px;
+    padding-top: 13px;
   }
 }
 .content h3 {
@@ -727,6 +789,27 @@ body {
     line-height: 30px;
     padding-top: 35px;
     padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .content h3 {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 23px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .content h3 {
+    font-size: 26px;
+    line-height: 36px;
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
 }
 .content p,
@@ -811,17 +894,19 @@ body {
 }
 @media screen and (min-width: 1380px) {
   .content blockquote {
-    font-size: 44px;
-    line-height: 55px;
-    max-width: 840px;
-    margin-top: 135px;
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 612px;
+    margin-top: 80px;
   }
 }
 @media screen and (min-width: 1650px) {
   .content blockquote {
-    font-size: 50px;
-    line-height: 63px;
-    max-width: 975px;
+    max-width: 726px;
+    font-size: 38px;
+    line-height: 48px;
+    margin-top: 113px;
+    margin-bottom: 25px;
   }
 }
 .content blockquote::before, .content blockquote::after {
@@ -1889,10 +1974,47 @@ nav ul.sub-menu > li ul.sub-menu.active {
     padding: 100px 114px 90px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #banner {
+    padding: 100px 114px 112px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  #banner {
+    padding: 140px 228px 142px;
+  }
+}
+
+.ilawyer-h1-in-banner #banner {
+  padding: 33px;
+}
+@media screen and (min-width: 768px) {
+  .ilawyer-h1-in-banner #banner {
+    padding: 73px 55px 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ilawyer-h1-in-banner #banner {
+    padding: 100px 114px 90px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .ilawyer-h1-in-banner #banner {
+    padding: 100px 114px 112px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .ilawyer-h1-in-banner #banner {
+    padding: 140px 228px 142px;
+  }
+}
 
 #banner-content {
   position: relative;
   z-index: 1;
+  max-width: 1465px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #banner-title {
@@ -1934,8 +2056,49 @@ nav ul.sub-menu > li ul.sub-menu.active {
     margin-right: 0;
   }
 }
+@media screen and (min-width: 1380px) {
+  #banner-title {
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 732px;
+    margin-bottom: 32px;
+  }
+}
 #banner-title span span span {
   color: #f0c498;
+}
+
+.ilawyer-h1-in-banner #banner-title {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+@media screen and (min-width: 768px) {
+  .ilawyer-h1-in-banner #banner-title {
+    font-size: 43px;
+    line-height: 43px;
+    max-width: 610px;
+    margin-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ilawyer-h1-in-banner #banner-title {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: left;
+    max-width: 660px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .ilawyer-h1-in-banner #banner-title {
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 785px;
+    margin-bottom: 32px;
+  }
 }
 
 .internal-banner-image {
@@ -1970,6 +2133,12 @@ nav ul.sub-menu > li ul.sub-menu.active {
     margin-right: 79px;
   }
 }
+@media screen and (min-width: 1650px) {
+  #sidebar-wrapper {
+    flex-basis: 454px;
+    margin-right: 135px;
+  }
+}
 
 .widget {
   background: #fff;
@@ -1984,6 +2153,11 @@ nav ul.sub-menu > li ul.sub-menu.active {
 @media screen and (min-width: 1200px) {
   .widget {
     padding: 41px 0 46px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .widget {
+    padding: 41px 0 34px;
   }
 }
 .widget h3 {
@@ -2008,6 +2182,11 @@ nav ul.sub-menu > li ul.sub-menu.active {
     padding: 0 43px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .widget h3 {
+    padding: 0 64px;
+  }
+}
 .widget ul {
   list-style: none;
 }
@@ -2019,6 +2198,12 @@ nav ul.sub-menu > li ul.sub-menu.active {
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 1650px) {
+  .widget ul li {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 .widget ul li.current-menu-item > a, .widget ul li.current-menu-ancestor > a {
   color: #ce996e;
@@ -2040,6 +2225,11 @@ nav ul.sub-menu > li ul.sub-menu.active {
   .widget ul li a {
     margin-bottom: 18px;
     padding: 0 43px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .widget ul li a {
+    padding: 0 64px;
   }
 }
 .widget ul li a:hover {
@@ -2072,6 +2262,11 @@ nav ul.sub-menu > li ul.sub-menu.active {
     margin-top: 37px;
     padding: 38px 0;
     margin-bottom: 35px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .widget ul.sub-menu.open {
+    margin-top: 29px;
   }
 }
 .widget ul.sub-menu.open li {
