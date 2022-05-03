@@ -125,16 +125,7 @@ h2.blog-title {
 		top: 0;
 		z-index: 1;
 		padding: 9px 20px;
-		overflow: hidden;
 		transition: all 200ms ease-in-out;
-		// &::before {
-		// 	background: $browngradient;
-		// 	opacity: 0;
-		// 	transition: all 200ms ease-in-out;
-		// 	@include abs(0, null, null, 0, -1);
-		// 	@include box(100%, 100%);
-		// 	@include contentdisplay();
-		// }
 		@include mq(large_laptop) {
 			padding: 10px 23px;
 		}
@@ -142,9 +133,6 @@ h2.blog-title {
 			border-color: $greythree;
 			background: $greythree;
 			color: $brownlight;
-			// &::before {
-			// 	opacity: 1;
-			// }
 		}
 	}
 	.prev {
@@ -186,6 +174,49 @@ h2.blog-title {
 		@include mq(small_monitor) {
 			font-size: 50px;
 			line-height: 50px;
+		}
+	}
+}
+
+#single-post-pagination {
+	border-top: 1px solid $browndark;
+	padding-top: 30px;
+	margin-top: 35px;
+	@include flex(center);
+	@include mq(small_tablet) {
+		margin-top: 55px;
+	}
+	@include mq(small_laptop) {
+		justify-content: flex-end;
+	}
+	@include mq(small_monitor) {
+		margin-top: 80px;
+		padding-top: 40px;
+	}
+	a {
+		border: 1px solid $black;
+		border-radius: 50px;
+		padding: 9px 20px;
+		transition: all 200ms ease-in-out;
+		@include type(
+			(
+				size: 16px,
+				family: $primaryfont,
+				color: $black,
+				weight: 900,
+				transform: lowercase,
+			)
+		);
+		@include mq(large_laptop) {
+			padding: 10px 23px;
+		}
+		&:last-of-type {
+			margin-left: 20px;
+		}
+		&:hover {
+			border-color: $greythree;
+			background: $greythree;
+			color: $brownlight;
 		}
 	}
 }

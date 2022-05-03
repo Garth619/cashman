@@ -5225,7 +5225,6 @@ h2.blog-title a:hover {
   top: 0;
   z-index: 1;
   padding: 9px 20px;
-  overflow: hidden;
   transition: all 200ms ease-in-out;
 }
 @media screen and (min-width: 1380px) {
@@ -5288,6 +5287,56 @@ h2.blog-title a:hover {
     font-size: 50px;
     line-height: 50px;
   }
+}
+
+#single-post-pagination {
+  border-top: 1px solid #ce996e;
+  padding-top: 30px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  #single-post-pagination {
+    margin-top: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #single-post-pagination {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1650px) {
+  #single-post-pagination {
+    margin-top: 80px;
+    padding-top: 40px;
+  }
+}
+#single-post-pagination a {
+  border: 1px solid #0b1216;
+  border-radius: 50px;
+  padding: 9px 20px;
+  transition: all 200ms ease-in-out;
+  font-size: 16px;
+  font-family: effra, sans-serif;
+  color: #0b1216;
+  font-weight: 900;
+  text-transform: lowercase;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 1380px) {
+  #single-post-pagination a {
+    padding: 10px 23px;
+  }
+}
+#single-post-pagination a:last-of-type {
+  margin-left: 20px;
+}
+#single-post-pagination a:hover {
+  border-color: #2a333d;
+  background: #2a333d;
+  color: #f0c498;
 }
 
 /*# sourceMappingURL=style.css.map */
