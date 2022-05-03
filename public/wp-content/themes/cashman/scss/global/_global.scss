@@ -157,6 +157,12 @@ body {
 	}
 }
 
+.template-part-wrapper {
+	position: relative;
+	z-index: 1;
+	@include margin_lr();
+}
+
 .content {
 	font-size: 17px;
 	line-height: 26px;
