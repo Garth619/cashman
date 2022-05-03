@@ -5577,22 +5577,57 @@ h2.blog-title a:hover {
   padding-bottom: 500px;
 }
 .template-testimonials .template-part-wrapper {
-  margin-top: -490px;
+  margin-top: -494px;
 }
 
 #testimonials-wrapper img.stars {
+  margin-bottom: 26px;
   max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+#testimonials-wrapper span {
+  display: block;
+}
+#testimonials-wrapper span.intro {
+  margin-bottom: 13px;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Playfair Display", serif;
+  color: #f0c498;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+#testimonials-wrapper span.name {
+  margin-top: -7px;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  line-height: 17px;
+  font-family: effra, sans-serif;
+  color: #f0c498;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#testimonials-wrapper .content {
+  padding: 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.testimonials-box {
+  text-align: center;
+  padding: 48px 15px 60px;
+}
 
 #testimonials-feature {
   background: #2a333d;
-  text-align: center;
   box-shadow: 0px 3px 9px #0000007c;
-  padding: 48px 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
