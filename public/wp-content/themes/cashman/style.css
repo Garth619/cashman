@@ -2135,6 +2135,8 @@ nav ul.sub-menu > li ul.sub-menu.active {
 .internal-banner-image {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
   max-width: 100%;
   height: auto;
   display: block;

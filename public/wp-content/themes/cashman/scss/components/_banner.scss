@@ -117,6 +117,7 @@
 
 .internal-banner-image {
 	object-fit: cover;
+	object-position: top center;
 	@include image();
 	@include box(100%, 100%);
 	@include abs(0, null, null, 0);

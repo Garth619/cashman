@@ -1,10 +1,14 @@
 <div class='content'>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <?php if (is_home() || is_archive()) { ?>
+            <?php
+            /**
+             * Blog, category and archive post feeds
+             */
+            if (is_home() || is_archive()) { ?>
                 <div class='blog-post'>
                     <h2 class='blog-title'><a class='blog-heading-link' href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h2>
                     <?php get_template_part('template-parts/post-meta'); ?>
-                    <?= wp_trim_words(get_the_content(), 70, '...'); ?>
+                    <?= wp_trim_words(get_the_content(), 60, '...'); ?>
                     <a class='blog-button button-one' href='<?php the_permalink(); ?>'>Read More</a>
                 </div>
         <?php } else {

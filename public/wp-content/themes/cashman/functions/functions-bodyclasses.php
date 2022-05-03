@@ -54,60 +54,31 @@ function body_classes($classes)
         $alt_banner_layout = $page_banners['alternative_banner_layout'];
         $internal_disable_images = $page_banners['banner_background_images']['disable_images'];
 
-        if ($banner_h1) {
-            $classes[] = 'ilawyer-h1-in-banner';
-        }
         if ($banner_disable) {
             $classes[] = 'ilawyer-banner-disabled';
-        }
-        if ($mobile_banner_button) {
-            $classes[] = 'ilawyer-mobile-button-in-banner';
         } else {
-            $classes[] = 'ilawyer-mobile-button-in-content';
-        }
-        if ($alt_banner_layout) {
-            $classes[] = 'ilawyer-alt-banner-layout';
-        }
-        if ($internal_disable_images) {
-            $classes[] = 'ilawyer-global-banner-images';
-        } else {
-            $classes[] = 'ilawyer-internal-banner-images';
-        }
-        /**
-         * Add classes to style the header differently with no banner or on page scroll
-         */
-        if (
-            $banner_disable
-            //&& !is_front_page()
-        ) {
-            $classes[] = 'white-header';
-            $classes[] = 'no-banner';
-        }
-        /**
-         * Page Template Page Titles when banner is disabled
-         */
-        if ($banner_disable) {
-            if (
-                is_page_template(
-                    array(
-                        'template-attprofile.php',
-                        'template-about.php',
-                    )
-                )
-            ) {
-                $classes[] = 'page-title-blue-no-banner';
-            } elseif (
-                is_page_template(
-                    array(
-                        'template-testimonials.php',
-                        'template-padirectory.php',
-                        'template-caseresults.php',
-                        'template-meetteam.php',
-                        'template-contact.php',
-                    )
-                )
-            ) {
-                $classes[] = 'page-title-gold-no-banner';
+            /**
+             * If banners are not disabled, then assign all banner class options
+             */
+            if ($alt_banner_layout) {
+                $classes[] = 'ilawyer-alt-banner-layout';
+            } else {
+                /**
+                 * If the alternate banner layout is not selected, set up all remaining banner class options
+                 */
+                if ($banner_h1) {
+                    $classes[] = 'ilawyer-h1-in-banner';
+                }
+                if ($mobile_banner_button) {
+                    $classes[] = 'ilawyer-mobile-button-in-banner';
+                } else {
+                    $classes[] = 'ilawyer-mobile-button-in-content';
+                }
+                if ($internal_disable_images) {
+                    $classes[] = 'ilawyer-global-banner-images';
+                } else {
+                    $classes[] = 'ilawyer-internal-banner-images';
+                }
             }
         }
     }
@@ -131,7 +102,7 @@ function ilaw_has_class($class)
 /**
  *  Get internal template name other than blog or default template
  *
- * Returns name of the template + 'part'
+ * Returns 'name of the template' - 'part'
  */
 function ilaw_get_template()
 {
