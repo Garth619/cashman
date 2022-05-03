@@ -21,7 +21,7 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
                 </h1>
             <?php }
             /**
-             * If the alternate banner layout option is selected not selected
+             * If the alternate banner layout option is not selected
              *
              * If the h1 in the banner is selected
              */
