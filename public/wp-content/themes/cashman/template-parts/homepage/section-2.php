@@ -1,38 +1,15 @@
 <section id='section-two'>
     <div id='sec-two-inner'>
         <div id='sec-two-sp'>
-            <div class='sec-two-single-sp one'>
-                <div class='sec-two-single-sp-inner'>
-                    <img class='sec-two-sp-icon' src='<?php bloginfo('template_directory'); ?>/images/sp_icon_1.svg' alt='altname' width='66' height='92' loading='lazy' />
-                    <span class='sec-two-single-sp-title'>Personalized Service</span>
-                    <span class='sec-two-single-sp-content'>Our clients all have direct communication with me as well as prompt and efficient response times.</span>
-                    <a class='sec-two-single-sp-button button-one' class='button-one' href='<?php bloginfo('bloginfo'); ?>/'>Meet Attorney Cashman</a>
+            <?php get_template_part('template-parts/selling', 'points'); ?>
+            <div id='sec-two-content'>
+                <div id='sec-two-content-left'>
+                    <h1>Massachusett’s Medical Negligence & Serious Personal Injury Attorney</h1>
                 </div>
-            </div>
-            <div class='sec-two-single-sp two'>
-                <div class='sec-two-single-sp-inner'>
-                    <img class='sec-two-sp-icon' src='<?php bloginfo('template_directory'); ?>/images/sp_icon_2.svg' alt='altname' width='91' height='92' loading='lazy' />
-                    <span class='sec-two-single-sp-title'>Elite Results</span>
-                    <span class='sec-two-single-sp-content'>We’ve recovered over $7.5 million in the past four years.</span>
-                    <a class='sec-two-single-sp-button button-one' href='<?php bloginfo('bloginfo'); ?>/'>View all results</a>
-                </div>
-            </div>
-            <div class='sec-two-single-sp three'>
-                <div class='sec-two-single-sp-inner'>
-                    <img class='sec-two-sp-icon' src='<?php bloginfo('template_directory'); ?>/images/sp_icon_3.svg' alt='altname' width='92' height='92' loading='lazy' />
-                    <span class='sec-two-single-sp-title'>Stellar Reputation</span>
-                    <span class='sec-two-single-sp-content'>Each of our clients receive personal attention. We take the time to get to know you and every detail of your case.</span>
-                    <a class='sec-two-single-sp-button button-one' href='<?php bloginfo('bloginfo'); ?>/'>What our clients say</a>
-                </div>
-            </div>
-        </div>
-        <div id='sec-two-content'>
-            <div id='sec-two-content-left'>
-                <h1>Massachusett’s Medical Negligence & Serious Personal Injury Attorney</h1>
-            </div>
-            <div id='sec-two-content-right' class='content'>
-                <div id='sec-two-content-right-inner'>
-                    <p>Attorney Mark A. Cashman represents victims of medical negligence, dangerous and defective products, construction site injuries, motor vehicle negligence, and dangerous property/landlord negligence cases. He is licensed to practice in Massachusetts, New Hampshire, and Rhode Island.</p>
+                <div id='sec-two-content-right' class='content'>
+                    <div id='sec-two-content-right-inner'>
+                        <p>Attorney Mark A. Cashman represents victims of medical negligence, dangerous and defective products, construction site injuries, motor vehicle negligence, and dangerous property/landlord negligence cases. He is licensed to practice in Massachusetts, New Hampshire, and Rhode Island.</p>
+                    </div>
                 </div>
             </div>
         </div>

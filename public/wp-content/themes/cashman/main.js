@@ -121,7 +121,7 @@ jQuery(document).ready(function ($) {
 	 * Slick Carousel ( http://kenwheeler.github.io/slick/ )
 	 */
 
-	$('#sec-two-sp').slick({
+	$('.selling-points-slides').slick({
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,

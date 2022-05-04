@@ -1,0 +1,233 @@
+.selling-points-slides {
+	max-width: 325px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		max-width: 100%;
+	}
+	.slick-track {
+		padding-bottom: 20px;
+
+		@include mq(small_tablet) {
+			@include flex();
+		}
+	}
+	.slick-list {
+		margin: 0 -10px;
+		@include mq(small_tablet) {
+			margin: 0 -13px;
+		}
+		@media screen and (min-width: 975px) {
+			margin: 0 -15px;
+		}
+		@include mq(large_laptop) {
+			margin: 0 -25px;
+		}
+		@include mq(small_monitor) {
+			margin: 0 -30px;
+		}
+	}
+	.slick-slide {
+		margin: 0 10px 23px;
+		background: $grey;
+		padding: 27px 32px;
+		text-align: center;
+		box-shadow: 0px 3px 6px #00000029;
+		@include mq(small_tablet) {
+			margin: 0 13px;
+			padding: 27px 40px;
+			height: inherit;
+		}
+		@media screen and (min-width: 975px) {
+			margin: 0 15px;
+		}
+		@include mq(small_laptop) {
+			padding: 30px 44px;
+		}
+		@include mq(large_laptop) {
+			margin: 0 25px;
+			padding: 30px 48px;
+		}
+		@include mq(small_monitor) {
+			padding: 37px 62px;
+			margin: 0 30px;
+		}
+		> div {
+			height: 100%;
+		}
+	}
+	.slick-dots {
+		position: static;
+		margin: 3px 0 0 0;
+		@include mq(small_tablet) {
+			margin: 12px 0 0 0;
+		}
+		li.slick-active {
+			button {
+				&:before {
+					color: $brownlight;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color: $brownlight;
+				}
+			}
+		}
+		li {
+			margin: 0;
+			width: 18px;
+			button {
+				width: 18px;
+				&:before {
+					width: 18px;
+					opacity: 1;
+					color: $white;
+					font-size: 30px;
+					transition: all 200ms ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.single-sp {
+	height: 100%;
+	&:first-child {
+		display: block;
+	}
+	&:nth-child(n + 2) {
+		display: none;
+	}
+	&.two {
+		.single-sp-title {
+			max-width: 8ch;
+		}
+		.single-sp-content {
+			max-width: 16ch;
+			@include margin_lr();
+			@include mq(small_laptop) {
+				max-width: 19ch;
+			}
+		}
+	}
+	&.three {
+		.single-sp-content {
+			@include mq(small_laptop) {
+				max-width: 26ch;
+			}
+		}
+	}
+}
+
+.single-sp-inner {
+	background: $greytwo;
+	border-radius: 350px;
+	padding: 37px 23px 97px;
+	color: $white;
+	position: relative;
+	height: 100%;
+	@include mq(small_laptop) {
+		padding: 41px 23px 97px;
+	}
+	@include mq(large_laptop) {
+		padding: 53px 30px 103px;
+	}
+	@include mq(small_monitor) {
+		padding: 72px 23px 152px;
+	}
+	svg,
+	img {
+		width: auto;
+		@include image();
+		height: 60px;
+		@include margin_lr();
+		@include mq(small_laptop) {
+			height: 65px;
+		}
+		@include mq(large_laptop) {
+			height: 70px;
+		}
+		@include mq(small_monitor) {
+			height: 92px;
+		}
+	}
+	span {
+		display: block;
+	}
+}
+
+.single-sp-title {
+	margin-top: 16px;
+	max-width: 12ch;
+	@include margin_lr();
+	@include type(
+		(
+			size: 26px,
+			height: 27px,
+			family: $secondaryfont,
+		)
+	);
+	@include mq(small_tablet) {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 24px;
+	}
+	@include mq(small_monitor) {
+		font-size: 40px;
+		line-height: 40px;
+		margin-top: 28px;
+	}
+}
+
+.single-sp-content {
+	margin-bottom: 38px;
+	margin-top: 10px;
+	@include margin_lr();
+	max-width: 24ch;
+	@include type(
+		(
+			size: 16px,
+			height: 20px,
+			family: $primaryfont,
+		)
+	);
+	@include mq(small_laptop) {
+		font-size: 17px;
+		line-height: 24px;
+		margin-top: 13px;
+		margin-bottom: 33px;
+	}
+	@include mq(large_laptop) {
+		margin-top: 19px;
+		margin-bottom: 39px;
+	}
+	@include mq(small_monitor) {
+		font-size: 22px;
+		line-height: 30px;
+		margin-top: 25px;
+	}
+}
+
+.single-sp-button {
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px 15px;
+	@include abs(null, 0, 68px, 0);
+	@include margin_lr();
+	@include mq(small_tablet) {
+		bottom: 72px;
+	}
+	@include mq(small_laptop) {
+		font-size: 16px;
+		padding: 12px 15px;
+	}
+	@include mq(small_monitor) {
+		font-size: 18px;
+		padding: 17px 24px;
+		bottom: 100px;
+	}
+}
