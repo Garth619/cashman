@@ -1,0 +1,7 @@
+.template-caseresults {
+	.single-cr {
+		&:nth-child(n + 2) {
+			display: block;
+		}
+	}
+}

@@ -1,15 +1,53 @@
 .template-testimonials {
+	#page-container-inner {
+		padding: 107px 163px 391px;
+	}
 	#banner {
 		padding-bottom: 500px;
+		@include mq(small_tablet) {
+			padding-bottom: 600px;
+		}
+		@include mq(small_laptop) {
+			padding-bottom: 503px;
+		}
 	}
 	.template-part-wrapper {
 		margin-top: -494px;
+		@include mq(small_tablet) {
+			margin-top: -604px;
+		}
+		@include mq(small_laptop) {
+			margin-top: -487px;
+		}
+		@include mq(large_laptop) {
+			margin-top: -507px;
+		}
 	}
 }
 
 #testimonials-wrapper {
+	padding-bottom: 37px;
+	max-width: 575px;
+	@include margin_lr();
+	@include mq(small_tablet) {
+		padding-bottom: 70px;
+	}
+	@include mq(small_laptop) {
+		max-width: 100%;
+		padding-bottom: 0;
+		margin-bottom: -30px;
+	}
+	@include mq(large_laptop) {
+		margin-bottom: 25px;
+	}
+	@include mq(small_monitor) {
+		margin-bottom: -28px;
+	}
+}
+
+.testimonials-box {
+	text-align: center;
 	img.stars {
-		margin-bottom: 26px;
 		@include image();
 		@include margin_lr();
 	}
@@ -22,7 +60,6 @@
 					size: 24px,
 					height: 30px,
 					family: $secondaryfont,
-					color: $brownlight,
 				)
 			);
 		}
@@ -34,11 +71,16 @@
 					height: 17px,
 					spacing: 2.8px,
 					family: $primaryfont,
-					color: $brownlight,
 					weight: 900,
 					transform: uppercase,
 				)
 			);
+			@include mq(small_tablet) {
+				margin-top: 0px;
+			}
+			@include mq(small_laptop) {
+				margin-top: 43px;
+			}
 		}
 	}
 	.content {
@@ -49,15 +91,194 @@
 	}
 }
 
-.testimonials-box {
-	text-align: center;
-	padding: 48px 15px 60px;
-}
-
 #testimonials-feature {
 	background: $greythree;
 	box-shadow: 0px 3px 9px #0000007c;
+	padding: 48px 15px 60px;
+	min-height: 530px;
+	@include mq(small_tablet) {
+		padding: 68px 35px 83px;
+	}
+	@include mq(small_laptop) {
+		padding: 90px 35px 83px;
+		max-width: 887px;
+		@include margin_lr();
+	}
+	@include mq(large_laptop) {
+		max-width: 1010px;
+		padding: 98px 35px 92px;
+	}
+	@include mq(small_monitor) {
+		max-width: 1130px;
+		padding: 98px 35px 105px;
+	}
+	img.stars {
+		margin-bottom: 26px;
+	}
+	span {
+		&.intro {
+			color: $brownlight;
+			@include mq(small_tablet) {
+				font-size: 30px;
+				line-height: 37px;
+				margin-bottom: 22px;
+				padding: 0 15px;
+			}
+			@include mq(small_laptop) {
+				font-size: 35px;
+				line-height: 43px;
+				margin-bottom: 27px;
+				max-width: 660px;
+				padding: 0;
+				@include margin_lr();
+			}
+			@include mq(large_laptop) {
+				font-size: 41px;
+				line-height: 50px;
+				max-width: 765px;
+			}
+			@include mq(small_monitor) {
+				font-size: 46px;
+				line-height: 56px;
+				max-width: 885px;
+			}
+		}
+		&.name {
+			color: $brownlight;
+			@include mq(small_laptop) {
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 3.2px;
+			}
+			@include mq(small_monitor) {
+				margin-top: 30px;
+			}
+		}
+	}
+	.content {
+		@include mq(small_tablet) {
+			font-size: 18px;
+			line-height: 28px;
+		}
+		@include mq(small_laptop) {
+			font-size: 22px;
+			line-height: 30px;
+			max-width: 612px;
+			@include margin_lr();
+		}
+		@include mq(large_laptop) {
+			font-size: 20px;
+			max-width: 695px;
+		}
+		@include mq(small_monitor) {
+			font-size: 22px;
+			line-height: 30px;
+			max-width: 780px;
+		}
+	}
+}
+
+#testimonials-list {
+	margin-top: 90px;
+	@include mq(small_laptop) {
+		margin-top: 97px;
+		column-count: 2;
+		column-gap: 30px;
+	}
+	@include mq(small_monitor) {
+		margin-top: 146px;
+		column-gap: 50px;
+	}
 }
 
 .testimonials-single {
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 82px;
+	@include mq(small_tablet) {
+		background: $white;
+		box-shadow: 0px 3px 6px #00000029;
+		padding: 84px 65px 73px;
+		//margin-bottom: 42px;
+	}
+	@include mq(small_laptop) {
+		display: inline-block;
+		width: 100%;
+		margin-top: 20px;
+		padding: 64px 65px 73px;
+		margin-bottom: 15px;
+	}
+	@include mq(large_laptop) {
+		padding: 93px 65px 73px;
+	}
+	@include mq(small_monitor) {
+		padding: 93px 65px 98px;
+		margin-bottom: 21px;
+	}
+	&:last-of-type {
+		margin-bottom: 0px;
+	}
+	img.stars {
+		margin-bottom: 20px;
+		@include mq(small_tablet) {
+			margin-bottom: 30px;
+		}
+	}
+	span {
+		&.intro {
+			color: $browndark;
+			font-size: 28px;
+			line-height: 30px;
+			@include mq(small_tablet) {
+				font-size: 30px;
+				line-height: 40px;
+				margin-bottom: 0px;
+			}
+			@include mq(small_laptop) {
+				font-size: 26px;
+				line-height: 36px;
+			}
+			@include mq(large_laptop) {
+				font-size: 30px;
+				line-height: 40px;
+			}
+			@include mq(small_monitor) {
+				font-size: 36px;
+				line-height: 44px;
+				max-width: 551px;
+				@include margin_lr();
+			}
+		}
+		&.name {
+			color: $browndark;
+			padding-top: 5px;
+			font-size: 16px;
+			letter-spacing: 3.2px;
+			@include mq(small_tablet) {
+				padding-top: 21px;
+			}
+			@include mq(small_laptop) {
+				margin-top: 32px;
+			}
+			@include mq(small_monitor) {
+				margin-top: 22px;
+			}
+		}
+	}
+	.content {
+		color: $black;
+		font-size: 18px;
+		line-height: 28px;
+		text-align: left;
+		padding-top: 20px;
+		@include mq(large_laptop) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+		@include mq(small_monitor) {
+			font-size: 22px;
+			line-height: 34px;
+			padding-top: 47px;
+		}
+	}
 }

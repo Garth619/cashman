@@ -1,25 +1,49 @@
 <?php
+$testimonials = get_field('testimonials');
+$featured_intro = $testimonials['featured_testimonial_intro'];
+$featured_content = $testimonials['featured_testimonial_content'];
+$featured_name = $testimonials['featured_testimonial_name'];
+$testimonials_list = $testimonials['testimonials'];
+
 if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id='testimonials-wrapper' class='template-part-wrapper'>
             <div id='testimonials-feature' class='testimonials-box'>
                 <img class='stars' src='<?php bloginfo('template_directory'); ?>/images/stars_1.svg' alt='Stars Icon' width='157' height='26' />
-                <span class='intro'>The most comforting part was how easily I could reach him. Mark responded to my emails and calls promptly I would highly recommend him.</span>
-                <div class='content'>
-                    <p>My name is Marianne I am a RN who was heading home from a 12 hr shift working in the Er I was stopped at a red light waiting to turn when I was hit head on by a truck . I had a displaced sternal fracture which kept me out of work for 3 1/2 months I had Mark represent me thru a very complicated legal process…</p>
-                </div>
-                <span class='name'>MaRIANNE - CLIENT</span>
-            </div>
-            <div id='testimonials-list'>
-                <div class='testimonials-single testimonials-box'>
-                    <img class='stars' src='<?php bloginfo('template_directory'); ?>/images/stars_1.svg' alt='Stars Icon' width='157' height='26' />
-                    <span class='intro'>The most comforting part was how easily I could reach him. Mark responded to my emails and calls promptly I would highly recommend him.</span>
+                <?php if ($featured_intro) { ?>
+                    <span class='intro'><?= $featured_intro; ?></span>
+                <?php }
+                if ($featured_content) { ?>
                     <div class='content'>
-                        <p>My name is Marianne I am a RN who was heading home from a 12 hr shift working in the Er I was stopped at a red light waiting to turn when I was hit head on by a truck . I had a displaced sternal fracture which kept me out of work for 3 1/2 months I had Mark represent me thru a very complicated legal process…</p>
+                        <?= $featured_content; ?>
                     </div>
-                    <span class='name'>MaRIANNE - CLIENT</span>
-                </div>
+                <?php }
+                if ($featured_name) { ?>
+                    <span class='name'><?= $featured_name; ?></span>
+                <?php } ?>
             </div>
-
+            <?php if ($testimonials_list) { ?>
+                <div id='testimonials-list'>
+                    <?php foreach ($testimonials_list as $single) {
+                        $intro = $single['intro'];
+                        $content = $single['content'];
+                        $name = $single['name']; ?>
+                        <div class='testimonials-single testimonials-box'>
+                            <img class='stars' src='<?php bloginfo('template_directory'); ?>/images/stars_2.svg' alt='Stars Icon' width='157' height='26' />
+                            <?php if ($intro) { ?>
+                                <span class='intro'><?= $intro; ?></span>
+                            <?php }
+                            if ($content) { ?>
+                                <div class='content'>
+                                    <?= $content; ?>
+                                </div>
+                            <?php }
+                            if ($name) { ?>
+                                <span class='name'><?= $name; ?></span>
+                            <?php } ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
         </div>
 <?php
     endwhile;

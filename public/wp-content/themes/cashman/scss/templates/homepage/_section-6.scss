@@ -70,7 +70,7 @@
 	}
 }
 
-#sec-six-case-results {
+.case-results {
 	margin-top: 25px;
 	@include mq(small_tablet) {
 		margin-top: 43px;
@@ -93,6 +93,7 @@
 	.slick-dots {
 		position: static;
 		margin-top: 12px;
+		margin-left: 0;
 		li.slick-active {
 			button {
 				&:before {
@@ -168,7 +169,7 @@
 			&::before {
 				opacity: 1;
 			}
-			.sec-six-cr-button {
+			.single-cr-button {
 				@include mq(small_laptop) {
 					opacity: 1;
 					visibility: visible;
@@ -186,7 +187,7 @@
 	}
 }
 
-.sec-six-cr {
+.single-cr {
 	padding: 20px 40px 0;
 	text-align: center;
 	@include mq(small_tablet) {
@@ -207,12 +208,12 @@
 	a {
 		text-decoration: none;
 	}
-	span:not(.sec-six-cr-button) {
+	span:not(.single-cr-button) {
 		display: block;
 	}
 }
 
-.sec-six-cr-amount {
+.single-cr-amount {
 	@include type(
 		(
 			size: 50px,
@@ -231,7 +232,7 @@
 	}
 }
 
-.sec-six-cr-type {
+.single-cr-type {
 	margin-top: 16px;
 	@include type(
 		(
@@ -259,7 +260,7 @@
 	}
 }
 
-.sec-six-cr-content {
+.single-cr-content {
 	color: $black;
 	font-size: 16px;
 	line-height: 24px;
@@ -280,7 +281,7 @@
 	}
 }
 
-.sec-six-cr-button {
+.single-cr-button {
 	display: none;
 	@include mq(small_laptop) {
 		display: block;
