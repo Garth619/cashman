@@ -5201,6 +5201,10 @@ body.mobile-header-change #section-one {
     padding-bottom: 570px;
   }
 }
+.template-about #page-container-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
 .template-about .template-part-wrapper {
   margin-top: -275px;
 }
@@ -5217,20 +5221,47 @@ body.mobile-header-change #section-one {
 @media screen and (min-width: 1650px) {
   .template-about .template-part-wrapper {
     margin-top: -495px;
+    margin-bottom: -40px;
   }
 }
-.template-about .selling-points-slides .slick-dots li.slick-active button:before {
+.template-about #about-selling-points {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  .template-about #about-selling-points {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .template-about #about-selling-points {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .template-about #about-selling-points {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .template-about #about-selling-points {
+    padding-left: 145px;
+    padding-right: 145px;
+  }
+}
+.template-about #about-selling-points .slick-dots li.slick-active button:before {
   color: #ce996e;
 }
-.template-about .selling-points-slides .slick-dots li:hover button:before {
+.template-about #about-selling-points .slick-dots li:hover button:before {
   color: #ce996e;
 }
-.template-about .selling-points-slides .slick-dots li button:before {
+.template-about #about-selling-points .slick-dots li button:before {
   color: #2a333d;
 }
 .template-about #content-layout-inner {
-  padding-left: 0;
-  padding-right: 0;
   padding-top: 30px;
 }
 @media screen and (min-width: 768px) {

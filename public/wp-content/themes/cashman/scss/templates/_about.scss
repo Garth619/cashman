@@ -11,6 +11,10 @@
 			padding-bottom: 570px;
 		}
 	}
+	#page-container-inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.template-part-wrapper {
 		margin-top: -275px;
 		@include mq(small_tablet) {
@@ -21,9 +25,28 @@
 		}
 		@include mq(small_monitor) {
 			margin-top: -495px;
+			margin-bottom: -40px;
 		}
 	}
-	.selling-points-slides {
+	#about-selling-points {
+		padding-left: 20px;
+		padding-right: 20px;
+		@include mq(small_tablet) {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		@include mq(small_laptop) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@include mq(large_laptop) {
+			padding-left: 75px;
+			padding-right: 75px;
+		}
+		@include mq(small_monitor) {
+			padding-left: 145px;
+			padding-right: 145px;
+		}
 		.slick-dots {
 			li.slick-active {
 				button {
@@ -49,8 +72,8 @@
 		}
 	}
 	#content-layout-inner {
-		padding-left: 0;
-		padding-right: 0;
+		// padding-left: 0;
+		// padding-right: 0;
 		padding-top: 30px;
 		@include mq(small_tablet) {
 			padding-top: 70px;

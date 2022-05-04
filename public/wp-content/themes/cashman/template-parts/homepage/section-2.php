@@ -1,7 +1,14 @@
+<?php
+$section_two = get_field('section_two');
+?>
 <section id='section-two'>
     <div id='sec-two-inner'>
         <div id='sec-two-sp'>
-            <?php get_template_part('template-parts/selling', 'points'); ?>
+            <?php get_template_part('template-parts/selling', 'points', array(
+                'acf-field' => $section_two,
+                'id' => 'sec-two-selling-points',
+                'loading' => 'eager'
+            )); ?>
             <div id='sec-two-content'>
                 <div id='sec-two-content-left'>
                     <h1>Massachusett’s Medical Negligence & Serious Personal Injury Attorney</h1>

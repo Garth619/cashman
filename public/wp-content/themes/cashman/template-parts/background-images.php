@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Experimental Reusable ACF Background Images Clone
+ * Experimental Reusable ACF Clone
  *
  * Get Template Part Args
  */

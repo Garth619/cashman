@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Experimental Reusable ACF Button Clone
+ * Experimental Reusable ACF Clone
  *
  * Get Template Part Args
  */

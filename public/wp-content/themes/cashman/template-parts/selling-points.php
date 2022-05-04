@@ -1,22 +1,26 @@
 <?php
 
 /**
- * Experimental Reusable ACF Button Clone
+ * Experimental Reusable ACF Clone
  *
  * Get Template Part Args
  */
 $array_defaults = array(
     'acf-field' => '',
+    'id' => '',
+    'loading' => 'loading'
 );
 $args = wp_parse_args($args, $array_defaults);
 /**
  * ACFs
  */
 $acf_field = $args['acf-field'];
+$id = $args['id'];
+$loading = $args['loading'];
 $sp_slides = $acf_field['selling_point_slides'];
 $sps = $sp_slides['selling_points'];
 if ($sps) { ?>
-    <div class='selling-points-slides'>
+    <div id="<?= $id; ?>" class='selling-points-slides'>
         <?php foreach ($sps as $sp) {
             $icon = $sp['icon'];
             $icon_link = $icon['url'];
@@ -31,10 +35,16 @@ if ($sps) { ?>
         ?>
             <div class='single-sp <?= $icon_name; ?>'>
                 <div class='single-sp-inner'>
-                    <img class='single-sp-icon' src='<?= $icon_link; ?>' alt='<?= $icon_alt; ?>' width='<?= $icon_width; ?>' height='<?= $icon_height; ?>' loading='lazy' />
-                    <span class='single-sp-title'><?= $title; ?></span>
-                    <span class='single-sp-content'><?= $content; ?></span>
-                    <?php get_template_part('template-parts/button', null, array(
+                    <?php if ($icon) { ?>
+                        <img class='single-sp-icon' src='<?= $icon_link; ?>' alt='<?= $icon_alt; ?>' width='<?= $icon_width; ?>' height='<?= $icon_height; ?>' loading='<?= $loading; ?>' />
+                    <?php } ?>
+                    <?php if ($title) { ?>
+                        <span class='single-sp-title'><?= $title; ?></span>
+                    <?php }
+                    if ($content) { ?>
+                        <span class='single-sp-content'><?= $content; ?></span>
+                    <?php }
+                    get_template_part('template-parts/button', null, array(
                         'acf-field' => $sp,
                         'button-classes' => 'single-sp-button button-one',
                     )); ?>
