@@ -1,26 +1,45 @@
-<div class='selling-points-slides'>
-    <div class='single-sp one'>
-        <div class='single-sp-inner'>
-            <img class='single-sp-icon' src='<?php bloginfo('template_directory'); ?>/images/sp_icon_1.svg' alt='altname' width='66' height='92' loading='lazy' />
-            <span class='single-sp-title'>Personalized Service</span>
-            <span class='single-sp-content'>Our clients all have direct communication with me as well as prompt and efficient response times.</span>
-            <a class='single-sp-button button-one' class='button-one' href='<?php bloginfo('bloginfo'); ?>/'>Meet Attorney Cashman</a>
-        </div>
+<?php
+
+/**
+ * Experimental Reusable ACF Button Clone
+ *
+ * Get Template Part Args
+ */
+$array_defaults = array(
+    'acf-field' => '',
+);
+$args = wp_parse_args($args, $array_defaults);
+/**
+ * ACFs
+ */
+$acf_field = $args['acf-field'];
+$sp_slides = $acf_field['selling_point_slides'];
+$sps = $sp_slides['selling_points'];
+if ($sps) { ?>
+    <div class='selling-points-slides'>
+        <?php foreach ($sps as $sp) {
+            $icon = $sp['icon'];
+            $icon_link = $icon['url'];
+            $icon_alt = $icon['alt'];
+            $icon_width = $icon['width'];
+            $icon_height = $icon['height'];
+            $icon_name = $icon['name'];
+            $title = $sp['title'];
+            $content = $sp['content'];
+            $button =  $sp['button'];
+            $button_verbiage =  $button['verbiage'];
+        ?>
+            <div class='single-sp <?= $icon_name; ?>'>
+                <div class='single-sp-inner'>
+                    <img class='single-sp-icon' src='<?= $icon_link; ?>' alt='<?= $icon_alt; ?>' width='<?= $icon_width; ?>' height='<?= $icon_height; ?>' loading='lazy' />
+                    <span class='single-sp-title'><?= $title; ?></span>
+                    <span class='single-sp-content'><?= $content; ?></span>
+                    <?php get_template_part('template-parts/button', null, array(
+                        'acf-field' => $sp,
+                        'button-classes' => 'single-sp-button button-one',
+                    )); ?>
+                </div>
+            </div>
+        <?php } ?>
     </div>
-    <div class='single-sp two'>
-        <div class='single-sp-inner'>
-            <img class='single-sp-icon' src='<?php bloginfo('template_directory'); ?>/images/sp_icon_2.svg' alt='altname' width='91' height='92' loading='lazy' />
-            <span class='single-sp-title'>Elite Results</span>
-            <span class='single-sp-content'>We’ve recovered over $7.5 million in the past four years.</span>
-            <a class='single-sp-button button-one' href='<?php bloginfo('bloginfo'); ?>/'>View all results</a>
-        </div>
-    </div>
-    <div class='single-sp three'>
-        <div class='single-sp-inner'>
-            <img class='single-sp-icon' src='<?php bloginfo('template_directory'); ?>/images/sp_icon_3.svg' alt='altname' width='92' height='92' loading='lazy' />
-            <span class='single-sp-title'>Stellar Reputation</span>
-            <span class='single-sp-content'>Each of our clients receive personal attention. We take the time to get to know you and every detail of your case.</span>
-            <a class='single-sp-button button-one' href='<?php bloginfo('bloginfo'); ?>/'>What our clients say</a>
-        </div>
-    </div>
-</div>
+<?php } ?>

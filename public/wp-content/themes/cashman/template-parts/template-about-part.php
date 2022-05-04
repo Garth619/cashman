@@ -1,8 +1,11 @@
 <?php
+$about = get_field('about_us');
 if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <main id='about-wrapper'>
+        <main id='about-wrapper' class='template-part-wrapper'>
             <?php
-            get_template_part('template-parts/selling', 'points');
+            get_template_part('template-parts/selling', 'points', array(
+                'acf-field' => $about
+            ));
             get_template_part('template-parts/content', 'layout');
             // get_template_part(
             //     'template-parts/logos',

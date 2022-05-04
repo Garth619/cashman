@@ -100,7 +100,7 @@
 	&:nth-child(n + 2) {
 		display: none;
 	}
-	&.two {
+	&.sp_icon_2 {
 		.single-sp-title {
 			max-width: 8ch;
 		}
@@ -112,7 +112,7 @@
 			}
 		}
 	}
-	&.three {
+	&.sp_icon_3 {
 		.single-sp-content {
 			@include mq(small_laptop) {
 				max-width: 26ch;

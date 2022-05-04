@@ -13,6 +13,7 @@ $array_defaults = array(
 $args = wp_parse_args($args, $array_defaults);
 
 $acf_field = $args['acf-field'];
+$verbiage = $args['verbiage'];
 $button_id = $args['button-id'];
 $button_classes = $args['button-classes'];
 /**
@@ -35,6 +36,9 @@ if ($url_select == 'External Link') {
 if ($url_select == 'Scroll to Footer Form') {
     $url = $footer_scroll;
 }
-if (!$disable) { ?>
+if (!$disable) {
+?>
     <a id='<?= $button_id; ?>' class='<?= $button_classes; ?>' href='<?= $url; ?>' <?= $open_window ? "target=_blank rel='noopener'" : ""; ?>><?= $verbiage; ?></a>
-<?php } ?>
+<?php
+}
+?>

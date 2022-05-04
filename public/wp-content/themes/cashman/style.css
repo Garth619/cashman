@@ -2530,21 +2530,21 @@ nav ul.sub-menu > li ul.sub-menu.active {
 .single-sp:nth-child(n+2) {
   display: none;
 }
-.single-sp.two .single-sp-title {
+.single-sp.sp_icon_2 .single-sp-title {
   max-width: 8ch;
 }
-.single-sp.two .single-sp-content {
+.single-sp.sp_icon_2 .single-sp-content {
   max-width: 16ch;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
-  .single-sp.two .single-sp-content {
+  .single-sp.sp_icon_2 .single-sp-content {
     max-width: 19ch;
   }
 }
 @media screen and (min-width: 1200px) {
-  .single-sp.three .single-sp-content {
+  .single-sp.sp_icon_3 .single-sp-content {
     max-width: 26ch;
   }
 }
@@ -5180,6 +5180,72 @@ body.mobile-header-change #section-one {
   .single-cr-button {
     margin-top: 62px;
     padding: 14px 18px;
+  }
+}
+
+.template-about #banner {
+  padding-bottom: 280px;
+}
+@media screen and (min-width: 768px) {
+  .template-about #banner {
+    padding-bottom: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .template-about #banner {
+    padding-bottom: 450px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .template-about #banner {
+    padding-bottom: 570px;
+  }
+}
+.template-about .template-part-wrapper {
+  margin-top: -275px;
+}
+@media screen and (min-width: 768px) {
+  .template-about .template-part-wrapper {
+    margin-top: -355px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .template-about .template-part-wrapper {
+    margin-top: -435px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .template-about .template-part-wrapper {
+    margin-top: -495px;
+  }
+}
+.template-about .selling-points-slides .slick-dots li.slick-active button:before {
+  color: #ce996e;
+}
+.template-about .selling-points-slides .slick-dots li:hover button:before {
+  color: #ce996e;
+}
+.template-about .selling-points-slides .slick-dots li button:before {
+  color: #2a333d;
+}
+.template-about #content-layout-inner {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .template-about #content-layout-inner {
+    padding-top: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .template-about #content-layout-inner {
+    padding-top: 150px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .template-about #content-layout-inner {
+    padding-top: 180px;
   }
 }
 
