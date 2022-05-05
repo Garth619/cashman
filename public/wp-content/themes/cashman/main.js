@@ -283,6 +283,13 @@ jQuery(document).ready(function ($) {
 	});
 
 	/**
+	 * Attorney Accolades
+	 */
+	$('.single-accolade-title').on('click', function (e) {
+		$(this).toggleClass('active');
+		$(this).next('.single-accolade-content').slideToggle();
+	});
+	/**
 	 * Resize Nav Functions
 	 * tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
 	 */

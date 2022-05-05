@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Add Body Classes to various templates and acfs for conditional internal layout shifts
+ * Add Body Classes to various templates and acfs for showing conditional internal layouts
  */
 function body_classes($classes)
 {

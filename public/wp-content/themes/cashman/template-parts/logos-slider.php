@@ -21,13 +21,11 @@ $loading = $args['loading'];
  * ACFs
  */
 $logos_slider = $acf_field['logos_slider'];
-$disable_logos = $logos_slider['disable_logos'];
 $logos = $logos_slider['logos'];
 ?>
-<?php if (!$disable_logos) { ?>
+<?php if ($logos) { ?>
     <div id='<?= $id; ?>' class='<?= $class; ?>'>
         <?php
-
         foreach ($logos as $logo) {
             $img = $logo['logo'];
             $img_url = $img['url'];

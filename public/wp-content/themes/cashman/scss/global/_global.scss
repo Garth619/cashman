@@ -216,12 +216,11 @@ body {
 			padding-bottom: 17px;
 		}
 		@include mq(large_laptop) {
-			font-size: 28px;
-			line-height: 42px;
-			padding-bottom: 5px;
+			padding-bottom: 3px;
 		}
 		@include mq(small_monitor) {
-			font-size: 32px;
+			font-size: 28px;
+			line-height: 40px;
 			padding-top: 13px;
 		}
 		&.blog-title {
@@ -276,11 +275,25 @@ body {
 	}
 	ul {
 		margin-left: 20px;
+
+		list-style: disc;
 		li {
 			&::marker {
 				font-size: 24px;
 				line-height: 24px;
 				color: $browndark;
+			}
+			ul {
+				list-style: disc;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				li {
+					&::marker {
+						font-size: 24px;
+						line-height: 24px;
+						color: $browndark;
+					}
+				}
 			}
 		}
 	}
@@ -322,39 +335,24 @@ body {
 		@include mq(small_tablet) {
 			font-size: 30px;
 			line-height: 40px;
-
 			margin-top: 69px;
 			margin-bottom: 34px;
-			//margin-top: 103px;
-			//margin-bottom: 120px;
 			max-width: 620px;
 		}
 		@include mq(small_laptop) {
-			//margin-top: 115px;
-			//margin-bottom: 163px;
 			margin-top: 62px;
 			margin-bottom: 32px;
-			// font-size: 38px;
-			// line-height: 48px;
 			font-size: 28px;
 			line-height: 35px;
-			//max-width: 730px;
 			max-width: 535px;
 		}
 		@include mq(large_laptop) {
-			// font-size: 44px;
-			// line-height: 55px;
 			font-size: 32px;
 			line-height: 40px;
-			//max-width: 840px;
 			max-width: 612px;
-			//margin-top: 135px;
 			margin-top: 80px;
 		}
 		@include mq(small_monitor) {
-			// font-size: 50px;
-			// line-height: 63px;
-			//max-width: 975px;
 			max-width: 726px;
 			font-size: 38px;
 			line-height: 48px;
