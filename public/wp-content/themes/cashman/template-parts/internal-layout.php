@@ -1,11 +1,17 @@
 <div id='internal-main'>
-    <?php get_template_part('template-parts/banner'); ?>
+    <?php
+    /**
+     * If its a default page or black banner template, get the banner
+     */
+    if (ilaw_has_class('ilawyer-default-page') || ilaw_has_class('ilawyer-alt-banner-layout')) {
+        get_template_part('template-parts/banner');
+    } ?>
     <main id='page-container'>
         <?php
         /**
-         * If it's a custom internal template and the banner is disabled
+         * Show a centered h1 title if the template doesnt call for a banner
          */
-        if (ilaw_get_template() && ilaw_has_class('ilawyer-banner-disabled')) { ?>
+        if (ilaw_has_class('ilawyer-no-banner-with-title-layout')) { ?>
             <h1 class='page-title no-banner-title'>
                 <?php echo text_wrap(get_the_title(), ' '); ?>
             </h1>

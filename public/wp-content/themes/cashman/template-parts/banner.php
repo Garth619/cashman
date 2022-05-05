@@ -13,7 +13,7 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
         <div id='banner-content'>
             <?php
             /**
-             * If the alternate banner layout option is selected
+             * If the black banner layout
              */
             if (ilaw_has_class('ilawyer-alt-banner-layout')) { ?>
                 <h1 id='banner-title'>
@@ -24,7 +24,7 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
                 <?php } ?>
             <?php }
             /**
-             * If the alternate banner layout option is not selected
+             * If the black banner layout is not used
              *
              * If the h1 in the banner is selected
              */
@@ -62,7 +62,7 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
         </span>
     <?php }
             /**
-             * Show the banner button option except for the alternative banner layout option
+             * Show the banner button option except for the black banner layout option
              */
             if (!ilaw_has_class('ilawyer-alt-banner-layout')) {
                 get_template_part('template-parts/button', null, array(

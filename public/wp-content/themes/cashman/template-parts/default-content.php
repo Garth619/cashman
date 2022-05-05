@@ -5,12 +5,10 @@
      *
      * If the h1 is selected to be in the banner or
      *
-     * an alternate banner layout
-     *
      * on the main blog post page, category and archive pages
      */
     if (
-        !(ilaw_has_class('ilawyer-h1-in-banner') || is_home() || is_archive() || ilaw_has_class('ilawyer-alt-banner-layout'))
+        !(ilaw_has_class('ilawyer-h1-in-banner') || is_home() || is_archive())
     ) { ?>
         <h1 class='page-title'>
             <?php the_title(); ?>
@@ -24,7 +22,7 @@
      * This shows only on mobile if the 'Mobile Banner Button Position' acf is selected to be in the content and is hidden on all other devices with css
      */
     if (
-        !(ilaw_has_class('ilawyer-blog') || ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-alt-banner-layout'))
+        !(ilaw_has_class('ilawyer-blog') || ilaw_has_class('ilawyer-banner-disabled'))
     ) {
         /**
          * Global button ACF options under site options

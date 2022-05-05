@@ -22,6 +22,34 @@ function body_classes($classes)
         $default_template = is_page() && !is_page_template();
         if ($default_template) {
             $classes[] = 'ilawyer-default-page';
+            /**
+             * Internal Page Options
+             */
+            $page_banners = get_field('internal_page_options_new');
+            // $banner_title = $page_banners['banner_text'];
+            $banner_h1 = $page_banners['h1_in_banner'];
+            $banner_disable = $page_banners['disable_banner'];
+            $mobile_banner_button = $page_banners['mobile_banner_button_position'];
+            // $alt_banner_layout = $page_banners['alternative_banner_layout'];
+            $internal_disable_images = $page_banners['banner_background_images']['disable_images'];
+
+            if ($banner_disable) {
+                $classes[] = 'ilawyer-banner-disabled';
+            } else {
+                if ($banner_h1) {
+                    $classes[] = 'ilawyer-h1-in-banner';
+                }
+                if ($mobile_banner_button) {
+                    $classes[] = 'ilawyer-mobile-button-in-banner';
+                } else {
+                    $classes[] = 'ilawyer-mobile-button-in-content';
+                }
+                if ($internal_disable_images) {
+                    $classes[] = 'ilawyer-global-banner-images';
+                } else {
+                    $classes[] = 'ilawyer-internal-banner-images';
+                }
+            }
         }
         /**
          * Internal Page Template
@@ -44,42 +72,28 @@ function body_classes($classes)
             $classes[] = 'ilawyer-single-col-layout';
         }
         /**
-         * Internal Page Options
+         * Templates with Black Banner
          */
-        $page_banners = get_field('internal_page_options_new');
-        $banner_title = $page_banners['banner_text'];
-        $banner_h1 = $page_banners['h1_in_banner'];
-        $banner_disable = $page_banners['disable_banner'];
-        $mobile_banner_button = $page_banners['mobile_banner_button_position'];
-        $alt_banner_layout = $page_banners['alternative_banner_layout'];
-        $internal_disable_images = $page_banners['banner_background_images']['disable_images'];
-
-        if ($banner_disable) {
-            $classes[] = 'ilawyer-banner-disabled';
-        } else {
-            /**
-             * If banners are not disabled, then assign all banner class options
-             */
-            if ($alt_banner_layout) {
-                $classes[] = 'ilawyer-alt-banner-layout';
-            } else {
-                /**
-                 * If the alternate banner layout is not selected, set up all remaining banner class options
-                 */
-                if ($banner_h1) {
-                    $classes[] = 'ilawyer-h1-in-banner';
-                }
-                if ($mobile_banner_button) {
-                    $classes[] = 'ilawyer-mobile-button-in-banner';
-                } else {
-                    $classes[] = 'ilawyer-mobile-button-in-content';
-                }
-                if ($internal_disable_images) {
-                    $classes[] = 'ilawyer-global-banner-images';
-                } else {
-                    $classes[] = 'ilawyer-internal-banner-images';
-                }
-            }
+        if (is_page_template(
+            array(
+                'template-padirectory.php',
+                'template-about.php',
+                'template-meetteam.php',
+                'template-attprofile.php',
+                'template-testimonials.php'
+            )
+        )) {
+            $classes[] = 'ilawyer-alt-banner-layout';
+        }
+        /**
+         * Templates with no banner and with a centered h1 title
+         */
+        if (is_page_template(
+            array(
+                'template-caseresults.php'
+            )
+        )) {
+            $classes[] = 'ilawyer-no-banner-with-title-layout';
         }
     }
     return $classes;

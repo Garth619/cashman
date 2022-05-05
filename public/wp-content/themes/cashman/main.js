@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-	$('body').addClass('ilawyer-ready');
+	$('body').addClass('ilawyer-page-loaded');
 
 	/**
 	 * Lazy Loading - some browsers need to use the fallback below as of 2/22/2022
