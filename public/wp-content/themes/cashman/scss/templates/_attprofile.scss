@@ -1,0 +1,35 @@
+.template-attprofile {
+	#banner {
+		padding-bottom: 168px;
+	}
+	.template-part-wrapper {
+		margin-top: -150px;
+	}
+}
+
+#att-position {
+	display: block;
+	margin-top: -5px;
+	@include type(
+		(
+			size: 16px,
+			height: 19px,
+			spacing: 3.2px,
+			family: $primaryfont,
+			color: $white,
+			weight: 900,
+			align: center,
+			transform: uppercase,
+		)
+	);
+}
+
+#attprofile-img-wrapper {
+	img {
+		@include image();
+	}
+}
+
+#attprofile-content {
+	padding-top: 42px;
+}

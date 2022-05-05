@@ -6187,6 +6187,38 @@ h2.blog-title a:hover {
   }
 }
 
+.template-attprofile #banner {
+  padding-bottom: 168px;
+}
+.template-attprofile .template-part-wrapper {
+  margin-top: -150px;
+}
+
+#att-position {
+  display: block;
+  margin-top: -5px;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  line-height: 19px;
+  font-family: effra, sans-serif;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#attprofile-img-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#attprofile-content {
+  padding-top: 42px;
+}
+
 .template-meetteam #banner {
   padding-bottom: 180px;
 }

@@ -19,6 +19,9 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
                 <h1 id='banner-title'>
                     <?php echo text_wrap(get_the_title(), ' '); ?>
                 </h1>
+                <?php if (ilaw_has_class('ilawyer-alt-banner-layout')) { ?>
+                    <span id='att-position'>Attorney</span>
+                <?php } ?>
             <?php }
             /**
              * If the alternate banner layout option is not selected
