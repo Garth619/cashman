@@ -1,75 +1,53 @@
 <?php
 $att = get_field('attorney_profile');
+$img = $att['attorney_image'];
+$img_url = $img['url'];
+$img_alt = $img['alt'];
+$img_width = $img['width'];
+$img_height = $img['height'];
+$acc_title = $att['accolades_title'];
+$acc = $att['accolades'];
 if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id='attprofile-wrapper' class='template-part-wrapper'>
             <div id='attprofile-container'>
                 <div id='attprofile-img-wrapper'>
-                    <img src='<?php bloginfo('template_directory'); ?>/images/att_img.jpg' alt='altname' width='' height='' loading='eager' />
+                    <img src='<?= $img_url; ?>' alt='<?= $img_alt; ?>' width='<?= $img_width; ?>' height='<?= $img_height; ?>' loading='eager' />
                 </div>
                 <div id='attprofile-content' class='content'>
-                    <h2>While studying in law school, Mark’s father suffered a delay in diagnosis of lung cancer.</h2>
-                    <p>He had a persistent cough for months before finally getting the test that discovered his terminal cancer. Having lived through the frustrations of the medical system and unnecessary delays has driven him to fight for victims of medical negligence. Prior to opening this firm, he worked as a Trial Lawyer at several nationally recognized plaintiff firms. Most recently, he served as head of the medical malpractice department. Mark’s first trained as a lawyer in the Boston office of the U.S. Attorney/Department of Justice. He was mentored by several elite civil prosecutors and FBI agents investigating health care fraud, illegal kickbacks, and off label marketing in violation of the federal false claims act. </p>
-                    <p> Mark A. Cashman represents victims of medical negligence, dangerous and defective products, construction site injuries, motor vehicle negligence, and dangerous property/landlord negligence cases. He is licensed to practice in Massachusetts, New Hampshire, and Rhode Island.</p>
+                    <?php the_content(); ?>
                     <div id='att-accolades'>
-                        <h2>Lorem Ipsum dolor</h2>
-                        <div class='single-accolade'>
-                            <div class='single-accolade-title'>
-                                <span>AREAS OF PRACTICe</span>
-                                <?php echo file_get_contents(get_template_directory() . '/images/att-arrow.svg'); ?>
+                        <?php if ($acc_title) { ?>
+                            <h2><?= $acc_title; ?></h2>
+                        <?php } ?>
+                        <?php foreach ($acc as $single) {
+                            $title = $single['title'];
+                            $list_items = $single['list_items'];
+                        ?>
+                            <div class='single-accolade'>
+                                <div class='single-accolade-title'>
+                                    <span><?= $title; ?></span>
+                                    <?php echo file_get_contents(get_template_directory() . '/images/att-arrow.svg'); ?>
+                                </div>
+                                <div class='single-accolade-content'>
+                                    <ul>
+                                        <?php foreach ($list_items as $list_item) {
+                                            $bullet = $list_item['list_item'];
+                                            $sub_list_items = $list_item['sub_list_items']; ?>
+                                            <li><?= $bullet; ?>
+                                                <?php if ($sub_list_items) { ?>
+                                                    <ul>
+                                                        <?php foreach ($sub_list_items as $sub_list_item) {
+                                                            $sub_bullet = $sub_list_item['sub_list_item']; ?>
+                                                            <li><?= $sub_bullet; ?></li>
+                                                        <?php } ?>
+                                                    </ul>
+                                                <?php } ?>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class='single-accolade-content'>
-                                <ul>
-                                    <li>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        <ul>
-                                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                                        </ul>
-                                    </li>
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class='single-accolade'>
-                            <div class='single-accolade-title'>
-                                <span>AREAS OF PRACTICe</span>
-                                <?php echo file_get_contents(get_template_directory() . '/images/att-arrow.svg'); ?>
-                            </div>
-                            <div class='single-accolade-content'>
-                                <ul>
-                                    <li>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        <ul>
-                                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                                        </ul>
-                                    </li>
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class='single-accolade'>
-                            <div class='single-accolade-title'>
-                                <span>AREAS OF PRACTICe</span>
-                                <?php echo file_get_contents(get_template_directory() . '/images/att-arrow.svg'); ?>
-                            </div>
-                            <div class='single-accolade-content'>
-                                <ul>
-                                    <li>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        <ul>
-                                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                                        </ul>
-                                    </li>
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing</li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        <?php } ?>
                     </div>
                 </div>
             </div>

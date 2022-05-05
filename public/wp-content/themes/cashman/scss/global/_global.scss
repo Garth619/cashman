@@ -123,6 +123,7 @@ body {
 #page-content {
 	@include mq(small_laptop) {
 		order: 2;
+		flex-grow: 1;
 	}
 }
 

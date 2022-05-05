@@ -698,6 +698,7 @@ body {
 @media screen and (min-width: 1200px) {
   #page-content {
     order: 2;
+    flex-grow: 1;
   }
 }
 
@@ -6342,6 +6343,11 @@ h2.blog-title a:hover {
 @media screen and (min-width: 768px) {
   #attprofile-content {
     padding-top: 53px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #attprofile-content {
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 1380px) {

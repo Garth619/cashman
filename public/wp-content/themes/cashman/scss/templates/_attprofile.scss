@@ -113,6 +113,9 @@
 	@include mq(small_tablet) {
 		padding-top: 53px;
 	}
+	@include mq(small_laptop) {
+		flex-grow: 1;
+	}
 	@include mq(large_laptop) {
 		padding-top: 40px;
 	}
