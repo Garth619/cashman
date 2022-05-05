@@ -92,30 +92,25 @@
 	}
 	&:hover {
 		&::before {
-			@include mq(small_laptop) {
-				opacity: 1;
-				transform: translateY(0px);
-			}
+			opacity: 1;
+			transform: translateY(0px);
 		}
 		.single-att-img-wrapper {
-			@include mq(small_laptop) {
-				border-radius: 198px; // change on media query
-				transform: scale(0.95);
+			border-radius: 198px;
+			transform: scale(0.95);
+
+			@include mq(small_monitor) {
+				border-radius: 255px;
 			}
 		}
 		.single-att-overlay {
 			&::before {
-				@include mq(small_laptop) {
-					opacity: 1;
-				}
+				opacity: 1;
 			}
 		}
 		.single-att-button {
-			@include mq(small_laptop) {
-				opacity: 1;
-				transform: translateY(0px);
-				//transition-delay: 200ms;
-			}
+			opacity: 1;
+			transform: translateY(0px);
 		}
 	}
 	a {
@@ -208,5 +203,9 @@
 	transform: translateY(15px);
 	opacity: 0;
 	transition: opacity 300ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+	font-size: 18px;
 	@include margin_lr();
+	@include mq(large_laptop) {
+		padding: 19px 35px;
+	}
 }

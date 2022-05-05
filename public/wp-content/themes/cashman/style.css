@@ -6321,31 +6321,28 @@ h2.blog-title a:hover {
   left: 0;
   z-index: 1;
 }
-@media screen and (min-width: 1200px) {
-  .single-att:hover::before {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
+.single-att:hover::before {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
-@media screen and (min-width: 1200px) {
+.single-att:hover .single-att-img-wrapper {
+  border-radius: 198px;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+@media screen and (min-width: 1650px) {
   .single-att:hover .single-att-img-wrapper {
-    border-radius: 198px;
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    border-radius: 255px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .single-att:hover .single-att-overlay::before {
-    opacity: 1;
-  }
+.single-att:hover .single-att-overlay::before {
+  opacity: 1;
 }
-@media screen and (min-width: 1200px) {
-  .single-att:hover .single-att-button {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
+.single-att:hover .single-att-button {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 .single-att a {
   text-decoration: none;
@@ -6462,8 +6459,14 @@ h2.blog-title a:hover {
   transition: opacity 300ms ease-in-out, -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   transition: opacity 300ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   transition: opacity 300ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  font-size: 18px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1380px) {
+  .single-att-button {
+    padding: 19px 35px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
