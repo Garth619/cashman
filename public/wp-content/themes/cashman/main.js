@@ -8,8 +8,9 @@ jQuery(document).ready(function ($) {
 		const wistiaID = $(this).attr('data-wistia');
 		if (typeof Wistia === 'undefined') {
 			loadWistia(self, wistiaID);
+			console.log('load wistia');
 		} else {
-			//console.log("wistia is already defined");
+			console.log('wistia is already defined');
 		}
 	}
 	function loadWistia(self, wistiaID) {
