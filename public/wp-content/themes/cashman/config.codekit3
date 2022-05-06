@@ -1627,6 +1627,14 @@
       "oAP" : "\/template-parts\/template-videocenter-part.php",
       "oF" : 0
     },
+    "\/template-parts\/video.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/video.php",
+      "oF" : 0
+    },
     "\/template-testimonials.php" : {
       "cB" : 0,
       "ft" : 8192,
