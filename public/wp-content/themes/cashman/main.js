@@ -1,25 +1,5 @@
 jQuery(document).ready(function ($) {
 	$('body').addClass('ilawyer-page-loaded');
-
-	/**
-	 * Lazy Loading - some browsers need to use the fallback below as of 2/22/2022
-	 * https://web.dev/browser-level-image-lazy-loading/
-	 * https://github.com/aFarkas/lazysizes
-	 */
-	// if ("loading" in HTMLImageElement.prototype) {
-	//   //console.log("loading in use");
-	//   const images = document.querySelectorAll('img[loading="lazy"]');
-	//   images.forEach((img) => {
-	//     img.src = img.dataset.src;
-	//   });
-	// } else {
-	//   //console.log("loading NOT in use");
-	//   const script = document.createElement("script");
-	//   script.src =
-	//     "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
-	//   document.body.appendChild(script);
-	// }
-
 	/**
 	 * Wistia - loads wistia on click to improve initial page speed fallsback if thumbnails need to be loaded on page load
 	 */

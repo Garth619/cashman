@@ -1,0 +1,57 @@
+#video-center-wrapper {
+}
+
+.single-video {
+	a {
+		display: block;
+		position: relative;
+	}
+}
+
+.single-wistia {
+	//background: pink;
+	@include box(100%, 100%);
+	@include abs(0, null, null, 0);
+}
+
+.single-video-thumbnail-wrapper {
+	position: relative;
+	img {
+		&.single-video-thumbnail {
+			object-fit: cover;
+			@include box(100%, 100%);
+			@include abs(0, null, null, 0);
+		}
+		&.single-video-spacer {
+			@include image();
+		}
+	}
+}
+
+.single-video-thumbnail {
+}
+
+.single-video-overlay {
+	@include flex(center, center);
+	@include box(100%, 100%);
+	@include abs(0, null, null, 0);
+	.play-button {
+		background: $browngradient;
+		border: 1px solid $white;
+		box-shadow: 0px 3px 6px #00000067;
+		display: block;
+		border-radius: 50%;
+		@include box(88px, 88px);
+		@include flex(center, center);
+		&::before {
+			background: $white;
+			margin-left: 5%;
+			clip-path: polygon(0 0, 100% 50%, 0 100%);
+			@include box(26%, 34%);
+			@include contentdisplay();
+		}
+	}
+}
+
+.single-video-title {
+}

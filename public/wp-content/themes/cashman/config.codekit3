@@ -626,6 +626,19 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/images\/spacer.png" : {
+      "ft" : 32768,
+      "iS" : 1772,
+      "oA" : 0,
+      "oAP" : "\/images\/spacer.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/stars_1.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -1156,6 +1169,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/templates\/_video-center.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/templates\/_video-center.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/templates\/homepage\/_section-1.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1591,12 +1619,28 @@
       "oAP" : "\/template-parts\/template-testimonials-part.php",
       "oF" : 0
     },
+    "\/template-parts\/template-videocenter-part.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/template-videocenter-part.php",
+      "oF" : 0
+    },
     "\/template-testimonials.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/template-testimonials.php",
+      "oF" : 0
+    },
+    "\/template-videocenter.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-videocenter.php",
       "oF" : 0
     }
   },

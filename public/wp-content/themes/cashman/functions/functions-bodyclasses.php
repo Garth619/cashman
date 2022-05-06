@@ -90,7 +90,8 @@ function body_classes($classes)
          */
         if (is_page_template(
             array(
-                'template-caseresults.php'
+                'template-caseresults.php',
+                'template-videocenter.php'
             )
         )) {
             $classes[] = 'ilawyer-no-banner-with-title-layout';
