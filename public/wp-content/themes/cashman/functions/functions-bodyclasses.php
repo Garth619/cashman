@@ -23,14 +23,12 @@ function body_classes($classes)
         if ($default_template) {
             $classes[] = 'ilawyer-default-page';
             /**
-             * Internal Page Options
+             * Default Banner/Button Options
              */
             $page_banners = get_field('internal_page_options_new');
-            // $banner_title = $page_banners['banner_text'];
             $banner_h1 = $page_banners['h1_in_banner'];
             $banner_disable = $page_banners['disable_banner'];
             $mobile_banner_button = $page_banners['mobile_banner_button_position'];
-            // $alt_banner_layout = $page_banners['alternative_banner_layout'];
             $internal_disable_images = $page_banners['banner_background_images']['disable_images'];
 
             if ($banner_disable) {
@@ -104,7 +102,7 @@ add_filter('body_class', 'body_classes');
 /**
  * Function to simplify checking for a body class. Loads template parts, conditionals, and layouts  in template files
  *
- * Replaces in_array($class, get_body_class())
+ * Replaces/simplifies 'in_array($class, get_body_class())'
  */
 function ilaw_has_class($class)
 {

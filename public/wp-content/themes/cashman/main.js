@@ -1,24 +1,25 @@
 jQuery(document).ready(function ($) {
+	/**
+	 * class to use for animations above the fold on page load
+	 */
 	$('body').addClass('ilawyer-page-loaded');
 	/**
-	 * Wistia - loads wistia on click to improve initial page speed fallsback if thumbnails need to be loaded on page load
+	 * Wistia - loads wistia on click to improve initial page speed
 	 */
 	function checkWistia() {
 		const self = this;
 		const wistiaID = $(this).attr('data-wistia');
 		if (typeof Wistia === 'undefined') {
 			loadWistia(self, wistiaID);
-			console.log('load wistia');
+			//console.log('load wistia');
 		} else {
-			console.log('wistia is already defined');
+			//console.log('wistia is already defined');
 		}
 	}
 	function loadWistia(self, wistiaID) {
 		jQuery.getScript(
 			'https://fast.wistia.com/assets/external/E-v1.js',
 			function (data, textStatus, jqxhr) {
-				// We got the text but, it's possible parsing could take some time on slower devices. Unfortunately, js parsing does not have
-				// a hook we can listen for. So we need to set an interval to check when it's ready
 				var interval = setInterval(function () {
 					if ($(self).attr('id') && window._wq) {
 						_wq.push({
@@ -34,7 +35,6 @@ jQuery(document).ready(function ($) {
 		);
 	}
 	$('.wistia_embed').on('click', checkWistia);
-
 	/**
 	 * Waypoints
 	 */
@@ -73,9 +73,8 @@ jQuery(document).ready(function ($) {
 
 	createWaypoint('section-one', '#body', 'mobile-header-change', 68, null, true);
 	createWaypoint('internal-main', '#body', 'mobile-header-change', 68, null, true);
-
 	/**
-	 * Smooth Scroll down to section on click (<a href="#id_of_section_to_be_scrolled_to">)
+	 * Smooth Scroll down to section on click (<a href="#id">)
 	 */
 	$(function () {
 		$('a[href*="#"]:not([href="#"])').click(function () {
@@ -97,7 +96,6 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	});
-
 	/**
 	 * Slick Carousel ( http://kenwheeler.github.io/slick/ )
 	 */
@@ -232,37 +230,35 @@ jQuery(document).ready(function ($) {
 			},
 		],
 	});
-
 	/**
 	 * Remove "#" from menu anchor items to avoid jump to the top of the page
 	 */
 	$("ul > li.menu-item-has-children > a[href='#']").removeAttr('href');
-	// not found go back button
+	/**
+	 *  not found go back button
+	 */
 	function goBack() {
 		window.history.back();
 	}
 	$('span.go-back').on('click', function (e) {
 		goBack();
 	});
-
 	/**
 	 * Sidebar slideToggle
 	 */
-
 	$('.widget_nav_menu ul.menu > li.menu-item-has-children a').on('click', function (e) {
 		$(this).toggleClass('active');
 		$(this).next('ul').toggleClass('open');
 	});
-
 	/**
 	 * Sidebar Current Class for Blog Sidebars
+	 *
 	 * add active to blog widgets that dont show a built in current class
 	 */
 	var pgurl = window.location.href;
 	$('.widget_block ul li').each(function () {
 		if ($(this).find('a').attr('href') == pgurl) $(this).addClass('blog-active');
 	});
-
 	/**
 	 * Attorney Accolades
 	 */
@@ -272,11 +268,11 @@ jQuery(document).ready(function ($) {
 	});
 	/**
 	 * Resize Nav Functions
-	 * tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
+	 *
+	 * tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page. repetitive code, could be thought out better - redo
+	 *
 	 */
 	$('#menu-wrap').on('click', function (e) {
-		// $(this).toggleClass("open");
-		// $("header").toggleClass("open");
 		$('nav').slideToggle('slow');
 		$('body').toggleClass('ilawyer-menu-open');
 		$('html, body').toggleClass('ilawyer-fixed');
@@ -295,7 +291,9 @@ jQuery(document).ready(function ($) {
 		$(this).toggleClass('active');
 		$(this).next('ul.sub-menu').toggleClass('active');
 	}
-	// nav
+	/**
+	 * Nav - on pageload
+	 */
 	if ($(window).width() >= 1200) {
 		navDesktop();
 	}
@@ -303,17 +301,17 @@ jQuery(document).ready(function ($) {
 		navDevice();
 		$('header nav li.menu-item-has-children > a').off().on('click', tabletClick);
 	}
-	// resize window width and fire functions
+	/**
+	 * Nav - on resize window width and fire functions
+	 */
 	$(window).resize(
 		_.debounce(function () {
 			if ($(window).width() >= 1200) {
 				navDesktop();
-				// off
 				$('header nav li.menu-item-has-children > a').off('click', tabletClick);
 			}
 			if ($(window).width() < 1200) {
 				navDevice();
-				// off
 				$('header nav li.menu-item-has-children > a').off().on('click', tabletClick);
 			}
 		}, 100)
