@@ -1,4 +1,15 @@
 <?php
+$contact = get_field('contact');
+$img_one = $contact['contact_image_one'];
+$img_one_url = $img_one['url'];
+$img_one_alt = $img_one['alt'];
+$img_one_width = $img_one['width'];
+$img_one_height = $img_one['height'];
+$img_two = $contact['contact_image_two'];
+$img_two_url = $img_two['url'];
+$img_two_alt = $img_two['alt'];
+$img_two_width = $img_two['width'];
+$img_two_height = $img_two['height'];
 if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id='contact-wrapper'>
             <div id='contact-content'>
@@ -38,10 +49,10 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
             </div>
             <div id='contact-image-wrapper'>
                 <div class='img-wrapper'>
-                    <img src='<?php bloginfo('template_directory'); ?>/images/content_img_1.jpg' alt='' width='' height='' loading='' />
+                    <img src='<?= $img_one_url; ?>' alt='<?= $img_one_alt; ?>' width='<?= $img_one_width; ?>' height='<?= $img_one_height; ?>' />
                 </div>
                 <div class='img-wrapper'>
-                    <img src='<?php bloginfo('template_directory'); ?>/images/content_img_2.jpg' alt='' width='' height='' loading='' />
+                    <img src='<?= $img_two_url; ?>' alt='<?= $img_two_alt; ?>' width='<?= $img_two_width; ?>' height='<?= $img_two_height; ?>' />
                 </div>
             </div>
         </div>
