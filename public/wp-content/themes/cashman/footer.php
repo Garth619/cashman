@@ -8,41 +8,42 @@
             </div>
             <?php gravity_form(1, false, false, false, '', true, 2323); ?>
         </div>
-        <div id='footer-info'>
-            <div class='footer-info-col'>
-                <span id='contact-title'>Contact Us Today</span>
-            </div>
-            <div class='footer-info-col'>
-                <span class='footer-title'>SaLEM OFFICE</span>
-                <div class='footer-info-col-inner'>
-                    <span class='footer-address'>27 Congress Street, # 401 Salem, MA 01970</span>
-                    <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
-                    <a class='footer-phone' href='tel:+18002003120'><span class='brown-light'>P</span> &nbsp;(800) 200-3120</a>
+        <?php if (!is_page_template('template-contact.php')) { ?>
+            <div id='footer-info'>
+                <div class='footer-info-col'>
+                    <span id='footer-contact-title'>Contact Us Today</span>
+                </div>
+                <div class='footer-info-col'>
+                    <span class='footer-title'>SaLEM OFFICE</span>
+                    <div class='footer-info-col-inner'>
+                        <span class='footer-address'>27 Congress Street, #401<br> Salem, MA 01970</span>
+                        <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
+                        <a class='footer-phone' href='tel:+18002003120'><span class='brown-light'>P</span> &nbsp;(800) 200-3120</a>
+                    </div>
+                </div>
+                <div class='footer-info-col'>
+                    <span class='footer-title'>BOSTON OFFICE</span>
+                    <div class='footer-info-col-inner'>
+                        <span class='footer-address'>27 Congress Street, #401<br> Salem, MA 01970</span>
+                        <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
+                        <a class='footer-phone' href='tel:+18002003120'><span class='brown-light'>P</span> &nbsp;(800) 200-3120</a>
+                    </div>
+                </div>
+                <div class='footer-info-col'>
+                    <div id='social-media'>
+                        <a href='' target='_blank' rel='noopener'>
+                            <?php echo file_get_contents(get_template_directory() . '/images/social_g.svg'); ?>
+                        </a>
+                        <a href='' target='_blank' rel='noopener'>
+                            <?php echo file_get_contents(get_template_directory() . '/images/social_fb.svg'); ?>
+                        </a>
+                        <a href='' target='_blank' rel='noopener'>
+                            <?php echo file_get_contents(get_template_directory() . '/images/social_linked.svg'); ?>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class='footer-info-col'>
-                <span class='footer-title'>BOSTON OFFICE</span>
-                <div class='footer-info-col-inner'>
-                    <span class='footer-address'>27 Congress Street, # 401
-                        Salem, MA 01970</span>
-                    <a class='get-directions' href='' target='_blank' rel='noopener'>Get Directions</a>
-                    <a class='footer-phone' href='tel:+18002003120'><span class='brown-light'>P</span> &nbsp;(800) 200-3120</a>
-                </div>
-            </div>
-            <div class='footer-info-col'>
-                <div id='social-media'>
-                    <a href='' target='_blank' rel='noopener'>
-                        <?php echo file_get_contents(get_template_directory() . '/images/social_g.svg'); ?>
-                    </a>
-                    <a href='' target='_blank' rel='noopener'>
-                        <?php echo file_get_contents(get_template_directory() . '/images/social_fb.svg'); ?>
-                    </a>
-                    <a href='' target='_blank' rel='noopener'>
-                        <?php echo file_get_contents(get_template_directory() . '/images/social_linked.svg'); ?>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
         <img id='footer-bg' src='<?php bloginfo('template_directory'); ?>/images/bg.jpg' alt='altname' width='1943' height='1497' loading='lazy' />
     </div>
     <div id='copyright'>

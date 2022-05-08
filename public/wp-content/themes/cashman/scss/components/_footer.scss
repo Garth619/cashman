@@ -222,11 +222,11 @@ footer {
 				&::after {
 					opacity: 1;
 				}
-				input[type="submit"] {
+				input[type='submit'] {
 					color: $brownlight;
 				}
 			}
-			input[type="submit"] {
+			input[type='submit'] {
 				cursor: pointer;
 				background: transparent;
 				border: none;
@@ -484,7 +484,7 @@ footer {
 	}
 }
 
-#contact-title {
+#footer-contact-title {
 	max-width: 8ch;
 	margin-bottom: 53px;
 	@include margin_lr();
