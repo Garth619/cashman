@@ -1,9 +1,9 @@
 #section-three {
 	background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 20%);
-	padding-top: 55px;
+	padding-top: 62px;
 	padding-bottom: 40px;
 	@include mq(small_tablet) {
-		padding-top: 75px;
+		padding-top: 91px;
 		background: linear-gradient(to bottom, #ffffff 0%, #f2f0ef 30%);
 	}
 	@include mq(small_laptop) {

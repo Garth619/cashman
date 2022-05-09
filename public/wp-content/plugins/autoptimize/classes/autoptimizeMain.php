@@ -228,12 +228,16 @@ class autoptimizeMain
 
     public function criticalcss()
     {
-        return $this->_criticalcss;
+        if ( apply_filters( 'autoptimize_filter_criticalcss_active', true ) && ! autoptimizeUtils::is_plugin_active( 'autoptimize-criticalcss/ao_criticss_aas.php' ) ) {
+            return $this->_criticalcss;
+        } else {
+            return false;
+        }
     }
 
     public function maybe_run_criticalcss()
     {
-        // Loads criticalcss if the power-up is not active and if the filter returns true.
+        // Loads criticalcss if the filter returns true & old power-up is not active.
         if ( apply_filters( 'autoptimize_filter_criticalcss_active', true ) && ! autoptimizeUtils::is_plugin_active( 'autoptimize-criticalcss/ao_criticss_aas.php' ) ) {
             $this->_criticalcss = new autoptimizeCriticalCSSBase();
             $this->_criticalcss->setup();
@@ -386,11 +390,12 @@ class autoptimizeMain
                 }
             }
 
-            // And make sure pagebuilder previews don't get optimized HTML/ JS/ CSS/ ...
+            // Misc. querystring paramaters that will stop AO from doing optimizations (pagebuilders +
+            // 2 generic parameters that could/ should become standard between optimization plugins?)
             if ( false === $ao_noptimize ) {
-                $_qs_pagebuilders = array( 'tve', 'elementor-preview', 'fl_builder', 'vc_action', 'et_fb', 'bt-beaverbuildertheme', 'ct_builder', 'fb-edit', 'siteorigin_panels_live_editor', 'preview' );
-                foreach ( $_qs_pagebuilders as $_pagebuilder ) {
-                    if ( array_key_exists( $_pagebuilder, $_GET ) ) {
+                $_qs_showstoppers = array( 'no_cache', 'no_optimize', 'tve', 'elementor-preview', 'fl_builder', 'vc_action', 'et_fb', 'bt-beaverbuildertheme', 'ct_builder', 'fb-edit', 'siteorigin_panels_live_editor', 'preview' );
+                foreach ( $_qs_showstoppers as $_showstopper ) {
+                    if ( array_key_exists( $_showstopper, $_GET ) ) {
                         $ao_noptimize = true;
                         break;
                     }

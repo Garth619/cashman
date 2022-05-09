@@ -65,7 +65,10 @@
 		padding: 0 48px;
 	}
 	@include mq(large_laptop) {
-		padding: 0px 85px;
+		padding: 0px 32px 0px 68px;
+	}
+	@include mq(small_monitor) {
+		padding: 0px 105px 0px 85px;
 	}
 }
 
@@ -87,7 +90,7 @@
 	}
 	@include mq(small_monitor) {
 		margin-top: 183px;
-		margin-right: 112px;
+		margin-right: 90px;
 	}
 	@include mq(monitor) {
 		flex-basis: 850px;

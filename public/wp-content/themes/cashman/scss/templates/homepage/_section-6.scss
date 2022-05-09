@@ -1,11 +1,11 @@
 #section-six {
 	background: $offwhite;
 	padding-top: 15px;
-	@include mq(small_tablet) {
-		padding-top: 73px;
-	}
 	@include mq(large_laptop) {
-		padding-top: 109px;
+		padding-top: 87px;
+	}
+	@include mq(small_monitor) {
+		padding-top: 99px;
 	}
 }
 
@@ -168,6 +168,11 @@
 			}
 			&::before {
 				opacity: 1;
+			}
+			.single-cr {
+				a {
+					text-decoration: none;
+				}
 			}
 			.single-cr-button {
 				@include mq(small_laptop) {

@@ -184,11 +184,13 @@ body {
 	b {
 		font-weight: 700;
 	}
-	a:not(.blog-heading-link, .blog-button),
+	a:not(.blog-heading-link, .blog-button, .content-layout-learn-more),
 	.go-back {
 		cursor: pointer;
-
+		color: $browndark;
+		text-decoration: none;
 		&:hover {
+			text-decoration: underline;
 		}
 	}
 	h1 {

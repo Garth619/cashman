@@ -564,8 +564,8 @@ class autoptimizeImages
         $to_replace = array();
         $to_preload = '';
 
-        // hide noscript tags to avoid nesting noscript tags (as lazyloaded images add noscript).
-        if ( $this->should_lazyload() ) {
+        // hide (no)script tags to avoid replacing (and potentially breaking) images in script tags.
+        if ( apply_filters( 'autoptimize_filter_imgopt_hide_script', true ) || $this->should_lazyload() ) {
             $in = autoptimizeBase::replace_contents_with_marker_if_exists(
                 'SCRIPT',
                 '<script',
@@ -667,7 +667,7 @@ class autoptimizeImages
                 }
                 
                 // and check if image needs to be prelaoded.
-                if ( ! empty( $metabox_preloads ) && str_replace( $metabox_preloads, '', $tag ) !== $tag ) {
+                if ( ! empty( $metabox_preloads ) && is_array( $metabox_preloads ) && str_replace( $metabox_preloads, '', $tag ) !== $tag ) {
                     $to_preload .= $this->create_img_preload_tag( $tag );
                 }
             }
@@ -703,20 +703,23 @@ class autoptimizeImages
             );
         }
 
-        // lazyload: restore noscript tags + lazyload picture source tags and bgimage.
+        // lazyload picture source tags and bgimage.
         if ( $this->should_lazyload() ) {
-            $out = autoptimizeBase::restore_marked_content(
-                'SCRIPT',
-                $out
-            );
-
             $out = $this->process_picture_tag( $out, true, true );
             $out = $this->process_bgimage( $out );
         } else {
             $out = $this->process_picture_tag( $out, true, false );
         }
 
-        if ( ! empty( $metabox_preloads ) && empty( $to_preload ) ) {
+        // restore (no)script tags.
+        if ( apply_filters( 'autoptimize_filter_imgopt_hide_script', true ) || $this->should_lazyload() ) {
+            $out = autoptimizeBase::restore_marked_content(
+                'SCRIPT',
+                $out
+            );
+        }
+
+        if ( ! empty( $metabox_preloads ) && is_array( $metabox_preloads ) && empty( $to_preload ) && false !== apply_filters( 'autoptimize_filter_imgopt_dopreloads', true ) ) {
             // the preload was not in an img tag, so adding a non-responsive preload instead.
             foreach( $metabox_preloads as $img_preload ) {
                 $to_preload .= '<link rel="preload" href="' . $img_preload . '" as="image">' ;
@@ -830,7 +833,7 @@ class autoptimizeImages
                 }
                 
                 // and check if image needs to be prelaoded.
-                if ( ! empty( $metabox_preloads ) && str_replace( $metabox_preloads, '', $tag ) !== $tag ) {
+                if ( ! empty( $metabox_preloads ) && is_array( $metabox_preloads ) && str_replace( $metabox_preloads, '', $tag ) !== $tag ) {
                     $to_preload .= $this->create_img_preload_tag( $tag );
                 }
             }
@@ -849,7 +852,7 @@ class autoptimizeImages
             $out
         );
 
-        if ( ! empty( $metabox_preloads ) && empty( $to_preload ) ) {
+        if ( ! empty( $metabox_preloads ) && is_array( $metabox_preloads ) && empty( $to_preload ) && false !== apply_filters( 'autoptimize_filter_imgopt_dopreloads', true ) ) {
             // the preload was not in an img tag, so adding a non-responsive preload instead.
             foreach( $metabox_preloads as $img_preload ) {
                 $to_preload .= '<link rel="preload" href="' . $img_preload . '" as="image">' ;
@@ -954,6 +957,13 @@ class autoptimizeImages
     }
     
     public static function create_img_preload_tag( $tag ) {
+        if ( false === apply_filters( 'autoptimize_filter_imgopt_dopreloads', true ) ) {
+            return '';
+        }
+
+        // clean up; remove tabs/ linebreaks/ spaces.
+        $tag = preg_replace( '/\s+/', ' ', $tag );
+
         // rewrite img tag to link preload img.
         $_from = array( '<img ', ' src=', ' sizes=', ' srcset=' );
         $_to   = array( '<link rel="preload" as="image" ', ' href=', ' imagesizes=', ' imagesrcset=' );

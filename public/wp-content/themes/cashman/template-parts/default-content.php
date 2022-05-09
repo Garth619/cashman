@@ -11,7 +11,12 @@
         !(ilaw_has_class('ilawyer-h1-in-banner') || is_home() || is_archive())
     ) { ?>
         <h1 class='page-title'>
-            <?php the_title(); ?>
+            <?php if (is_404()) {
+                echo 'Not Found';
+            } else {
+                the_title();
+            }
+            ?>
         </h1>
     <?php }
     /**
@@ -22,7 +27,7 @@
      * This shows only on mobile if the 'Mobile Banner Button Position' acf is selected to be in the content and is hidden on all other devices with css
      */
     if (
-        !(ilaw_has_class('ilawyer-blog') || ilaw_has_class('ilawyer-banner-disabled'))
+        !(ilaw_has_class('ilawyer-blog') || ilaw_has_class('ilawyer-banner-disabled') || is_404())
     ) {
         /**
          * Global button ACF options under site options

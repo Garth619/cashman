@@ -55,6 +55,7 @@ footer {
 		@include margin_lr();
 		@include mq(small_tablet) {
 			max-width: 100%;
+			margin-top: 32px;
 		}
 		@include mq(small_laptop) {
 			margin-top: 41px;
@@ -246,9 +247,9 @@ footer {
 						transform: uppercase,
 					)
 				);
-				@include mq(small_laptop) {
+				@include mq(small_monitor) {
 					font-size: 20px;
-					padding: 16px 25px;
+					padding: 19px 34px;
 				}
 			}
 		}
@@ -403,7 +404,7 @@ footer {
 #footer-info {
 	position: relative;
 	z-index: 1;
-	margin-top: 67px;
+	margin-top: 62px;
 	@include mq(small_tablet) {
 		margin-top: 78px;
 		padding: 0 43px;
@@ -486,7 +487,7 @@ footer {
 
 #footer-contact-title {
 	max-width: 8ch;
-	margin-bottom: 53px;
+	margin-bottom: 58px;
 	@include margin_lr();
 	@include type(
 		(
@@ -667,6 +668,9 @@ footer {
 	@include mq(small_laptop) {
 		padding: 22px 40px;
 		@include flex(space-between);
+	}
+	@include mq(large_laptop) {
+		padding: 22px 55px;
 	}
 	@include mq(small_monitor) {
 		padding: 13px 52px 34px;
