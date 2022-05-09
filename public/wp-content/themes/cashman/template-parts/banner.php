@@ -4,7 +4,6 @@ $global_title = $global_banners['banner_text'];
 $page_banners = get_field('internal_page_options_new');
 $banner_title = $page_banners['banner_text'];
 $blog_banner = get_field('blog_banners', 'options');
-$bodyclass = get_body_class();
 /**
  * Show banners except when disabled or on the blog post type
  */
@@ -19,9 +18,13 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
                 <h1 id='banner-title'>
                     <?php echo text_wrap(get_the_title(), ' '); ?>
                 </h1>
-                <?php if (ilaw_has_class('ilawyer-alt-banner-layout')) { ?>
-                    <span id='att-position'>Attorney</span>
-                <?php } ?>
+                <?php if (ilaw_has_class('template-attprofile')) {
+                    $att_profile =  get_field('attorney_profile');
+                    $att_pos = $att_profile['attorney_position'];
+                    if ($att_pos) { ?>
+                        <span id='att-position'><?= $att_pos; ?></span>
+                <?php }
+                } ?>
             <?php }
             /**
              * If the black banner layout is not used

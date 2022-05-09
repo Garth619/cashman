@@ -27,6 +27,7 @@
 		}
 	}
 	#page-container-inner {
+		min-height: 780px;
 		@include mq(small_laptop) {
 			padding-left: 65px;
 			padding-right: 65px;
@@ -85,6 +86,7 @@
 
 #attprofile-img-wrapper {
 	max-width: 470px;
+	position: relative;
 	@include margin_lr();
 	@include mq(small_laptop) {
 		flex-shrink: 0;
@@ -105,6 +107,35 @@
 	}
 	img {
 		@include image();
+	}
+}
+
+.attprofile-placeholder {
+	background: $browngradient;
+	&::before {
+		@include contentdisplay(block, 'Photo Coming Soon');
+		@include flex(center, center);
+		@include box(100%, 100%);
+		@include abs(0, null, null, 0);
+		@include type(
+			(
+				size: 14px,
+				spacing: 2.8px,
+				family: $primaryfont,
+				color: $black,
+				weight: 900,
+				align: center,
+				transform: uppercase,
+			)
+		);
+		@include mq(small_tablet) {
+			font-size: 16px;
+			letter-spacing: 3.2px;
+		}
+		@include mq(large_laptop) {
+			font-size: 18px;
+			letter-spacing: 3.6px;
+		}
 	}
 }
 

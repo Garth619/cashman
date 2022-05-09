@@ -4618,6 +4618,13 @@ body.mobile-header-change #section-one {
     margin-top: 32px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .sec-four-single-content {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .sec-four-single-name {
   margin-top: 17px;
@@ -6492,6 +6499,9 @@ h2.blog-title a:hover {
     margin-top: -40px;
   }
 }
+.template-attprofile #page-container-inner {
+  min-height: 780px;
+}
 @media screen and (min-width: 1200px) {
   .template-attprofile #page-container-inner {
     padding-left: 65px;
@@ -6558,6 +6568,7 @@ h2.blog-title a:hover {
 
 #attprofile-img-wrapper {
   max-width: 470px;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
@@ -6588,6 +6599,43 @@ h2.blog-title a:hover {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.attprofile-placeholder {
+  background: transparent linear-gradient(180deg, #f0c498 0%, #ce996e 100%) 0% 0% no-repeat padding-box;
+}
+.attprofile-placeholder::before {
+  content: "Photo Coming Soon";
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  font-family: effra, sans-serif;
+  color: #0b1216;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .attprofile-placeholder::before {
+    font-size: 16px;
+    letter-spacing: 3.2px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .attprofile-placeholder::before {
+    font-size: 18px;
+    letter-spacing: 3.6px;
+  }
 }
 
 #attprofile-content {

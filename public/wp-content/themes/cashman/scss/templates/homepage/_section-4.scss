@@ -188,6 +188,10 @@
 		padding: 0 10px;
 		margin-top: 32px;
 	}
+	@include mq(small_monitor) {
+		max-width: 780px;
+		@include margin_lr();
+	}
 }
 
 .sec-four-single-name {
