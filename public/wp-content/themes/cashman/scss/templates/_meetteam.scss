@@ -1,19 +1,46 @@
 .template-meetteam {
 	#banner {
+		padding-top: 79px;
 		padding-bottom: 180px;
 		@include mq(small_tablet) {
+			padding-top: 110px;
 			padding-bottom: 360px;
 		}
 		@include mq(small_laptop) {
+			padding-top: 140px;
 			padding-bottom: 375px;
 		}
 		@include mq(large_laptop) {
+			padding-top: 150px;
 			padding-bottom: 440px;
+		}
+		@include mq(small_monitor) {
+			padding-top: 170px;
+			padding-bottom: 562px;
+		}
+	}
+	#banner-title {
+		font-size: 50px;
+		@include mq(small_tablet) {
+			font-size: 60px;
+			line-height: 75px;
+		}
+		@include mq(small_laptop) {
+			font-size: 70px;
+			line-height: 85px;
+		}
+		@include mq(small_monitor) {
+			font-size: 90px;
+			line-height: 105px;
 		}
 	}
 	#page-container-inner {
-		padding-left: 55px;
-		padding-right: 55px;
+		padding-left: 37px;
+		padding-right: 37px;
+		@include mq(small_tablet) {
+			padding-left: 55px;
+			padding-right: 55px;
+		}
 		@include mq(small_laptop) {
 			padding-left: 75px;
 			padding-right: 75px;
@@ -34,12 +61,14 @@
 		@include mq(large_laptop) {
 			margin-top: -400px;
 		}
+		@include mq(small_monitor) {
+			margin-top: -530px;
+		}
 	}
 }
 
 #meetteam-wrapper {
-	padding: 0 13px;
-	margin-bottom: -50px;
+	margin-bottom: -30px;
 	max-width: 320px;
 	@include margin_lr();
 	@include mq(small_tablet) {
@@ -53,6 +82,7 @@
 	@include mq(small_laptop) {
 		max-width: 100%;
 		margin-bottom: -120px;
+		grid-gap: 0px 40px;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 	@include mq(large_laptop) {
@@ -67,7 +97,7 @@
 .single-att {
 	text-align: center;
 	position: relative;
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 	@include mq(small_tablet) {
 		margin-bottom: 85px;
 	}
@@ -111,6 +141,35 @@
 		.single-att-button {
 			opacity: 1;
 			transform: translateY(0px);
+		}
+		&.placeholder {
+			.single-att-overlay {
+				&::before {
+					opacity: 0;
+				}
+			}
+
+			.attprofile-placeholder {
+				&::before {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	&.placeholder {
+		&:nth-of-type(-n + 3) {
+			&::before {
+				background: $white;
+			}
+		}
+		&::before {
+			background: $greythree;
+		}
+		.single-att-button {
+			color: $brownlight;
+			&::before {
+				background: $greythree;
+			}
 		}
 	}
 	a {

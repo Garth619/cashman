@@ -6605,6 +6605,7 @@ h2.blog-title a:hover {
   background: transparent linear-gradient(180deg, #f0c498 0%, #ce996e 100%) 0% 0% no-repeat padding-box;
 }
 .attprofile-placeholder::before {
+  transition: all 200ms ease-in-out;
   content: "Photo Coming Soon";
   display: block;
   display: flex;
@@ -7197,26 +7198,63 @@ h2.blog-title a:hover {
 }
 
 .template-meetteam #banner {
+  padding-top: 79px;
   padding-bottom: 180px;
 }
 @media screen and (min-width: 768px) {
   .template-meetteam #banner {
+    padding-top: 110px;
     padding-bottom: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
   .template-meetteam #banner {
+    padding-top: 140px;
     padding-bottom: 375px;
   }
 }
 @media screen and (min-width: 1380px) {
   .template-meetteam #banner {
+    padding-top: 150px;
     padding-bottom: 440px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .template-meetteam #banner {
+    padding-top: 170px;
+    padding-bottom: 562px;
+  }
+}
+.template-meetteam #banner-title {
+  font-size: 50px;
+}
+@media screen and (min-width: 768px) {
+  .template-meetteam #banner-title {
+    font-size: 60px;
+    line-height: 75px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .template-meetteam #banner-title {
+    font-size: 70px;
+    line-height: 85px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .template-meetteam #banner-title {
+    font-size: 90px;
+    line-height: 105px;
+  }
+}
 .template-meetteam #page-container-inner {
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+@media screen and (min-width: 768px) {
+  .template-meetteam #page-container-inner {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .template-meetteam #page-container-inner {
@@ -7248,10 +7286,14 @@ h2.blog-title a:hover {
     margin-top: -400px;
   }
 }
+@media screen and (min-width: 1650px) {
+  .template-meetteam .template-part-wrapper {
+    margin-top: -530px;
+  }
+}
 
 #meetteam-wrapper {
-  padding: 0 13px;
-  margin-bottom: -50px;
+  margin-bottom: -30px;
   max-width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -7270,6 +7312,7 @@ h2.blog-title a:hover {
   #meetteam-wrapper {
     max-width: 100%;
     margin-bottom: -120px;
+    grid-gap: 0px 40px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -7288,7 +7331,7 @@ h2.blog-title a:hover {
 .single-att {
   text-align: center;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 @media screen and (min-width: 768px) {
   .single-att {
@@ -7352,6 +7395,24 @@ h2.blog-title a:hover {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+.single-att:hover.placeholder .single-att-overlay::before {
+  opacity: 0;
+}
+.single-att:hover.placeholder .attprofile-placeholder::before {
+  opacity: 0;
+}
+.single-att.placeholder:nth-of-type(-n + 3)::before {
+  background: #fff;
+}
+.single-att.placeholder::before {
+  background: #2a333d;
+}
+.single-att.placeholder .single-att-button {
+  color: #f0c498;
+}
+.single-att.placeholder .single-att-button::before {
+  background: #2a333d;
 }
 .single-att a {
   text-decoration: none;

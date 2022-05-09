@@ -26,8 +26,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <?php if ($acc) {
                             foreach ($acc as $single) {
                                 $title = $single['title'];
-                                $list_items = $single['list_items'];
-                        ?>
+                                $list_items = $single['list_items']; ?>
                                 <div class='single-accolade'>
                                     <div class='single-accolade-title'>
                                         <span><?= $title; ?></span>

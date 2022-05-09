@@ -311,6 +311,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/black-bg.jpg" : {
+      "ft" : 16384,
+      "iS" : 195541,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/black-bg.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/content_img_1.jpg" : {
       "ft" : 16384,
       "iS" : 111275,

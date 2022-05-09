@@ -113,6 +113,7 @@
 .attprofile-placeholder {
 	background: $browngradient;
 	&::before {
+		transition: all 200ms ease-in-out;
 		@include contentdisplay(block, 'Photo Coming Soon');
 		@include flex(center, center);
 		@include box(100%, 100%);

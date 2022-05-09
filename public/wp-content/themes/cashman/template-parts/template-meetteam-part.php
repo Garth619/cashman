@@ -11,12 +11,19 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                     $attorney = get_field('attorney_profile');
                     $attpos = $attorney['attorney_position'];
                     $attimg = $attorney['attorney_image'];
-                    $attimg_url = $attimg['url']; ?>
+                    $attimg_url = $attimg['url'];
+                    $attimg_alt = $attimg['alt']; ?>
 
-                    <div class='single-att'>
+                    <div class='single-att <?= $attimg ? '' : 'placeholder'; ?>'>
                         <a href='<?php the_permalink(); ?>'>
                             <div class='single-att-img-wrapper'>
-                                <img src='<?= $attimg_url; ?>' alt='altname' width='' height='' />
+                                <?php if ($attimg) { ?>
+                                    <img src='<?= $attimg_url; ?>' alt='<?= $attimg_alt; ?>' width='641' height='872' loading='eager' />
+                                <?php } else { ?>
+                                    <div class='attprofile-placeholder'>
+                                        <img src='<?php bloginfo('template_directory'); ?>/images/att_placeholder.png' alt='Attorney Image Placeholder' width='641' height='872' loading='eager' />
+                                    </div>
+                                <?php } ?>
                                 <div class='single-att-overlay'>
                                     <span class='single-att-button button-one'>
                                         View Profile
