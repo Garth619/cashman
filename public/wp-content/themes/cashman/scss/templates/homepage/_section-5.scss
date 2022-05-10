@@ -64,6 +64,9 @@
 		max-width: 477px;
 	}
 	@include mq(small_monitor) {
+		max-width: 507px;
+	}
+	@include mq(monitor) {
 		max-width: 100%;
 	}
 	li {

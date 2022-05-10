@@ -60,7 +60,7 @@ $page_link = $content_layout['page_link'];
     <?php if ($blockquote) { ?>
         <div id='content-layout-blockquote'>
             <blockquote>
-                <p><?= $blockquote; ?></p>
+                <p><?= text_wrap($blockquote, ' '); ?></p>
             </blockquote>
         </div>
     <?php } ?>

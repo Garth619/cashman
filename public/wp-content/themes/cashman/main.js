@@ -73,6 +73,22 @@ jQuery(document).ready(function ($) {
 
 	createWaypoint('section-one', '#body', 'mobile-header-change', 68, null, true);
 	createWaypoint('internal-main', '#body', 'mobile-header-change', 68, null, true);
+	createWaypoint('sec-two-content', '#sec-two-content', 'visible', 400, null, true);
+	createWaypoint('content-layout-top', '#content-layout-top', 'visible', 300, null, true);
+	createWaypoint(
+		'content-layout-blockquote',
+		'#content-layout-blockquote',
+		'visible',
+		500,
+		null,
+		true
+	);
+	createWaypoint('content-layout-bottom', '#content-layout-bottom', 'visible', 400, null, true);
+	createWaypoint('sec-three-logos', '#sec-three-logos', 'visible', 400, null, true);
+	createWaypoint('about-logos', '#about-logos', 'visible', 400, null, true);
+	createWaypoint('section-four', '#section-four', 'visible', 400, null, true);
+	createWaypoint('section-five', '#section-five', 'visible', 400, null, true);
+
 	/**
 	 * Smooth Scroll down to section on click (<a href="#id">)
 	 */

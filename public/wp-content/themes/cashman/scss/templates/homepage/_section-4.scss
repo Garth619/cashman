@@ -71,8 +71,12 @@
 }
 
 #test-stars {
-	@include image();
-	@include margin_lr();
+	@include flex(center);
+	img {
+		margin: 0 4px;
+		@include box(26px, 26px);
+		@include image();
+	}
 }
 
 #sec-four-testimonials {

@@ -6,9 +6,9 @@ $title = $sec_one['title']; ?>
     <div id='sec-one-inner'>
         <?php if ($selling_points) { ?>
             <ul id='sec-one-sp'>
-                <?php foreach ($selling_points as $single) {
-                    $list_item = $single['list_item']; ?>
-                    <li><?= $list_item; ?></li>
+                <?php foreach ($selling_points as $key => $value) {
+                    $list_item = $value['list_item']; ?>
+                    <li style='--i: <?= ($key + 3); ?>'><?= $list_item; ?></li>
                 <?php } ?>
             </ul>
         <?php }

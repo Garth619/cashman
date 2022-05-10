@@ -1,5 +1,7 @@
 <?php
 $section_two = get_field('section_two');
+$title = $section_two['title'];
+$content = $section_two['content'];
 ?>
 <section id='section-two'>
     <div id='sec-two-inner'>
@@ -11,13 +13,17 @@ $section_two = get_field('section_two');
             )); ?>
             <div id='sec-two-content'>
                 <div id='sec-two-content-left'>
-                    <h1>Massachusett’s Medical Negligence & Serious Personal Injury Attorney</h1>
+                    <?php if ($title) { ?>
+                        <h1><?= text_wrap($title, ' '); ?></h1>
+                    <?php } ?>
                 </div>
-                <div id='sec-two-content-right' class='content'>
-                    <div id='sec-two-content-right-inner'>
-                        <p>Attorney Mark A. Cashman represents victims of medical negligence, dangerous and defective products, construction site injuries, motor vehicle negligence, and dangerous property/landlord negligence cases. He is licensed to practice in Massachusetts, New Hampshire, and Rhode Island.</p>
+                <?php if ($content) { ?>
+                    <div id='sec-two-content-right' class='content'>
+                        <div id='sec-two-content-right-inner'>
+                            <?= $content; ?>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>

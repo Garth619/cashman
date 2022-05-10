@@ -4,7 +4,13 @@
             <?php echo file_get_contents(get_template_directory() . '/images/test_left_arrow.svg'); ?>
         </div>
         <div id='sec-four-inner'>
-            <img id='test-stars' src='<?php bloginfo('template_directory'); ?>/images/stars_1.svg' alt='Stars Icon' width='154' height='26' loading='lazy' />
+            <div id='test-stars'>
+                <img style="--i: 0" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
+                <img style="--i: 1" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
+                <img style="--i: 2" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
+                <img style="--i: 3" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
+                <img style="--i: 4" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
+            </div>
             <div id='sec-four-testimonials'>
                 <div class='sec-four-single'>
                     <span class='sec-four-single-title'>The most comforting part was how easily I could reach him. Mark responded to my emails and calls promptly I would highly recommend&nbsp;him.</span>
