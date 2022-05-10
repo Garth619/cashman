@@ -1,6 +1,8 @@
 .template-testimonials {
 	#page-container-inner {
-		padding: 107px 163px 391px;
+		@include mq(small_monitor) {
+			padding: 107px 163px 391px;
+		}
 	}
 	#banner {
 		padding-bottom: 500px;

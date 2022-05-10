@@ -1,2 +1,16 @@
 @media screen and (min-width: 1199px) {
+	// all animations start at 1199px and up
+	// section one
+	#section-one {
+		overflow: hidden;
+	}
+	#hero {
+		transform: scale(1.2);
+		transition: transform 1400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+	}
+	body.ilawyer-page-loaded {
+		#hero {
+			transform: scale(1);
+		}
+	}
 }

@@ -1,20 +1,33 @@
+<?php
+$sec_one = get_field('section_one');
+$selling_points = $sec_one['selling_points'];
+$title = $sec_one['title']; ?>
 <section id='section-one'>
     <div id='sec-one-inner'>
-        <ul id='sec-one-sp'>
-            <li>TrUST</li>
-            <li>INTEGRITY</li>
-            <li>EXCELLENCE</li>
-        </ul>
-        <span id='sec-one-title'>
-            <span class='brown-light'>PeRSONALIZED SERVICE</span> IS AT THE HEART OF WHAT WE DO.
-        </span>
-        <a id='sec-one-button' class='button-one' href='#consultation'>Click for free case evaluation</a>
+        <?php if ($selling_points) { ?>
+            <ul id='sec-one-sp'>
+                <?php foreach ($selling_points as $single) {
+                    $list_item = $single['list_item']; ?>
+                    <li><?= $list_item; ?></li>
+                <?php } ?>
+            </ul>
+        <?php }
+        if ($title) { ?>
+            <span id='sec-one-title'>
+                <?= $title; ?>
+            </span>
+        <?php }
+        get_template_part('template-parts/button', null, array(
+            'acf-field' => $sec_one,
+            'button-id' => 'sec-one-button',
+            'button-classes' => 'button-one',
+        )); ?>
     </div>
-    <picture>
-        <source media='(min-width: 1650px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_1920.jpg'>
-        <source media='(min-width: 1400px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_1400.jpg'>
-        <source media='(min-width: 1200px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_1200.jpg'>
-        <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/header_img_tablet.jpg'>
-        <img id='hero' src='<?php bloginfo('template_directory'); ?>/images/header_img_mobile.jpg' alt='' width='768' height='607' loading='eager' />
-    </picture>
+    <?php get_template_part('template-parts/background-images', null, array(
+        'acf-field' => $sec_one,
+        'id' => 'hero',
+        'loading' => 'eager',
+        'width' => '768',
+        'height' => '607',
+    )); ?>
 </section>

@@ -212,11 +212,17 @@
 	}
 }
 
+.button-wrap {
+	@include abs(null, 0, 68px, 0);
+	@include mq(small_tablet) {
+		bottom: 0;
+	}
+}
+
 .single-sp-button {
 	font-size: 15px;
 	line-height: 16px;
 	padding: 10px 15px;
-	@include abs(null, 0, 68px, 0);
 	@include margin_lr();
 	@include mq(small_tablet) {
 		bottom: 72px;

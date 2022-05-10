@@ -98,20 +98,20 @@
 	@include margin_lr();
 	@include mq(small_tablet) {
 		max-width: 100%;
-		@include flex();
+		@include flex(space-between);
 	}
 	@include mq(small_laptop) {
 		display: block;
 	}
 	@include mq(monitor) {
 		padding-left: 10px;
-		@include flex();
+		@include flex(flex-start);
 	}
 }
 
 .contact-info-col {
 	&:first-of-type {
-		margin-right: 65px;
+		//margin-right: 65px;
 		@include mq(monitor) {
 			margin-right: 105px;
 		}
@@ -227,6 +227,9 @@
 	}
 	@include mq(large_laptop) {
 		padding-top: 30px;
+	}
+	@include mq(monitor) {
+		padding-top: 50px;
 	}
 	span {
 		display: block;

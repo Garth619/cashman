@@ -1,6 +1,6 @@
 #banner {
 	position: relative;
-	padding: 42px 55px 50px;
+	padding: 42px 56px 50px;
 	@include mq(small_tablet) {
 		padding: 73px 55px 90px;
 	}
@@ -17,7 +17,7 @@
 
 .ilawyer-alt-banner-layout {
 	#banner {
-		padding: 78px 30px 90px;
+		padding: 78px 20px 90px;
 		@include mq(small_tablet) {
 			padding: 115px 30px 110px;
 		}

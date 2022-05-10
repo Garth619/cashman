@@ -55,7 +55,7 @@
 			margin: 0 20px;
 		}
 		@include mq(monitor) {
-			margin: 0 0px;
+			margin: 0 0px 40px;
 		}
 		&:nth-child(n + 2) {
 			display: block;

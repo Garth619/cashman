@@ -43,11 +43,13 @@ if ($sps) { ?>
                     <?php }
                     if ($content) { ?>
                         <span class='single-sp-content'><?= $content; ?></span>
-                    <?php }
+                        <div class='button-wrap'>
+                        <?php }
                     get_template_part('template-parts/button', null, array(
                         'acf-field' => $sp,
                         'button-classes' => 'single-sp-button button-one',
                     )); ?>
+                        </div>
                 </div>
             </div>
         <?php } ?>

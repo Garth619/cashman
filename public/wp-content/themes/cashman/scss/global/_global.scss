@@ -102,7 +102,7 @@ body {
 		padding: 80px 95px 342px;
 	}
 	@include mq(large_laptop) {
-		padding: 80px 95px 292px;
+		padding: 80px 109px 292px;
 		max-width: 1500px;
 		@include margin_lr();
 	}
@@ -336,8 +336,8 @@ body {
 			)
 		);
 		@include mq(small_tablet) {
-			font-size: 30px;
-			line-height: 40px;
+			font-size: 28px;
+			line-height: 35px;
 			margin-top: 69px;
 			margin-bottom: 34px;
 			max-width: 620px;
@@ -364,7 +364,7 @@ body {
 		}
 		&::before,
 		&::after {
-			background: $brownlight;
+			background: $browndark;
 			@include box(2px, 60px);
 			@include contentdisplay();
 			@include margin_lr();

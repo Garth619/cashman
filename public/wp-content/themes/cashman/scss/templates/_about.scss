@@ -8,6 +8,7 @@
 			padding-bottom: 450px;
 		}
 		@include mq(small_monitor) {
+			padding-top: 175px;
 			padding-bottom: 570px;
 		}
 	}
@@ -24,7 +25,7 @@
 			margin-top: -435px;
 		}
 		@include mq(small_monitor) {
-			margin-top: -495px;
+			margin-top: -535px;
 			margin-bottom: -40px;
 		}
 	}

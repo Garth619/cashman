@@ -30,7 +30,7 @@
 		min-height: 780px;
 		@include mq(small_laptop) {
 			padding-left: 65px;
-			padding-right: 65px;
+			padding-right: 110px;
 			padding-bottom: 310px;
 		}
 		@include mq(large_laptop) {
@@ -150,14 +150,26 @@
 	}
 	@include mq(large_laptop) {
 		padding-top: 40px;
+		padding-right: 30px;
+	}
+	h2 {
+		font-size: 26px;
+		line-height: 36px;
+		@include mq(small_laptop) {
+			font-size: 32px;
+			line-height: 42px;
+		}
+		@include mq(large_laptop) {
+			padding-bottom: 31px;
+		}
 	}
 }
 
 #att-accolades {
-	max-width: 490px;
 	padding-top: 32px;
 	@include mq(small_tablet) {
 		padding-top: 45px;
+		max-width: 575px;
 	}
 	@include mq(small_laptop) {
 		padding-top: 29px;
@@ -175,7 +187,7 @@
 			margin-bottom: 35px;
 		}
 		@include mq(large_laptop) {
-			margin-bottom: 45px;
+			margin-bottom: 16px;
 		}
 	}
 }
@@ -251,7 +263,7 @@
 
 .single-accolade-content {
 	display: none;
-	padding: 10px 10px 25px;
+	padding: 10px;
 }
 
 #att-logos {
