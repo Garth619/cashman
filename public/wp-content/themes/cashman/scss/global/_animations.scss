@@ -1,8 +1,63 @@
 @media screen and (min-width: 1199px) {
 	// all animations start at 1199px and up
 	// section one
+	.page-template-template-home {
+		#header-left,
+		nav,
+		#cta-wrap {
+			opacity: 0;
+			transform: translateX(-30px);
+			transition: opacity 400ms ease-in-out,
+				transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+		}
+	}
+	.page-template-template-home.ilawyer-page-loaded {
+		#header-left,
+		nav,
+		#cta-wrap {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		nav {
+			transition-delay: 300ms;
+		}
+		#cta-wrap {
+			transition-delay: 600ms;
+		}
+	}
+
 	#section-one {
 		overflow: hidden;
+	}
+	#sec-one-title {
+		display: block;
+		opacity: 0;
+		transform: translate3d(0, 50px, 0) skewY(6deg);
+		transition: transform 1400ms ease, opacity 2000ms ease;
+		span.mask {
+			opacity: 0;
+			display: inline-block;
+			transform: translateY(calc((var(--i) + 2) * 20px));
+			transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease;
+			span.wrapped {
+				//display: inline;
+				span {
+					//display: inline;
+				}
+			}
+		}
+	}
+	.ilawyer-page-loaded {
+		#sec-one-title {
+			transform: translate3d(0, 0, 0) skewY(0);
+			transition-delay: calc(var(--i) * 0.5ms);
+			opacity: 1;
+			span.mask {
+				opacity: 1;
+				transform: translateY(0px);
+				transition-delay: calc(var(--i) * 10ms);
+			}
+		}
 	}
 	#hero {
 		transform: scale(1.2);

@@ -14,7 +14,7 @@ $title = $sec_one['title']; ?>
         <?php }
         if ($title) { ?>
             <span id='sec-one-title'>
-                <?= $title; ?>
+                <?= text_wrap($title, ' '); ?>
             </span>
         <?php }
         get_template_part('template-parts/button', null, array(
