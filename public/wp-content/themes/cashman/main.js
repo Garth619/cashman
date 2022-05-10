@@ -87,7 +87,7 @@ jQuery(document).ready(function ($) {
 	createWaypoint('sec-three-logos', '#sec-three-logos', 'visible', 400, null, true);
 	createWaypoint('about-logos', '#about-logos', 'visible', 400, null, true);
 	createWaypoint('section-four', '#section-four', 'visible', 400, null, true);
-	createWaypoint('section-five', '#section-five', 'visible', 400, null, true);
+	createWaypoint('section-five', '#section-five', 'visible', 200, null, true);
 
 	/**
 	 * Smooth Scroll down to section on click (<a href="#id">)

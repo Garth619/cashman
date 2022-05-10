@@ -8103,10 +8103,54 @@ h2.blog-title a:hover {
     transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   }
 
+  #sec-five-pa-list li {
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+    opacity: 0;
+    transition: opacity 500ms ease-in-out, -webkit-transform 1000ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1000ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms ease-in-out;
+    transition: transform 1000ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms ease-in-out, -webkit-transform 1000ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #sec-five-image-wrapper .img-wrapper {
+    -webkit-transform: translateX(-290px);
+            transform: translateX(-290px);
+    transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #sec-five-image-wrapper .img-wrapper:nth-of-type(1) img {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  #sec-five-image-wrapper .img-wrapper:nth-of-type(2) img {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  #sec-five-image-wrapper .img-wrapper img {
+    transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
   #section-five.visible #sec-five-content-inner {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
+  }
+  #section-five.visible #sec-five-pa-list li {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    transition-delay: calc(var(--i) * 100ms);
+  }
+  #section-five.visible #sec-five-image-wrapper .img-wrapper {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  #section-five.visible #sec-five-image-wrapper .img-wrapper img {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
   }
 }
 
