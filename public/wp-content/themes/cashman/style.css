@@ -4984,8 +4984,8 @@ body.mobile-header-change #section-one {
     line-height: 86px;
   }
 }
-#sec-six-title span {
-  display: inline;
+#sec-six-title span span span {
+  color: #ce996e;
 }
 
 #sec-six-button {
@@ -5084,7 +5084,7 @@ body.mobile-header-change #section-one {
     box-shadow: 0px 3px 6px transparent;
     border-radius: 500px;
     margin: 0 10px;
-    transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    transition: background 400ms ease-in-out, box-shadow 400ms ease-in-out;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -5097,7 +5097,11 @@ body.mobile-header-change #section-one {
     background: #ce996e;
     margin-top: -45px;
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    transition: opacity 200ms ease-in-out, -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 200ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 200ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     margin-left: auto;
     margin-right: auto;
     width: 2px;
@@ -5120,6 +5124,8 @@ body.mobile-header-change #section-one {
 }
 .case-results .slick-slide:hover::before {
   opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 .case-results .slick-slide:hover .single-cr a {
   text-decoration: none;
@@ -5127,7 +5133,8 @@ body.mobile-header-change #section-one {
 @media screen and (min-width: 1200px) {
   .case-results .slick-slide:hover .single-cr-button {
     opacity: 1;
-    visibility: visible;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -5268,8 +5275,11 @@ body.mobile-header-change #section-one {
     margin-top: 42px;
     padding: 11px 18px;
     opacity: 0;
-    visibility: hidden;
-    transition: all 200ms ease-in-out;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    transition: opacity 300ms ease-in-out, -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 300ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 300ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     margin-left: auto;
     margin-right: auto;
     font-size: 14px;
@@ -8151,6 +8161,53 @@ h2.blog-title a:hover {
   #section-five.visible #sec-five-image-wrapper .img-wrapper img {
     -webkit-transform: translateY(0) scale(1);
             transform: translateY(0) scale(1);
+  }
+
+  #sec-six-title {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0) skewY(5deg);
+            transform: translate3d(0, 15px, 0) skewY(5deg);
+    transition: opacity 2000ms ease, -webkit-transform 1700ms ease;
+    transition: transform 1700ms ease, opacity 2000ms ease;
+    transition: transform 1700ms ease, opacity 2000ms ease, -webkit-transform 1700ms ease;
+  }
+  #sec-six-title span.mask {
+    opacity: 0;
+    display: inline-block;
+    -webkit-transform: translateY(calc((var(--i) + 2) * 20px));
+            transform: translateY(calc((var(--i) + 2) * 20px));
+    transition: opacity 200ms ease, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease;
+    transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #sec-six-button {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #section-six.visible #sec-six-title {
+    -webkit-transform: translate3d(0, 0, 0) skewY(0);
+            transform: translate3d(0, 0, 0) skewY(0);
+    transition-delay: calc(var(--i) * 0.5ms);
+    opacity: 1;
+  }
+  #section-six.visible #sec-six-title span.mask {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    transition-delay: calc(var(--i) * 10ms);
+  }
+  #section-six.visible #sec-six-button {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 300ms;
   }
 }
 
