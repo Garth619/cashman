@@ -79,16 +79,17 @@ jQuery(document).ready(function ($) {
 		'content-layout-blockquote',
 		'#content-layout-blockquote',
 		'visible',
-		500,
+		400,
 		null,
 		true
 	);
 	createWaypoint('content-layout-bottom', '#content-layout-bottom', 'visible', 400, null, true);
-	createWaypoint('sec-three-logos', '#sec-three-logos', 'visible', 400, null, true);
+	createWaypoint('sec-three-logos', '#sec-three-logos', 'visible', 500, null, true);
 	createWaypoint('about-logos', '#about-logos', 'visible', 400, null, true);
+
 	createWaypoint('section-four', '#section-four', 'visible', 400, null, true);
 	createWaypoint('section-five', '#section-five', 'visible', 200, null, true);
-	createWaypoint('section-six', '#section-six', 'visible', 200, null, true);
+	createWaypoint('section-six', '#section-six', 'visible', 500, null, true);
 
 	/**
 	 * Smooth Scroll down to section on click (<a href="#id">)

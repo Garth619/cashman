@@ -22,7 +22,7 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
                     $att_profile =  get_field('attorney_profile');
                     $att_pos = $att_profile['attorney_position'];
                     if ($att_pos) { ?>
-                        <span id='att-position'><?= $att_pos; ?></span>
+                        <span id='att-position'><?= text_wrap($att_pos, ' '); ?></span>
                 <?php }
                 } ?>
             <?php }

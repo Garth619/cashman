@@ -5,11 +5,11 @@
         </div>
         <div id='sec-four-inner'>
             <div id='test-stars'>
-                <img style="--i: 0" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
-                <img style="--i: 1" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
-                <img style="--i: 2" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
-                <img style="--i: 3" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
-                <img style="--i: 4" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='' height='' loading='lazy' />
+                <img style="--i: 0" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                <img style="--i: 1" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                <img style="--i: 2" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                <img style="--i: 3" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                <img style="--i: 4" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
             </div>
             <div id='sec-four-testimonials'>
                 <div class='sec-four-single'>

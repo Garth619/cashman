@@ -5887,7 +5887,7 @@ h2.blog-title a:hover {
     border-radius: 500px;
     margin: 0 10px;
     padding: 95px 0px;
-    transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    transition: background 400ms ease-in-out, box-shadow 400ms ease-in-out;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -5911,7 +5911,11 @@ h2.blog-title a:hover {
     background: #ce996e;
     margin-top: -140px;
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    transition: opacity 200ms ease-in-out, -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 200ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 200ms ease-in-out, transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     margin-left: auto;
     margin-right: auto;
     width: 2px;
@@ -5934,6 +5938,8 @@ h2.blog-title a:hover {
 }
 .template-caseresults .single-cr:hover::before {
   opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 @media screen and (min-width: 1200px) {
   .template-caseresults .single-cr-amount {
@@ -6010,12 +6016,17 @@ h2.blog-title a:hover {
 .testimonials-box {
   text-align: center;
 }
-.testimonials-box img.stars {
+.testimonials-box #test-stars {
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: center;
+}
+.testimonials-box #test-stars img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 26px;
+  height: 26px;
 }
 .testimonials-box span {
   display: block;
@@ -7686,16 +7697,16 @@ h2.blog-title a:hover {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
     opacity: 0;
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   }
 
   .ilawyer-page-loaded #sec-one-button {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
-    transition-delay: 750ms;
+    transition-delay: 550ms;
   }
 
   #hero {
@@ -8034,9 +8045,9 @@ h2.blog-title a:hover {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
     opacity: 0;
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   }
 
   .sec-four-arrow {
@@ -8097,7 +8108,7 @@ h2.blog-title a:hover {
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    transition-delay: 500ms;
+    transition-delay: 300ms;
   }
   #section-four.visible #sec-four-bg {
     -webkit-transform: scale(1);
@@ -8130,12 +8141,12 @@ h2.blog-title a:hover {
     transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   }
   #sec-five-image-wrapper .img-wrapper:nth-of-type(1) img {
-    -webkit-transform: translateX(600px);
-            transform: translateX(600px);
+    -webkit-transform: translateX(700px);
+            transform: translateX(700px);
   }
   #sec-five-image-wrapper .img-wrapper:nth-of-type(2) img {
-    -webkit-transform: translateX(400px);
-            transform: translateX(400px);
+    -webkit-transform: translateX(550px);
+            transform: translateX(550px);
   }
   #sec-five-image-wrapper .img-wrapper img {
     transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
@@ -8186,9 +8197,9 @@ h2.blog-title a:hover {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
     opacity: 0;
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
-    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   }
 
   #section-six.visible #sec-six-title {
@@ -8208,6 +8219,213 @@ h2.blog-title a:hover {
             transform: translateY(0px);
     opacity: 1;
     transition-delay: 300ms;
+  }
+
+  #banner {
+    overflow: hidden;
+  }
+
+  .internal-banner-image {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    transition: -webkit-transform 1100ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1100ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1100ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1100ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #banner-title,
+#att-position,
+.no-banner-title {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0) skewY(5deg);
+            transform: translate3d(0, 15px, 0) skewY(5deg);
+    transition: opacity 2000ms ease, -webkit-transform 1700ms ease;
+    transition: transform 1700ms ease, opacity 2000ms ease;
+    transition: transform 1700ms ease, opacity 2000ms ease, -webkit-transform 1700ms ease;
+  }
+  #banner-title span.mask,
+#att-position span.mask,
+.no-banner-title span.mask {
+    opacity: 0;
+    display: inline-block;
+    -webkit-transform: translateY(calc((var(--i) + 2) * 20px));
+            transform: translateY(calc((var(--i) + 2) * 20px));
+    transition: opacity 200ms ease, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease;
+    transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  .banner-button {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+    transition: opacity 400ms ease-in-out, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 400ms ease-in-out, transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  .ilawyer-page-loaded .internal-banner-image {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .ilawyer-page-loaded #banner-title,
+.ilawyer-page-loaded #att-position,
+.ilawyer-page-loaded .no-banner-title {
+    -webkit-transform: translate3d(0, 0, 0) skewY(0);
+            transform: translate3d(0, 0, 0) skewY(0);
+    transition-delay: calc(var(--i) * 0.5ms);
+    opacity: 1;
+  }
+  .ilawyer-page-loaded #banner-title span.mask,
+.ilawyer-page-loaded #att-position span.mask,
+.ilawyer-page-loaded .no-banner-title span.mask {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    transition-delay: calc(var(--i) * 10ms);
+  }
+  .ilawyer-page-loaded .banner-button {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 550ms;
+  }
+
+  #attprofile-img-wrapper {
+    overflow: hidden;
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
+    transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #attprofile-img-wrapper img {
+    -webkit-transform: translateY(1000px) scale(1.3);
+            transform: translateY(1000px) scale(1.3);
+    transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #attprofile-content {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    opacity: 0;
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  .ilawyer-page-loaded #attprofile-content {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  .ilawyer-page-loaded #attprofile-img-wrapper {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .ilawyer-page-loaded #attprofile-img-wrapper img {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+  }
+
+  .ilawyer-page-loaded.template-testimonials #test-stars img {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    transition-delay: calc(var(--i) * 100ms);
+  }
+
+  #contact-title {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0) skewY(5deg);
+            transform: translate3d(0, 15px, 0) skewY(5deg);
+    transition: opacity 2000ms ease, -webkit-transform 1700ms ease;
+    transition: transform 1700ms ease, opacity 2000ms ease;
+    transition: transform 1700ms ease, opacity 2000ms ease, -webkit-transform 1700ms ease;
+  }
+  #contact-title span.mask {
+    opacity: 0;
+    display: inline-block;
+    -webkit-transform: translateY(calc((var(--i) + 2) * 20px));
+            transform: translateY(calc((var(--i) + 2) * 20px));
+    transition: opacity 200ms ease, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease;
+    transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 200ms ease, -webkit-transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #contact-image-wrapper .img-wrapper {
+    -webkit-transform: translateX(-290px);
+            transform: translateX(-290px);
+    transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  #contact-image-wrapper .img-wrapper:nth-of-type(1) img {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  #contact-image-wrapper .img-wrapper:nth-of-type(2) img {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  #contact-image-wrapper .img-wrapper img {
+    transition: -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  #contact-col-wrapper,
+#contact-social-media-wrapper {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    opacity: 0;
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transition: opacity 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98), transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98), -webkit-transform 1600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+
+  .ilawyer-page-loaded #contact-title {
+    -webkit-transform: translate3d(0, 0, 0) skewY(0);
+            transform: translate3d(0, 0, 0) skewY(0);
+    transition-delay: calc(var(--i) * 0.5ms);
+    opacity: 1;
+  }
+  .ilawyer-page-loaded #contact-title span.mask {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    transition-delay: calc(var(--i) * 10ms);
+  }
+  .ilawyer-page-loaded #contact-col-wrapper {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 400ms;
+  }
+  .ilawyer-page-loaded #contact-social-media-wrapper {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 600ms;
+  }
+  .ilawyer-page-loaded #contact-image-wrapper .img-wrapper {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .ilawyer-page-loaded #contact-image-wrapper .img-wrapper img {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    transition-delay: 400ms;
+  }
+  .ilawyer-page-loaded #contact-image-wrapper .img-wrapper:nth-of-type(2) {
+    transition-delay: 500ms;
+  }
+  .ilawyer-page-loaded #contact-image-wrapper .img-wrapper:nth-of-type(2) img {
+    transition-delay: 500ms;
   }
 }
 

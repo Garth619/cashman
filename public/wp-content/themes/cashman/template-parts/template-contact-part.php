@@ -1,5 +1,6 @@
 <?php
 $contact = get_field('contact');
+$title = $contact['title'];
 $img_one = $contact['contact_image_one'];
 $img_one_url = $img_one['url'];
 $img_one_alt = $img_one['alt'];
@@ -13,7 +14,9 @@ $img_two_height = $img_two['height'];
 if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id='contact-wrapper'>
             <div id='contact-content'>
-                <h1 id='contact-title'>Contact Us Today</h1>
+                <?php if ($title) { ?>
+                    <h1 id='contact-title'><?= text_wrap($title, ' '); ?></h1>
+                <?php } ?>
                 <div id='contact-col-wrapper'>
                     <div class='contact-info-col'>
                         <span class='contact-title'>SaLEM OFFICE</span>

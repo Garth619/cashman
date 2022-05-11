@@ -8,7 +8,13 @@ $testimonials_list = $testimonials['testimonials'];
 if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id='testimonials-wrapper' class='template-part-wrapper'>
             <div id='testimonials-feature' class='testimonials-box'>
-                <img class='stars' src='<?php bloginfo('template_directory'); ?>/images/stars_1.svg' alt='Stars Icon' width='157' height='26' />
+                <div id='test-stars'>
+                    <img style="--i: 0" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                    <img style="--i: 1" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                    <img style="--i: 2" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                    <img style="--i: 3" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                    <img style="--i: 4" src='<?php bloginfo('template_directory'); ?>/images/star.svg' alt='Stars Icon' width='26' height='26' loading='lazy' />
+                </div>
                 <?php if ($featured_intro) { ?>
                     <span class='intro'><?= $featured_intro; ?></span>
                 <?php }
