@@ -37,19 +37,19 @@
         <div id='page-container-inner'>
             <?php
             /**
-             * If custom internal page template template, use a template part with a single col container
+             * If its a default internal page, blog or 404 page, get the template part with a two col container
+             */
+            if (ilaw_has_class('ilawyer-two-col-layout')) {
+                get_template_part('template-parts/default', 'content');
+            }
+            /**
+             * If custom internal page template, use a template part with a single col container
              */
             if (ilaw_has_class('ilawyer-single-col-layout')) {
                 /**
                  * ilaw_get_template() returns 'current template name' - 'part' (template files and template part files are named similarly)
                  */
                 get_template_part('template-parts/' . ilaw_get_template() . '');
-            }
-            /**
-             * If its a default internal page, blog or 404 page, get the template part with a two col container
-             */
-            if (ilaw_has_class('ilawyer-two-col-layout')) {
-                get_template_part('template-parts/default', 'content');
             } ?>
         </div>
     </main>

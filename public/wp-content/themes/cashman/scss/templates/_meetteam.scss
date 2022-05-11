@@ -122,36 +122,46 @@
 	}
 	&:hover {
 		&::before {
-			opacity: 1;
-			transform: translateY(0px);
+			@include mq(small_laptop) {
+				opacity: 1;
+				transform: translateY(0px);
+			}
 		}
 		.single-att-img-wrapper {
-			border-radius: 198px;
-			transform: scale(0.95);
-
+			@include mq(small_laptop) {
+				border-radius: 198px;
+				transform: scale(0.95);
+			}
 			@include mq(small_monitor) {
 				border-radius: 255px;
 			}
 		}
 		.single-att-overlay {
 			&::before {
-				opacity: 1;
+				@include mq(small_laptop) {
+					opacity: 1;
+				}
 			}
 		}
 		.single-att-button {
-			opacity: 1;
-			transform: translateY(0px);
+			@include mq(small_laptop) {
+				opacity: 1;
+				transform: translateY(0px);
+			}
 		}
 		&.placeholder {
 			.single-att-overlay {
 				&::before {
-					opacity: 0;
+					@include mq(small_laptop) {
+						opacity: 0;
+					}
 				}
 			}
-
 			.attprofile-placeholder {
 				&::before {
-					opacity: 0;
+					@include mq(small_laptop) {
+						opacity: 0;
+					}
 				}
 			}
 		}

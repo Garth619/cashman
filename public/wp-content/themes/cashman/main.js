@@ -73,23 +73,23 @@ jQuery(document).ready(function ($) {
 
 	createWaypoint('section-one', '#body', 'mobile-header-change', 68, null, true);
 	createWaypoint('internal-main', '#body', 'mobile-header-change', 68, null, true);
-	createWaypoint('sec-two-content', '#sec-two-content', 'visible', 400, null, true);
-	createWaypoint('content-layout-top', '#content-layout-top', 'visible', 300, null, true);
+	createWaypoint('sec-two-content', '#sec-two-content', 'visible', 400, null, false);
+	createWaypoint('content-layout-top', '#content-layout-top', 'visible', 300, null, false);
 	createWaypoint(
 		'content-layout-blockquote',
 		'#content-layout-blockquote',
 		'visible',
 		400,
 		null,
-		true
+		false
 	);
-	createWaypoint('content-layout-bottom', '#content-layout-bottom', 'visible', 400, null, true);
-	createWaypoint('sec-three-logos', '#sec-three-logos', 'visible', 500, null, true);
-	createWaypoint('about-logos', '#about-logos', 'visible', 400, null, true);
+	createWaypoint('content-layout-bottom', '#content-layout-bottom', 'visible', 400, null, false);
+	createWaypoint('sec-three-logos', '#sec-three-logos', 'visible', 500, null, false);
+	createWaypoint('about-logos', '#about-logos', 'visible', 400, null, false);
 
-	createWaypoint('section-four', '#section-four', 'visible', 400, null, true);
-	createWaypoint('section-five', '#section-five', 'visible', 200, null, true);
-	createWaypoint('section-six', '#section-six', 'visible', 500, null, true);
+	createWaypoint('section-four', '#section-four', 'visible', 400, null, false);
+	createWaypoint('section-five', '#section-five', 'visible', 200, null, false);
+	createWaypoint('section-six', '#section-six', 'visible', 500, null, false);
 
 	/**
 	 * Smooth Scroll down to section on click (<a href="#id">)

@@ -9,7 +9,7 @@ $array_defaults = array(
     'acf-field' => '',
     'class' => 'logos-slider', // tied to slick slider function in main.js
     'id' => '',
-    'loading' => 'loading',
+    'loading' => 'lazy',
 );
 $args = wp_parse_args($args, $array_defaults);
 

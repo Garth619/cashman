@@ -7,7 +7,7 @@
  */
 $array_defaults = array(
     'acf-field' => '',
-    'loading' => 'loading',
+    'loading' => 'lazy',
 );
 $args = wp_parse_args($args, $array_defaults);
 /**

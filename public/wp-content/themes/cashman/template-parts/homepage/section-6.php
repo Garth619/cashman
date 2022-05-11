@@ -1,12 +1,13 @@
 <?php
 $sec_six = get_field('section_six');
-$title = $sec_six['title']; ?>
+$title = $sec_six['title'];
+?>
 <section id='section-six'>
     <div id='sec-six-inner'>
         <?php if ($title) { ?>
             <span id='sec-six-title'><?= text_wrap($title, ' '); ?></span>
         <?php } ?>
-        <a id='sec-six-button' class='button-one' href=''>View all results</a>
+        <a id='sec-six-button' class='button-one' href='<?php the_permalink(138); ?>'>View all results</a>
         <div id='sec-six-case-results' class='case-results content'>
             <div class='single-cr'>
                 <a href=''>

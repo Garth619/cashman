@@ -29,21 +29,39 @@
 </head>
 
 <body id='body' <?php body_class(); ?>>
+    <?php
+    $header = get_field('header', 'option');
+    $logo = $header['logo'];
+    $logo_url = $logo['url'];
+    $logo_alt = $logo['alt'];
+    $logo_width = $logo['width'];
+    $logo_height = $logo['height'];
+    $cta = $header['free_case_evaluation'];
+    $contact_info = get_field('contact_information', 'option');
+    $phone = $contact_info['phone'];
+    $tel = str_replace(['-', '(', ')', ' '], '', $phone);
+    ?>
     <header>
         <div id='header-inner'>
             <div id='header-left'>
-                <a id='logo' href='<?php bloginfo('url'); ?>'>
-                    <img src='<?php bloginfo('template_directory'); ?>/images/logo.svg' alt='altname' width='422' height='53' loading='eager' />
-                </a>
+                <?php if ($logo) { ?>
+                    <a id='logo' href='<?php bloginfo('url'); ?>'>
+                        <img src='<?= $logo_url; ?>' alt='<?= $logo_alt; ?>' width='<?= $logo_width; ?>' height='<?= $logo_height; ?>' loading='eager' />
+                    </a>
+                <?php } ?>
             </div>
             <div id='header-right'>
                 <div id='cta-wrap'>
-                    <span id='cta'>
-                        Free case evaluation - 24/7
-                    </span>
-                    <a id='phone' href='tel:+18002003120'>(800) 200-3120</a>
+                    <?php if ($cta) { ?>
+                        <span id='cta'>
+                            <?= $cta; ?>
+                        </span>
+                    <?php }
+                    if ($tel) { ?>
+                        <a id='phone' href='tel:+1<?= $tel; ?>'><?= $phone; ?></a>
+                    <?php } ?>
                 </div>
-                <nav> <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
+                <nav><?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu')); ?></nav>
                 <div id='menu-wrap'>
                     <span></span>
                     <span></span>

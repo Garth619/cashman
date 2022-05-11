@@ -13,7 +13,6 @@ $array_defaults = array(
 $args = wp_parse_args($args, $array_defaults);
 
 $acf_field = $args['acf-field'];
-$verbiage = $args['verbiage'];
 $button_id = $args['button-id'];
 $button_classes = $args['button-classes'];
 /**

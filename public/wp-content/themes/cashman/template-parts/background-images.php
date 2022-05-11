@@ -16,7 +16,6 @@ $array_defaults = array(
 $args = wp_parse_args($args, $array_defaults);
 
 $acf_field = $args['acf-field'];
-$acf_option = $args['acf-site-options'];
 $class = $args['class'];
 $id = $args['id'];
 $loading = $args['loading'];

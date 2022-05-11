@@ -49,7 +49,7 @@ nav {
 							color: $browndark;
 						}
 						&::after {
-							@include contentdisplay(inline-block, "-");
+							@include contentdisplay(inline-block, '-');
 						}
 					}
 				}
@@ -66,11 +66,12 @@ nav {
 						vertical-align: top;
 						margin: 1px 0 0 4px;
 						@include box(9px, 22px);
-						@include contentdisplay(inline-block, "+");
+						@include contentdisplay(inline-block, '+');
 					}
 				}
 			}
 			&.current-menu-item,
+			&.current_page_parent,
 			&.current-menu-ancestor {
 				> a {
 					color: $brownlight;
