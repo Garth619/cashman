@@ -1,8 +1,7 @@
 <?php
 $section_two = get_field('section_two');
 $title = $section_two['title'];
-$content = $section_two['content'];
-?>
+$content = $section_two['content']; ?>
 <section id='section-two'>
     <div id='sec-two-inner'>
         <div id='sec-two-sp'>
@@ -27,5 +26,5 @@ $content = $section_two['content'];
             </div>
         </div>
     </div>
-    <img id='sec-two-background' src='<?php bloginfo('template_directory'); ?>/images/bg.jpg' alt='altname' width='1943' height='1497' loading='lazy' />
+    <img id='sec-two-background' src='<?php bloginfo('template_directory'); ?>/images/bg_header_test.jpg' alt='Background Image' width='1943' height='1497' loading='lazy' />
 </section>

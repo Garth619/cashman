@@ -1,62 +1,41 @@
 <?php
 $sec_six = get_field('section_six');
 $title = $sec_six['title'];
-?>
+$case_results = $sec_six['case_results']; ?>
 <section id='section-six'>
     <div id='sec-six-inner'>
         <?php if ($title) { ?>
             <span id='sec-six-title'><?= text_wrap($title, ' '); ?></span>
         <?php } ?>
-        <a id='sec-six-button' class='button-one' href='<?php the_permalink(138); ?>'>View all results</a>
-        <div id='sec-six-case-results' class='case-results content'>
-            <div class='single-cr'>
-                <a href=''>
-                    <span class='single-cr-amount'>$3.5M</span>
-                    <span class='single-cr-type'>SeTTLEMENT</span>
-                    <span class='single-cr-content'>botched surgery and delay of diagnosis</span>
-                    <span class='single-cr-button'>Read More</span>
-                </a>
+        <?php get_template_part('template-parts/button', null, array(
+            'acf-field' => $sec_six,
+            'button-id' => 'sec-six-button',
+            'button-classes' => 'button-one',
+        )); ?>
+        <?php if ($case_results) { ?>
+            <div id='sec-six-case-results' class='case-results content'>
+                <?php foreach ($case_results as $cr) {
+                    $amount = $cr['amount'];
+                    $type = $cr['type'];
+                    $description = $cr['description'];
+                    $page_link = $cr['page_link'];
+                ?>
+                    <div class='single-cr'>
+                        <a href='<?= $page_link; ?>'>
+                            <?php if ($amount) { ?>
+                                <span class='single-cr-amount'><?= $amount; ?></span>
+                            <?php } ?>
+                            <?php if ($type) { ?>
+                                <span class='single-cr-type'><?= $type; ?></span>
+                            <?php } ?>
+                            <?php if ($description) { ?>
+                                <span class='single-cr-content'><?= $description; ?></span>
+                            <?php } ?>
+                            <span class='single-cr-button'>Read More</span>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
-            <div class='single-cr'>
-                <a href=''>
-                    <span class='single-cr-amount'>$2.8M</span>
-                    <span class='single-cr-type'>Verdict</span>
-                    <span class='single-cr-content'>delay in diagnosis of prostate cancer</span>
-                    <span class='single-cr-button'>Read More</span>
-                </a>
-            </div>
-            <div class='single-cr'>
-                <a href=''>
-                    <span class='single-cr-amount'>$1M</span>
-                    <span class='single-cr-type'>Verdict</span>
-                    <span class='single-cr-content'>failure to recognize and treat retinal detachment leading to blindness</span>
-                    <span class='single-cr-button'>Read More</span>
-                </a>
-            </div>
-            <div class='single-cr'>
-                <a href=''>
-                    <span class='single-cr-amount'>$900k</span>
-                    <span class='single-cr-type'>SeTTLEMENT</span>
-                    <span class='single-cr-content'>delay in diagnosis of breast cancer.</span>
-                    <span class='single-cr-button'>Read More</span>
-                </a>
-            </div>
-            <div class='single-cr'>
-                <a href=''>
-                    <span class='single-cr-amount'>$1.5M</span>
-                    <span class='single-cr-type'>SeTTLEMENT</span>
-                    <span class='single-cr-content'>botched surgery and delay of diagnosis</span>
-                    <span class='single-cr-button'>Read More</span>
-                </a>
-            </div>
-            <div class='single-cr'>
-                <a href=''>
-                    <span class='single-cr-amount'>$5.5M</span>
-                    <span class='single-cr-type'>SeTTLEMENT</span>
-                    <span class='single-cr-content'>botched surgery and delay of diagnosis</span>
-                    <span class='single-cr-button'>Read More</span>
-                </a>
-            </div>
-        </div>
+        <?php } ?>
     </div>
 </section>

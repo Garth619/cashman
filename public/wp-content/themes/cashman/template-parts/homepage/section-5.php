@@ -11,8 +11,7 @@ $image_two = $sec_five['image_two'];
 $image_two_url = $image_two['url'];
 $image_two_alt = $image_two['alt'];
 $image_two_width = $image_two['width'];
-$image_two_height = $image_two['height'];
-?>
+$image_two_height = $image_two['height']; ?>
 <section id='section-five'>
     <div id='sec-five-inner'>
         <div id='sec-five-content'>
@@ -30,7 +29,7 @@ $image_two_height = $image_two['height'];
                             <li style='--i: <?= ($key + 1); ?>'>
                                 <a href="<?= $link; ?>">
                                     <span><?= $title; ?></span>
-                                    <?php echo file_get_contents(get_template_directory() . '/images/pa_grid_arrow.svg'); ?>
+                                    <?= file_get_contents(get_template_directory() . '/images/pa_grid_arrow.svg'); ?>
                                 </a>
                             </li>
                     <?php }

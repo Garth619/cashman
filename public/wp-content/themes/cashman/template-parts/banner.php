@@ -96,7 +96,7 @@ if (!(ilaw_has_class('ilawyer-banner-disabled') || ilaw_has_class('ilawyer-blog'
             $acf_field = $global_banners;
         }
         if (ilaw_has_class('ilawyer-alt-banner-layout')) { ?>
-            <img class="internal-banner-image banner-img" src="<?php bloginfo('template_directory'); ?>/images/bg.jpg" alt="Black Background" width="1943" height="1497" loading="eager">
+            <img class="internal-banner-image banner-img" src="<?php bloginfo('template_directory'); ?>/images/bg_header_test.jpg" alt="Black Background" width="1943" height="1497" loading="eager">
         <?php } else {
             /**
              * Gets the acf cloned template part - background images

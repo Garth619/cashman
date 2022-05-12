@@ -1,12 +1,11 @@
 <?php
 $sec_four = get_field('section_four');
-$tests = $sec_four['testimonials'];
-?>
+$tests = $sec_four['testimonials']; ?>
 <section id='section-four'>
     <?php if ($tests) { ?>
         <div id='sec-four-container'>
             <div id='sec-four-arrow-left' class='sec-four-arrow'>
-                <?php echo file_get_contents(get_template_directory() . '/images/test_left_arrow.svg'); ?>
+                <?= file_get_contents(get_template_directory() . '/images/test_left_arrow.svg'); ?>
             </div>
             <div id='sec-four-inner'>
                 <div id='test-stars'>
@@ -28,8 +27,8 @@ $tests = $sec_four['testimonials'];
                             <?php }
                             if ($content) { ?>
                                 <span class='sec-four-single-content content'> <?= $content; ?></span>
-                                <?php }
-                            if ($name) { ?>?>
+                            <?php }
+                            if ($name) { ?>
                                 <span class='sec-four-single-name'><?= $name; ?></span>
                             <?php } ?>
                         </div>
@@ -42,9 +41,9 @@ $tests = $sec_four['testimonials'];
                 )); ?>
             </div>
             <div id='sec-four-arrow-right' class='sec-four-arrow'>
-                <?php echo file_get_contents(get_template_directory() . '/images/test_right_arrow.svg'); ?>
+                <?= file_get_contents(get_template_directory() . '/images/test_right_arrow.svg'); ?>
             </div>
         </div>
     <?php } ?>
-    <img id='sec-four-bg' src='<?php bloginfo('template_directory'); ?>/images/bg.jpg' alt='altname' width='1943' height='1497' loading='lazy' />
+    <img id='sec-four-bg' src='<?php bloginfo('template_directory'); ?>/images/bg_header_test.jpg' alt='Background Image' width='1943' height='1497' loading='lazy' />
 </section>

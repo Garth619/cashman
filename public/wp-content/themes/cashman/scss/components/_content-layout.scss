@@ -221,7 +221,7 @@
 	@include mq(small_laptop) {
 		font-size: 16px;
 		letter-spacing: 3.2px;
-		margin-top: 115px;
+		margin-top: 25px;
 	}
 	@include mq(large_laptop) {
 		margin-top: 41px;

@@ -62,8 +62,8 @@
 	@include margin_lr();
 	@include type(
 		(
-			size: 67px,
-			height: 65px,
+			size: 60px,
+			height: 60px,
 			family: $secondaryfont,
 			color: $browndark,
 			align: center,
@@ -193,7 +193,7 @@
 .contact-phone {
 	margin-top: 28px;
 	margin-bottom: 72px;
-	display: block;
+	display: inline-block;
 	transition: all 200ms ease-in-out;
 	@include type(
 		(
@@ -210,6 +210,9 @@
 		margin-bottom: 79px;
 	}
 	&:hover {
+		color: $browndark;
+	}
+	.brown {
 		color: $browndark;
 	}
 }

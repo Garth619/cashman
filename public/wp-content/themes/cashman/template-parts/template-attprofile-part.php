@@ -30,7 +30,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                                 <div class='single-accolade'>
                                     <div class='single-accolade-title'>
                                         <span><?= $title; ?></span>
-                                        <?php echo file_get_contents(get_template_directory() . '/images/att-arrow.svg'); ?>
+                                        <?= file_get_contents(get_template_directory() . '/images/att-arrow.svg'); ?>
                                     </div>
                                     <div class='single-accolade-content'>
                                         <ul>

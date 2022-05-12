@@ -75,8 +75,8 @@ $page_link = $content_layout['page_link'];
                 <a class='content-layout-learn-more' href='<?= $page_link; ?>'>
                     <span class='link'><?= $link_verbiage; ?></span>
                     <span class='arrow'>
-                        <?php echo file_get_contents(get_template_directory() . '/images/learn_about_arrow.svg'); ?>
-                        <?php echo file_get_contents(get_template_directory() . '/images/learn_about_arrow_2.svg'); ?>
+                        <?= file_get_contents(get_template_directory() . '/images/learn_about_arrow.svg'); ?>
+                        <?= file_get_contents(get_template_directory() . '/images/learn_about_arrow_2.svg'); ?>
                     </span>
                 </a>
             <?php } ?>

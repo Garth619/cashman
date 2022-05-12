@@ -1,6 +1,5 @@
 <?php
-$section_three = get_field('section_three');
-?>
+$section_three = get_field('section_three'); ?>
 <section id='section-three'>
     <?php
     get_template_part(

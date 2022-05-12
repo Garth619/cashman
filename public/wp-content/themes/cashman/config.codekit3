@@ -298,6 +298,32 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/images\/bg_footer_test.jpg" : {
+      "ft" : 16384,
+      "iS" : 105654,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/bg_footer_test.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/bg_header_test.jpg" : {
+      "ft" : 16384,
+      "iS" : 118232,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/bg_header_test.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/images\/bg.jpg" : {
       "ft" : 16384,
       "iS" : 677360,
@@ -385,6 +411,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/favicon.png" : {
+      "ft" : 32768,
+      "iS" : 17238,
+      "oA" : 0,
+      "oAP" : "\/images\/favicon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -664,6 +703,16 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/images\/star.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/images\/star.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/images\/stars_1.svg" : {
       "ft" : 2097152,
@@ -1437,14 +1486,6 @@
       "oAP" : "\/template-padirectory.php",
       "oF" : 0
     },
-    "\/template-parts\/att-profile.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/template-parts\/att-profile.php",
-      "oF" : 0
-    },
     "\/template-parts\/background-images.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1541,6 +1582,14 @@
       "oAP" : "\/template-parts\/internal-layout.php",
       "oF" : 0
     },
+    "\/template-parts\/locations.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/locations.php",
+      "oF" : 0
+    },
     "\/template-parts\/logos-slider.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1587,6 +1636,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/template-parts\/selling-points.php",
+      "oF" : 0
+    },
+    "\/template-parts\/social-media.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/social-media.php",
       "oF" : 0
     },
     "\/template-parts\/template-about-part.php" : {
