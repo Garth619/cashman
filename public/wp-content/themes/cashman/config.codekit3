@@ -306,9 +306,20 @@
       "oAP" : "\/images\/bg_footer_test.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
+      "opt" : 1,
+      "ou" : "lpckwebp-default",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/bg_footer_test.webp" : {
+      "ft" : 8388608,
+      "iS" : 11602,
+      "oA" : 0,
+      "oAP" : "\/images\/bg_footer_test.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/bg_header_test.jpg" : {
@@ -319,35 +330,20 @@
       "oAP" : "\/images\/bg_header_test.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/images\/bg.jpg" : {
-      "ft" : 16384,
-      "iS" : 677360,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/images\/bg.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
+      "ou" : "lpckwebp-default",
       "q" : 100,
       "rq" : 75
     },
-    "\/images\/black-bg.jpg" : {
-      "ft" : 16384,
-      "iS" : 195541,
-      "jF" : 0,
+    "\/images\/bg_header_test.webp" : {
+      "ft" : 8388608,
+      "iS" : 9832,
       "oA" : 0,
-      "oAP" : "\/images\/black-bg.jpg",
+      "oAP" : "\/images\/bg_header_test.webp",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/content_img_1.jpg" : {
