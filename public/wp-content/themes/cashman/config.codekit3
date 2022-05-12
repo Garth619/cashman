@@ -447,8 +447,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
+      "ou" : "lpckwebp-default",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/header_img_1200.webp" : {
+      "ft" : 8388608,
+      "iS" : 83162,
+      "oA" : 0,
+      "oAP" : "\/images\/header_img_1200.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/header_img_1400.jpg" : {
@@ -460,8 +471,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
+      "ou" : "lpckwebp-default",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/header_img_1400.webp" : {
+      "ft" : 8388608,
+      "iS" : 105460,
+      "oA" : 0,
+      "oAP" : "\/images\/header_img_1400.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/header_img_1920.jpg" : {
@@ -473,8 +495,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
+      "ou" : "lpckwebp-default",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/header_img_1920.webp" : {
+      "ft" : 8388608,
+      "iS" : 153408,
+      "oA" : 0,
+      "oAP" : "\/images\/header_img_1920.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/header_img_mobile.jpg" : {
@@ -486,8 +519,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
+      "ou" : "lpckwebp-default",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/header_img_mobile.webp" : {
+      "ft" : 8388608,
+      "iS" : 54246,
+      "oA" : 0,
+      "oAP" : "\/images\/header_img_mobile.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/header_img_tablet.jpg" : {
@@ -499,8 +543,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
+      "ou" : "lpckwebp-default",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/header_img_tablet.webp" : {
+      "ft" : 8388608,
+      "iS" : 83726,
+      "oA" : 0,
+      "oAP" : "\/images\/header_img_tablet.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/images\/ilawyer_logo.svg" : {
