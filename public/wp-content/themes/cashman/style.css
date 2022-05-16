@@ -2836,22 +2836,6 @@ nav ul.sub-menu > li ul.sub-menu.active {
   width: 100%;
 }
 @media screen and (min-width: 1200px) {
-  #content-layout-top .content-layout-content {
-    margin-top: 15px;
-  }
-}
-@media screen and (min-width: 1380px) {
-  #content-layout-top .content-layout-content {
-    margin-top: 50px;
-  }
-}
-@media screen and (min-width: 1650px) {
-  #content-layout-top .content-layout-content {
-    margin-top: 40px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
   .content-layout-content {
     flex-grow: 1;
   }
@@ -2871,18 +2855,30 @@ nav ul.sub-menu > li ul.sub-menu.active {
 @media screen and (min-width: 1200px) {
   .content-layout-content h2 {
     padding-top: 30px;
+    padding-bottom: 10px;
   }
 }
 @media screen and (min-width: 1380px) {
   .content-layout-content h2 {
     font-size: 28px;
     line-height: 42px;
+    padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 1650px) {
   .content-layout-content h2 {
     font-size: 32px;
-    padding-bottom: 5px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content-layout-content ul li {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .content-layout-content ul li {
+    margin-bottom: 30px;
   }
 }
 
@@ -2897,6 +2893,7 @@ nav ul.sub-menu > li ul.sub-menu.active {
     margin-bottom: 120px;
     font-size: 32px;
     line-height: 40px;
+    max-width: 580px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2905,14 +2902,14 @@ nav ul.sub-menu > li ul.sub-menu.active {
     margin-bottom: 163px;
     font-size: 38px;
     line-height: 48px;
-    max-width: 730px;
+    max-width: 690px;
   }
 }
 @media screen and (min-width: 1380px) {
   #content-layout-blockquote blockquote {
     font-size: 44px;
     line-height: 55px;
-    max-width: 840px;
+    max-width: 800px;
     margin-top: 135px;
   }
 }
@@ -2920,7 +2917,7 @@ nav ul.sub-menu > li ul.sub-menu.active {
   #content-layout-blockquote blockquote {
     font-size: 50px;
     line-height: 63px;
-    max-width: 975px;
+    max-width: 915px;
   }
 }
 
@@ -2943,7 +2940,6 @@ nav ul.sub-menu > li ul.sub-menu.active {
   #content-layout-bottom .content-layout-content {
     flex-grow: 1;
     padding-top: 0px;
-    margin-top: -45px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -2976,6 +2972,7 @@ nav ul.sub-menu > li ul.sub-menu.active {
     margin-right: 185px;
   }
 }
+
 .content-layout-learn-more {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;

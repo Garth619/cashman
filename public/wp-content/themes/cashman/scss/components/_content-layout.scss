@@ -80,15 +80,6 @@
 		}
 	}
 	.content-layout-content {
-		@include mq(small_laptop) {
-			margin-top: 15px;
-		}
-		@include mq(large_laptop) {
-			margin-top: 50px;
-		}
-		@include mq(small_monitor) {
-			margin-top: 40px;
-		}
 	}
 }
 
@@ -107,14 +98,26 @@
 		}
 		@include mq(small_laptop) {
 			padding-top: 30px;
+			padding-bottom: 10px;
 		}
 		@include mq(large_laptop) {
 			font-size: 28px;
 			line-height: 42px;
+			padding-bottom: 20px;
 		}
 		@include mq(small_monitor) {
 			font-size: 32px;
-			padding-bottom: 5px;
+			padding-bottom: 25px;
+		}
+	}
+	ul {
+		li {
+			@include mq(small_laptop) {
+				margin-bottom: 20px;
+			}
+			@include mq(large_laptop) {
+				margin-bottom: 30px;
+			}
 		}
 	}
 }
@@ -130,24 +133,25 @@
 			margin-bottom: 120px;
 			font-size: 32px;
 			line-height: 40px;
+			max-width: 580px;
 		}
 		@include mq(small_laptop) {
 			margin-top: 115px;
 			margin-bottom: 163px;
 			font-size: 38px;
 			line-height: 48px;
-			max-width: 730px;
+			max-width: 690px;
 		}
 		@include mq(large_laptop) {
 			font-size: 44px;
 			line-height: 55px;
-			max-width: 840px;
+			max-width: 800px;
 			margin-top: 135px;
 		}
 		@include mq(small_monitor) {
 			font-size: 50px;
 			line-height: 63px;
-			max-width: 975px;
+			max-width: 915px;
 		}
 	}
 }
@@ -166,7 +170,6 @@
 		@include mq(small_laptop) {
 			flex-grow: 1;
 			padding-top: 0px;
-			margin-top: -45px;
 		}
 		h2 {
 			@include mq(large_laptop) {
@@ -180,7 +183,6 @@
 		@include margin_lr();
 		@include mq(small_laptop) {
 			flex-shrink: 0;
-			//flex-basis: 448px;
 			margin-right: 120px;
 			margin-left: 0;
 		}
@@ -191,8 +193,6 @@
 		@include mq(small_monitor) {
 			max-width: 614px;
 			margin-right: 185px;
-		}
-		.img-wrapper {
 		}
 	}
 }
