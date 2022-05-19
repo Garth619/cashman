@@ -13,6 +13,13 @@ $args = wp_parse_args($args, $array_defaults);
 
 $acf_field = $args['acf-field'];
 $template_location = $args['template-location'];
+$auth = stream_context_create(
+    array(
+        'http' => array(
+            'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")
+        ),
+    )
+);
 /**
  * ACFs
  */
@@ -22,9 +29,11 @@ if ($social_media) { ?>
         <?php foreach ($social_media as $icons) {
             $link = $icons['link'];
             $icon = $icons['icon'];
+            $icon_url = $icon['url'];
             $filename = $icon['filename']; ?>
             <a href='<?= $link; ?>' target='_blank' rel='noopener'>
-                <?= file_get_contents(get_template_directory() . '/images/' . $filename); ?>
+                <?= file_get_contents($icon_url, false, $auth);
+                ?>
             </a>
         <?php } ?>
     </div>
